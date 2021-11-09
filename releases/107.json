@@ -1,0 +1,3319 @@
+{
+    "finnix": {
+        "releases": {
+            "107": {
+                "architectures": {
+                    "i386": {
+                        "base_os": "Debian testing (2012-12-23)",
+                        "files": {
+                            "finnix-107.iso": {
+                                "md5_checksum": "f107ffc366b62bec6af3e2a4e3c43484",
+                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niQIcBAABCAAGBQJQ10QIAAoJEH1vhcBDVubCnQIQAJIeNkJ122xJS4oo7HlebbuZ\nkfBzsyM7mvAO6FIj/8QXcw3dw7BSV8etN9a/JiK4keQhHK2ZnjXn5x627ulSNTla\nCHZzP4sPGO1n1Hlty8YwiSwRba2s9zuCCgl3nIk73bva2oo9hD0Ic/ZWVNxFINFb\nKq1ofcSnzpp0T0uijN6LzDrqYAUgrtJR061VJzhoPmEITKrlt0o5cDFRiZ4tZzDi\nnmM8djVfst1fbl/kvPtVLwlBqISeM/KVq/wryzKPKF1WpA5sFgWDHtWgnlDeECJn\n0bYR/Gy6FPjwmiRw+FvR1Le1s6g7Mk8KMJyb+/Kq0302XiumjGYIlKACgI2xZXGf\nO2FI5TgYGd7+c/eJ4OMqaA5BNysWS0f4+EssRzughx3RZ9+cMDT1SVGmHzQmyunQ\nocZr/RD8QB1LhmP6Hq0ILVcfIR0YgSB5HNo/pbye7pjS1jmKMLkLzZK5F7grYvbU\n5gNGNPpWXgVri07BuqHlz3Tgw/Z6ooh84bOEUZifmz1OM5zgG5Dk4xzUVhJKl838\nHAm/4Lzj8r9Wlkww7RTk00vfVsXpal8GGjUodyYGd/0v4ONWmpyzN6cbaH6wFe8b\nItHQOCoFERXWQeySQodl3tjvzq9aED7WHNMRV28vsv/FTAqLyIrbiNWzte4Awq69\n0lHkpxFS9oejynCX7BmW\n=88W6\n-----END PGP SIGNATURE-----",
+                                "sha256_checksum": "e500494d5cd5a9e4ba4196e0e1f09e2998c24744e73808a2d6c274c2b83c3fea",
+                                "sha512_checksum": "e5b063640a39d0eb73cf72d94dae2e5512b4ebeaa609cef23f2e26f3f0f41686d5e9d4cf801d5e32db2fed9a7b9345b7ca9883af616172ff7e93b4e4bd327cbe",
+                                "size": 122683392
+                            }
+                        },
+                        "kernel": "Linux 3.6",
+                        "packages": {
+                            "2ping": {
+                                "type": "dpkg",
+                                "version": "2.0-1"
+                            },
+                            "acpi": {
+                                "type": "dpkg",
+                                "version": "1.6-1"
+                            },
+                            "adduser": {
+                                "type": "dpkg",
+                                "version": "3.113+nmu3"
+                            },
+                            "apmd": {
+                                "type": "dpkg",
+                                "version": "3.2.2-14"
+                            },
+                            "apt": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "apt-utils": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "arj": {
+                                "type": "dpkg",
+                                "version": "3.10.22-10"
+                            },
+                            "arping": {
+                                "type": "dpkg",
+                                "version": "2.11-1"
+                            },
+                            "arpwatch": {
+                                "type": "dpkg",
+                                "version": "2.1a15-1.2"
+                            },
+                            "ash": {
+                                "type": "dpkg",
+                                "version": "0.5.7-3"
+                            },
+                            "at": {
+                                "type": "dpkg",
+                                "version": "3.1.13-2"
+                            },
+                            "attr": {
+                                "type": "dpkg",
+                                "version": "1:2.4.46-8"
+                            },
+                            "base-files": {
+                                "type": "dpkg",
+                                "version": "6.11"
+                            },
+                            "base-passwd": {
+                                "type": "dpkg",
+                                "version": "3.5.26"
+                            },
+                            "bash": {
+                                "type": "dpkg",
+                                "version": "4.2-4"
+                            },
+                            "bc": {
+                                "type": "dpkg",
+                                "version": "1.06.95-2"
+                            },
+                            "bind9-host": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "binutils": {
+                                "type": "dpkg",
+                                "version": "2.22-7.1"
+                            },
+                            "bittornado": {
+                                "type": "dpkg",
+                                "version": "0.3.18-10"
+                            },
+                            "bonnie++": {
+                                "type": "dpkg",
+                                "version": "1.96"
+                            },
+                            "bootchart": {
+                                "type": "dpkg",
+                                "version": "0.10~svn407-3.3"
+                            },
+                            "bridge-utils": {
+                                "type": "dpkg",
+                                "version": "1.5-6"
+                            },
+                            "bsd-mailx": {
+                                "type": "dpkg",
+                                "version": "8.1.2-0.20111106c",
+                                "version_possibly_truncated": true
+                            },
+                            "bsdmainutils": {
+                                "type": "dpkg",
+                                "version": "9.0.3"
+                            },
+                            "bsdutils": {
+                                "type": "dpkg",
+                                "version": "1:2.20.1-5.3"
+                            },
+                            "btrfs-tools": {
+                                "type": "dpkg",
+                                "version": "0.19+20120328-7"
+                            },
+                            "buffer": {
+                                "type": "dpkg",
+                                "version": "1.19-11"
+                            },
+                            "bzip2": {
+                                "type": "dpkg",
+                                "version": "1.0.6-4"
+                            },
+                            "ca-certificates": {
+                                "type": "dpkg",
+                                "version": "20120623"
+                            },
+                            "cabextract": {
+                                "type": "dpkg",
+                                "version": "1.4-3"
+                            },
+                            "cdbackup": {
+                                "type": "dpkg",
+                                "version": "0.7.0-5"
+                            },
+                            "cdpr": {
+                                "type": "dpkg",
+                                "version": "2.4-1"
+                            },
+                            "chkrootkit": {
+                                "type": "dpkg",
+                                "version": "0.49-4.1"
+                            },
+                            "chntpw": {
+                                "type": "dpkg",
+                                "version": "0.99.6-2"
+                            },
+                            "cifs-utils": {
+                                "type": "dpkg",
+                                "version": "2:5.5-1"
+                            },
+                            "cmospwd": {
+                                "type": "dpkg",
+                                "version": "5.0+dfsg-2"
+                            },
+                            "console-data": {
+                                "type": "dpkg",
+                                "version": "2:1.12-2"
+                            },
+                            "console-tools": {
+                                "type": "dpkg",
+                                "version": "1:0.2.3dbs-70"
+                            },
+                            "coreutils": {
+                                "type": "dpkg",
+                                "version": "8.13-3.4"
+                            },
+                            "cpio": {
+                                "type": "dpkg",
+                                "version": "2.11-8"
+                            },
+                            "cpuburn": {
+                                "type": "dpkg",
+                                "version": "1.4a-3"
+                            },
+                            "cpuid": {
+                                "type": "dpkg",
+                                "version": "3.3-9"
+                            },
+                            "cron": {
+                                "type": "dpkg",
+                                "version": "3.0pl1-124"
+                            },
+                            "cryptsetup": {
+                                "type": "dpkg",
+                                "version": "2:1.4.3-4"
+                            },
+                            "cryptsetup-bin": {
+                                "type": "dpkg",
+                                "version": "2:1.4.3-4"
+                            },
+                            "curl": {
+                                "type": "dpkg",
+                                "version": "7.26.0-1"
+                            },
+                            "dash": {
+                                "type": "dpkg",
+                                "version": "0.5.7-3"
+                            },
+                            "debconf": {
+                                "type": "dpkg",
+                                "version": "1.5.48"
+                            },
+                            "debconf-i18n": {
+                                "type": "dpkg",
+                                "version": "1.5.48"
+                            },
+                            "debian-archive-keyring": {
+                                "type": "dpkg",
+                                "version": "2012.4"
+                            },
+                            "debianutils": {
+                                "type": "dpkg",
+                                "version": "4.3.2"
+                            },
+                            "debootstrap": {
+                                "type": "dpkg",
+                                "version": "1.0.44"
+                            },
+                            "diffutils": {
+                                "type": "dpkg",
+                                "version": "1:3.2-6"
+                            },
+                            "dmidecode": {
+                                "type": "dpkg",
+                                "version": "2.11-9"
+                            },
+                            "dmsetup": {
+                                "type": "dpkg",
+                                "version": "2:1.02.74-4"
+                            },
+                            "dnsutils": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "dosfstools": {
+                                "type": "dpkg",
+                                "version": "3.0.13-1"
+                            },
+                            "dpkg": {
+                                "type": "dpkg",
+                                "version": "1.16.9"
+                            },
+                            "dselect": {
+                                "type": "dpkg",
+                                "version": "1.16.9"
+                            },
+                            "dump": {
+                                "type": "dpkg",
+                                "version": "0.4b44-1"
+                            },
+                            "dvd+rw-tools": {
+                                "type": "dpkg",
+                                "version": "7.1-10"
+                            },
+                            "e2fslibs": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "e2fsprogs": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "ed": {
+                                "type": "dpkg",
+                                "version": "1.6-2"
+                            },
+                            "eject": {
+                                "type": "dpkg",
+                                "version": "2.1.5+deb1+cvs200",
+                                "version_possibly_truncated": true
+                            },
+                            "elinks-lite": {
+                                "type": "dpkg",
+                                "version": "0.12~pre5-9"
+                            },
+                            "emad": {
+                                "type": "dpkg",
+                                "version": "1.0-0~1finnix2"
+                            },
+                            "etherwake": {
+                                "type": "dpkg",
+                                "version": "1.09-3"
+                            },
+                            "ethtool": {
+                                "type": "dpkg",
+                                "version": "1:3.4.2-1"
+                            },
+                            "fdutils": {
+                                "type": "dpkg",
+                                "version": "5.5-20060227-6"
+                            },
+                            "fetchmail": {
+                                "type": "dpkg",
+                                "version": "6.3.21-4"
+                            },
+                            "file": {
+                                "type": "dpkg",
+                                "version": "5.11-2"
+                            },
+                            "findutils": {
+                                "type": "dpkg",
+                                "version": "4.4.2-4"
+                            },
+                            "finger": {
+                                "type": "dpkg",
+                                "version": "0.17-15"
+                            },
+                            "finnix-base": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-keyring": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-netboot": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-release": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-scripts": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-standard": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-standard-arch": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-utmp": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "fsarchiver": {
+                                "type": "dpkg",
+                                "version": "0.6.15-1"
+                            },
+                            "fuse": {
+                                "type": "dpkg",
+                                "version": "2.9.0-2"
+                            },
+                            "fuse-utils": {
+                                "type": "dpkg",
+                                "version": "2.9.0-2"
+                            },
+                            "fuseext2": {
+                                "type": "dpkg",
+                                "version": "0.4-1"
+                            },
+                            "fxload": {
+                                "type": "dpkg",
+                                "version": "0.0.20081013-1"
+                            },
+                            "gawk": {
+                                "type": "dpkg",
+                                "version": "1:4.0.1+dfsg-2"
+                            },
+                            "gcc-4.7-base": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "gddrescue": {
+                                "type": "dpkg",
+                                "version": "1.16-1"
+                            },
+                            "gdisk-noicu": {
+                                "type": "dpkg",
+                                "version": "0.8.5-1+finnix2"
+                            },
+                            "genisoimage": {
+                                "type": "dpkg",
+                                "version": "9:1.1.11-2"
+                            },
+                            "genromfs": {
+                                "type": "dpkg",
+                                "version": "0.5.2-2"
+                            },
+                            "gettext-base": {
+                                "type": "dpkg",
+                                "version": "0.18.1.1-9"
+                            },
+                            "gnupg": {
+                                "type": "dpkg",
+                                "version": "1.4.12-6"
+                            },
+                            "gpart": {
+                                "type": "dpkg",
+                                "version": "0.1h-11+b1"
+                            },
+                            "gpgv": {
+                                "type": "dpkg",
+                                "version": "1.4.12-6"
+                            },
+                            "gpm": {
+                                "type": "dpkg",
+                                "version": "1.20.4-6"
+                            },
+                            "grep": {
+                                "type": "dpkg",
+                                "version": "2.12-2"
+                            },
+                            "grepcidr": {
+                                "type": "dpkg",
+                                "version": "1.3-5"
+                            },
+                            "groff-base": {
+                                "type": "dpkg",
+                                "version": "1.21-9"
+                            },
+                            "growisofs": {
+                                "type": "dpkg",
+                                "version": "7.1-10"
+                            },
+                            "gzip": {
+                                "type": "dpkg",
+                                "version": "1.5-1.1"
+                            },
+                            "hdparm": {
+                                "type": "dpkg",
+                                "version": "9.39-1+b1"
+                            },
+                            "hexedit": {
+                                "type": "dpkg",
+                                "version": "1.2.12-4"
+                            },
+                            "hfsutils": {
+                                "type": "dpkg",
+                                "version": "3.2.6-11"
+                            },
+                            "hostname": {
+                                "type": "dpkg",
+                                "version": "3.11"
+                            },
+                            "htop": {
+                                "type": "dpkg",
+                                "version": "1.0.1-1"
+                            },
+                            "ifenslave-2.6": {
+                                "type": "dpkg",
+                                "version": "1.1.0-20"
+                            },
+                            "iftop": {
+                                "type": "dpkg",
+                                "version": "1.0~pre2-3"
+                            },
+                            "ifupdown": {
+                                "type": "dpkg",
+                                "version": "0.7.5"
+                            },
+                            "initscripts": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "insserv": {
+                                "type": "dpkg",
+                                "version": "1.14.0-5"
+                            },
+                            "iotop": {
+                                "type": "dpkg",
+                                "version": "0.4.4-4"
+                            },
+                            "ipcalc": {
+                                "type": "dpkg",
+                                "version": "0.41-2.1"
+                            },
+                            "iproute": {
+                                "type": "dpkg",
+                                "version": "20120521-3"
+                            },
+                            "iptables": {
+                                "type": "dpkg",
+                                "version": "1.4.14-3"
+                            },
+                            "iptraf": {
+                                "type": "dpkg",
+                                "version": "3.0.0-8.1"
+                            },
+                            "iputils-ping": {
+                                "type": "dpkg",
+                                "version": "3:20101006-1+b1"
+                            },
+                            "irssi": {
+                                "type": "dpkg",
+                                "version": "0.8.15-5"
+                            },
+                            "isc-dhcp-client": {
+                                "type": "dpkg",
+                                "version": "4.2.2.dfsg.1-5+de",
+                                "version_possibly_truncated": true
+                            },
+                            "isc-dhcp-common": {
+                                "type": "dpkg",
+                                "version": "4.2.2.dfsg.1-5+de",
+                                "version_possibly_truncated": true
+                            },
+                            "isomd5sum": {
+                                "type": "dpkg",
+                                "version": "1:1.0.7+git.20110",
+                                "version_possibly_truncated": true
+                            },
+                            "jfsutils": {
+                                "type": "dpkg",
+                                "version": "1.1.15-2"
+                            },
+                            "joe": {
+                                "type": "dpkg",
+                                "version": "3.7-2.3"
+                            },
+                            "kmod": {
+                                "type": "dpkg",
+                                "version": "9-2"
+                            },
+                            "less": {
+                                "type": "dpkg",
+                                "version": "444-4"
+                            },
+                            "lftp": {
+                                "type": "dpkg",
+                                "version": "4.3.6-1+deb7u1"
+                            },
+                            "libacl1": {
+                                "type": "dpkg",
+                                "version": "2.2.51-8"
+                            },
+                            "libapm1": {
+                                "type": "dpkg",
+                                "version": "3.2.2-14"
+                            },
+                            "libapt-inst1.5": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "libapt-pkg4.12": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "libasprintf0c2": {
+                                "type": "dpkg",
+                                "version": "0.18.1.1-9"
+                            },
+                            "libattr1": {
+                                "type": "dpkg",
+                                "version": "1:2.4.46-8"
+                            },
+                            "libbind9-80": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libblas3": {
+                                "type": "dpkg",
+                                "version": "1.2.20110419-5"
+                            },
+                            "libblas3gf": {
+                                "type": "dpkg",
+                                "version": "1.2.20110419-5"
+                            },
+                            "libblkid1": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "libbsd0": {
+                                "type": "dpkg",
+                                "version": "0.4.2-1"
+                            },
+                            "libbz2-1.0": {
+                                "type": "dpkg",
+                                "version": "1.0.6-4"
+                            },
+                            "libc-bin": {
+                                "type": "dpkg",
+                                "version": "2.13-37"
+                            },
+                            "libc6": {
+                                "type": "dpkg",
+                                "version": "2.13-37"
+                            },
+                            "libcap-ng0": {
+                                "type": "dpkg",
+                                "version": "0.6.6-2"
+                            },
+                            "libcap2": {
+                                "type": "dpkg",
+                                "version": "1:2.22-1.2"
+                            },
+                            "libclass-isa-perl": {
+                                "type": "dpkg",
+                                "version": "0.36-3"
+                            },
+                            "libcomerr2": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "libconsole": {
+                                "type": "dpkg",
+                                "version": "1:0.2.3dbs-70"
+                            },
+                            "libcryptsetup4": {
+                                "type": "dpkg",
+                                "version": "2:1.4.3-4"
+                            },
+                            "libcurl3": {
+                                "type": "dpkg",
+                                "version": "7.26.0-1"
+                            },
+                            "libdb5.1": {
+                                "type": "dpkg",
+                                "version": "5.1.29-5"
+                            },
+                            "libdbus-1-3": {
+                                "type": "dpkg",
+                                "version": "1.6.8-1"
+                            },
+                            "libdevmapper-event1.02.1": {
+                                "type": "dpkg",
+                                "version": "2:1.02.74-4"
+                            },
+                            "libdevmapper1.02.1": {
+                                "type": "dpkg",
+                                "version": "2:1.02.74-4"
+                            },
+                            "libdns81": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libdpkg-perl": {
+                                "type": "dpkg",
+                                "version": "1.16.9"
+                            },
+                            "libedit2": {
+                                "type": "dpkg",
+                                "version": "2.11-20080614-5"
+                            },
+                            "libelfg0": {
+                                "type": "dpkg",
+                                "version": "0.8.13-3"
+                            },
+                            "libevent-2.0-5": {
+                                "type": "dpkg",
+                                "version": "2.0.19-stable-3"
+                            },
+                            "libexpat1": {
+                                "type": "dpkg",
+                                "version": "2.1.0-1"
+                            },
+                            "libffi5": {
+                                "type": "dpkg",
+                                "version": "3.0.10-3"
+                            },
+                            "libfile-copy-recursive-perl": {
+                                "type": "dpkg",
+                                "version": "0.38-1"
+                            },
+                            "libfuse2": {
+                                "type": "dpkg",
+                                "version": "2.9.0-2"
+                            },
+                            "libgcc1": {
+                                "type": "dpkg",
+                                "version": "1:4.7.2-4"
+                            },
+                            "libgcrypt11": {
+                                "type": "dpkg",
+                                "version": "1.5.0-3"
+                            },
+                            "libgdbm3": {
+                                "type": "dpkg",
+                                "version": "1.8.3-11"
+                            },
+                            "libgeoip1": {
+                                "type": "dpkg",
+                                "version": "1.4.8+dfsg-3"
+                            },
+                            "libgfortran3": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "libglib2.0-0": {
+                                "type": "dpkg",
+                                "version": "2.33.12+really2.3",
+                                "version_possibly_truncated": true
+                            },
+                            "libgnutls-openssl27": {
+                                "type": "dpkg",
+                                "version": "2.12.20-2"
+                            },
+                            "libgnutls26": {
+                                "type": "dpkg",
+                                "version": "2.12.20-2"
+                            },
+                            "libgpg-error0": {
+                                "type": "dpkg",
+                                "version": "1.10-3.1"
+                            },
+                            "libgpgme11": {
+                                "type": "dpkg",
+                                "version": "1.2.0-1.4"
+                            },
+                            "libgpm2": {
+                                "type": "dpkg",
+                                "version": "1.20.4-6"
+                            },
+                            "libgssapi-krb5-2": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libgssglue1": {
+                                "type": "dpkg",
+                                "version": "0.4-2"
+                            },
+                            "libidn11": {
+                                "type": "dpkg",
+                                "version": "1.25-2"
+                            },
+                            "libisc83": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libisccc80": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libisccfg82": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libiw30": {
+                                "type": "dpkg",
+                                "version": "30~pre9-8"
+                            },
+                            "libjpeg8": {
+                                "type": "dpkg",
+                                "version": "8d-1"
+                            },
+                            "libk5crypto3": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libkeyutils1": {
+                                "type": "dpkg",
+                                "version": "1.5.5-3"
+                            },
+                            "libkmod2": {
+                                "type": "dpkg",
+                                "version": "9-2"
+                            },
+                            "libkrb5-3": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libkrb5support0": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libldap-2.4-2": {
+                                "type": "dpkg",
+                                "version": "2.4.31-1"
+                            },
+                            "liblinear1": {
+                                "type": "dpkg",
+                                "version": "1.8+dfsg-1"
+                            },
+                            "liblocale-gettext-perl": {
+                                "type": "dpkg",
+                                "version": "1.05-7+b1"
+                            },
+                            "liblockfile-bin": {
+                                "type": "dpkg",
+                                "version": "1.09-5"
+                            },
+                            "liblockfile1": {
+                                "type": "dpkg",
+                                "version": "1.09-5"
+                            },
+                            "liblua5.1-0": {
+                                "type": "dpkg",
+                                "version": "5.1.5-4"
+                            },
+                            "liblwres80": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "liblzma5": {
+                                "type": "dpkg",
+                                "version": "5.1.1alpha+201206",
+                                "version_possibly_truncated": true
+                            },
+                            "liblzo2-2": {
+                                "type": "dpkg",
+                                "version": "2.06-1"
+                            },
+                            "libmagic1": {
+                                "type": "dpkg",
+                                "version": "5.11-2"
+                            },
+                            "libmount1": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "libncurses5": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "libncursesw5": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "libnet1": {
+                                "type": "dpkg",
+                                "version": "1.1.4-2.1"
+                            },
+                            "libnewt0.52": {
+                                "type": "dpkg",
+                                "version": "0.52.14-10"
+                            },
+                            "libnfnetlink0": {
+                                "type": "dpkg",
+                                "version": "1.0.0-1"
+                            },
+                            "libnfsidmap2": {
+                                "type": "dpkg",
+                                "version": "0.25-4"
+                            },
+                            "libnl-3-200": {
+                                "type": "dpkg",
+                                "version": "3.2.7-4"
+                            },
+                            "libnl-genl-3-200": {
+                                "type": "dpkg",
+                                "version": "3.2.7-4"
+                            },
+                            "libntfs10": {
+                                "type": "dpkg",
+                                "version": "2.0.0-1+b1"
+                            },
+                            "libp11-kit0": {
+                                "type": "dpkg",
+                                "version": "0.12-3"
+                            },
+                            "libpam-modules": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libpam-modules-bin": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libpam-runtime": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libpam0g": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libparted0debian1": {
+                                "type": "dpkg",
+                                "version": "2.3-11"
+                            },
+                            "libpcap0.8": {
+                                "type": "dpkg",
+                                "version": "1.3.0-1"
+                            },
+                            "libpci3": {
+                                "type": "dpkg",
+                                "version": "1:3.1.9-6"
+                            },
+                            "libpcre3": {
+                                "type": "dpkg",
+                                "version": "1:8.30-5"
+                            },
+                            "libpcsclite1": {
+                                "type": "dpkg",
+                                "version": "1.8.4-1"
+                            },
+                            "libperl5.14": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "libpipeline1": {
+                                "type": "dpkg",
+                                "version": "1.2.1-1"
+                            },
+                            "libpkcs11-helper1": {
+                                "type": "dpkg",
+                                "version": "1.09-1"
+                            },
+                            "libpopt0": {
+                                "type": "dpkg",
+                                "version": "1.16-7"
+                            },
+                            "libprocps0": {
+                                "type": "dpkg",
+                                "version": "1:3.3.3-2"
+                            },
+                            "libpth20": {
+                                "type": "dpkg",
+                                "version": "2.0.7-16"
+                            },
+                            "libquadmath0": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "libreadline5": {
+                                "type": "dpkg",
+                                "version": "5.2-12"
+                            },
+                            "libreadline6": {
+                                "type": "dpkg",
+                                "version": "6.2-8"
+                            },
+                            "librsync1": {
+                                "type": "dpkg",
+                                "version": "0.9.7-9"
+                            },
+                            "librtmp0": {
+                                "type": "dpkg",
+                                "version": "2.4+20111222.git4",
+                                "version_possibly_truncated": true
+                            },
+                            "libsasl2-2": {
+                                "type": "dpkg",
+                                "version": "2.1.25.dfsg1-6"
+                            },
+                            "libselinux1": {
+                                "type": "dpkg",
+                                "version": "2.1.9-5"
+                            },
+                            "libsemanage-common": {
+                                "type": "dpkg",
+                                "version": "2.1.6-6"
+                            },
+                            "libsemanage1": {
+                                "type": "dpkg",
+                                "version": "2.1.6-6"
+                            },
+                            "libsensors4": {
+                                "type": "dpkg",
+                                "version": "1:3.3.2-2"
+                            },
+                            "libsepol1": {
+                                "type": "dpkg",
+                                "version": "2.1.4-3"
+                            },
+                            "libsigsegv2": {
+                                "type": "dpkg",
+                                "version": "2.9-4"
+                            },
+                            "libslang2": {
+                                "type": "dpkg",
+                                "version": "2.2.4-15"
+                            },
+                            "libsnmp-base": {
+                                "type": "dpkg",
+                                "version": "5.4.3~dfsg-2.7"
+                            },
+                            "libsnmp15": {
+                                "type": "dpkg",
+                                "version": "5.4.3~dfsg-2.7"
+                            },
+                            "libsqlite3-0": {
+                                "type": "dpkg",
+                                "version": "3.7.13-1"
+                            },
+                            "libss2": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "libssh2-1": {
+                                "type": "dpkg",
+                                "version": "1.4.2-1.1"
+                            },
+                            "libssl1.0.0": {
+                                "type": "dpkg",
+                                "version": "1.0.1c-4"
+                            },
+                            "libstdc++6": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "libswitch-perl": {
+                                "type": "dpkg",
+                                "version": "2.16-2"
+                            },
+                            "libtalloc2": {
+                                "type": "dpkg",
+                                "version": "2.0.7+git20120207",
+                                "version_possibly_truncated": true
+                            },
+                            "libtasn1-3": {
+                                "type": "dpkg",
+                                "version": "2.13-2"
+                            },
+                            "libtdb1": {
+                                "type": "dpkg",
+                                "version": "1.2.10-2"
+                            },
+                            "libtext-charwidth-perl": {
+                                "type": "dpkg",
+                                "version": "0.04-7+b1"
+                            },
+                            "libtext-iconv-perl": {
+                                "type": "dpkg",
+                                "version": "1.7-5"
+                            },
+                            "libtext-wrapi18n-perl": {
+                                "type": "dpkg",
+                                "version": "0.06-7"
+                            },
+                            "libtimedate-perl": {
+                                "type": "dpkg",
+                                "version": "1.2000-1"
+                            },
+                            "libtinfo5": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "libtirpc1": {
+                                "type": "dpkg",
+                                "version": "0.2.2-5"
+                            },
+                            "libtokyocabinet9": {
+                                "type": "dpkg",
+                                "version": "1.4.47-2"
+                            },
+                            "libudev0": {
+                                "type": "dpkg",
+                                "version": "175-7"
+                            },
+                            "libusb-0.1-4": {
+                                "type": "dpkg",
+                                "version": "2:0.1.12-20+nmu1"
+                            },
+                            "libusb-1.0-0": {
+                                "type": "dpkg",
+                                "version": "2:1.0.11-1"
+                            },
+                            "libustr-1.0-1": {
+                                "type": "dpkg",
+                                "version": "1.0.4-3"
+                            },
+                            "libuuid1": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "libwbclient0": {
+                                "type": "dpkg",
+                                "version": "2:3.6.6-3"
+                            },
+                            "libwrap0": {
+                                "type": "dpkg",
+                                "version": "7.6.q-24"
+                            },
+                            "lilo": {
+                                "type": "dpkg",
+                                "version": "1:23.2-4"
+                            },
+                            "lm-sensors": {
+                                "type": "dpkg",
+                                "version": "1:3.3.2-2"
+                            },
+                            "login": {
+                                "type": "dpkg",
+                                "version": "1:4.1.5.1-1"
+                            },
+                            "lpr": {
+                                "type": "dpkg",
+                                "version": "1:2008.05.17+nmu1",
+                                "version_possibly_truncated": true
+                            },
+                            "lrzsz": {
+                                "type": "dpkg",
+                                "version": "0.12.21-5"
+                            },
+                            "lsb-base": {
+                                "type": "dpkg",
+                                "version": "4.1+Debian8"
+                            },
+                            "lsb-release": {
+                                "type": "dpkg",
+                                "version": "4.1+Debian8"
+                            },
+                            "lshw": {
+                                "type": "dpkg",
+                                "version": "02.16-1"
+                            },
+                            "lsof": {
+                                "type": "dpkg",
+                                "version": "4.86+dfsg-1"
+                            },
+                            "ltrace": {
+                                "type": "dpkg",
+                                "version": "0.5.3-2.1"
+                            },
+                            "lvm2": {
+                                "type": "dpkg",
+                                "version": "2.02.95-4"
+                            },
+                            "makedev": {
+                                "type": "dpkg",
+                                "version": "2.3.1-92"
+                            },
+                            "man-db": {
+                                "type": "dpkg",
+                                "version": "2.6.2-1"
+                            },
+                            "mawk": {
+                                "type": "dpkg",
+                                "version": "1.3.3-17"
+                            },
+                            "mbr": {
+                                "type": "dpkg",
+                                "version": "1.1.11-5+b1"
+                            },
+                            "mc": {
+                                "type": "dpkg",
+                                "version": "3:4.8.3-10"
+                            },
+                            "mc-data": {
+                                "type": "dpkg",
+                                "version": "3:4.8.3-10"
+                            },
+                            "mdadm": {
+                                "type": "dpkg",
+                                "version": "3.2.5-3"
+                            },
+                            "memtester": {
+                                "type": "dpkg",
+                                "version": "4.2.2-1"
+                            },
+                            "mii-diag": {
+                                "type": "dpkg",
+                                "version": "2.11-3+b1"
+                            },
+                            "mime-support": {
+                                "type": "dpkg",
+                                "version": "3.52-1"
+                            },
+                            "minicom": {
+                                "type": "dpkg",
+                                "version": "2.6.1-1"
+                            },
+                            "module-init-tools": {
+                                "type": "dpkg",
+                                "version": "9-2"
+                            },
+                            "mount": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "mt-st": {
+                                "type": "dpkg",
+                                "version": "1.1-4"
+                            },
+                            "mtools": {
+                                "type": "dpkg",
+                                "version": "4.0.17-1"
+                            },
+                            "mtr-tiny": {
+                                "type": "dpkg",
+                                "version": "0.82-3"
+                            },
+                            "multiarch-support": {
+                                "type": "dpkg",
+                                "version": "2.13-37"
+                            },
+                            "mutt": {
+                                "type": "dpkg",
+                                "version": "1.5.21-6.2"
+                            },
+                            "nano": {
+                                "type": "dpkg",
+                                "version": "2.2.6-1+b1"
+                            },
+                            "ncurses-base": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "ncurses-bin": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "net-tools": {
+                                "type": "dpkg",
+                                "version": "1.60-24.2"
+                            },
+                            "netbase": {
+                                "type": "dpkg",
+                                "version": "5.0"
+                            },
+                            "netcat-openbsd": {
+                                "type": "dpkg",
+                                "version": "1.105-7"
+                            },
+                            "nfs-common": {
+                                "type": "dpkg",
+                                "version": "1:1.2.6-3"
+                            },
+                            "nfs-kernel-server": {
+                                "type": "dpkg",
+                                "version": "1:1.2.6-3"
+                            },
+                            "nmap": {
+                                "type": "dpkg",
+                                "version": "6.00-0.2"
+                            },
+                            "ntfs-3g": {
+                                "type": "dpkg",
+                                "version": "1:2012.1.15AR.5-2",
+                                "version_possibly_truncated": true
+                            },
+                            "ntpdate": {
+                                "type": "dpkg",
+                                "version": "1:4.2.6.p5+dfsg-2",
+                                "version_possibly_truncated": true
+                            },
+                            "nvi": {
+                                "type": "dpkg",
+                                "version": "1.81.6-8.2"
+                            },
+                            "openbsd-inetd": {
+                                "type": "dpkg",
+                                "version": "0.20091229-2"
+                            },
+                            "openssh-client": {
+                                "type": "dpkg",
+                                "version": "1:6.0p1-3"
+                            },
+                            "openssh-server": {
+                                "type": "dpkg",
+                                "version": "1:6.0p1-3"
+                            },
+                            "openssl": {
+                                "type": "dpkg",
+                                "version": "1.0.1c-4"
+                            },
+                            "openvpn": {
+                                "type": "dpkg",
+                                "version": "2.2.1-8"
+                            },
+                            "oui": {
+                                "type": "dpkg",
+                                "version": "1.0-0~1finnix2"
+                            },
+                            "p7zip": {
+                                "type": "dpkg",
+                                "version": "9.20.1~dfsg.1-4"
+                            },
+                            "parted": {
+                                "type": "dpkg",
+                                "version": "2.3-11"
+                            },
+                            "partimage": {
+                                "type": "dpkg",
+                                "version": "0.6.8-2.2"
+                            },
+                            "passwd": {
+                                "type": "dpkg",
+                                "version": "1:4.1.5.1-1"
+                            },
+                            "patch": {
+                                "type": "dpkg",
+                                "version": "2.6.1-3"
+                            },
+                            "pciutils": {
+                                "type": "dpkg",
+                                "version": "1:3.1.9-6"
+                            },
+                            "pcmciautils": {
+                                "type": "dpkg",
+                                "version": "018-8"
+                            },
+                            "perl": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "perl-base": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "perl-modules": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "pidentd": {
+                                "type": "dpkg",
+                                "version": "3.0.19.ds1-7"
+                            },
+                            "powermgmt-base": {
+                                "type": "dpkg",
+                                "version": "1.31"
+                            },
+                            "ppp": {
+                                "type": "dpkg",
+                                "version": "2.4.5-5.1+b1"
+                            },
+                            "pppconfig": {
+                                "type": "dpkg",
+                                "version": "2.3.18+nmu4"
+                            },
+                            "pppoe": {
+                                "type": "dpkg",
+                                "version": "3.8-3"
+                            },
+                            "pppoeconf": {
+                                "type": "dpkg",
+                                "version": "1.20"
+                            },
+                            "pptp-linux": {
+                                "type": "dpkg",
+                                "version": "1.7.2-7"
+                            },
+                            "procinfo": {
+                                "type": "dpkg",
+                                "version": "1:2.0.304-1"
+                            },
+                            "procps": {
+                                "type": "dpkg",
+                                "version": "1:3.3.3-2"
+                            },
+                            "psmisc": {
+                                "type": "dpkg",
+                                "version": "22.19-1"
+                            },
+                            "pump": {
+                                "type": "dpkg",
+                                "version": "0.8.24-7"
+                            },
+                            "pv": {
+                                "type": "dpkg",
+                                "version": "1.2.0-1"
+                            },
+                            "pwgen": {
+                                "type": "dpkg",
+                                "version": "2.06-1+b2"
+                            },
+                            "python": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-1"
+                            },
+                            "python-minimal": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-1"
+                            },
+                            "python-support": {
+                                "type": "dpkg",
+                                "version": "1.0.15"
+                            },
+                            "python2.7": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-2.1"
+                            },
+                            "python2.7-minimal": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-2.1"
+                            },
+                            "rdate": {
+                                "type": "dpkg",
+                                "version": "1:1.2-5"
+                            },
+                            "rdiff-backup": {
+                                "type": "dpkg",
+                                "version": "1.2.8-7"
+                            },
+                            "readline-common": {
+                                "type": "dpkg",
+                                "version": "6.2-8"
+                            },
+                            "reiser4progs": {
+                                "type": "dpkg",
+                                "version": "1.0.7-6.3"
+                            },
+                            "reiserfsprogs": {
+                                "type": "dpkg",
+                                "version": "1:3.6.21-1"
+                            },
+                            "rlwrap": {
+                                "type": "dpkg",
+                                "version": "0.37-3"
+                            },
+                            "robotfindskitten": {
+                                "type": "dpkg",
+                                "version": "1.7320508.406-3"
+                            },
+                            "rpcbind": {
+                                "type": "dpkg",
+                                "version": "0.2.0-8"
+                            },
+                            "rsync": {
+                                "type": "dpkg",
+                                "version": "3.0.9-4"
+                            },
+                            "runit": {
+                                "type": "dpkg",
+                                "version": "2.1.1-6.2"
+                            },
+                            "samba-common": {
+                                "type": "dpkg",
+                                "version": "2:3.6.6-3"
+                            },
+                            "screen": {
+                                "type": "dpkg",
+                                "version": "4.1.0~20120320git",
+                                "version_possibly_truncated": true
+                            },
+                            "sed": {
+                                "type": "dpkg",
+                                "version": "4.2.1-10"
+                            },
+                            "sendfile": {
+                                "type": "dpkg",
+                                "version": "2.1b.20080616-5.2",
+                                "version_possibly_truncated": true
+                            },
+                            "sensible-utils": {
+                                "type": "dpkg",
+                                "version": "0.0.7"
+                            },
+                            "setserial": {
+                                "type": "dpkg",
+                                "version": "2.17-47"
+                            },
+                            "sharutils": {
+                                "type": "dpkg",
+                                "version": "1:4.11.1-1"
+                            },
+                            "sl": {
+                                "type": "dpkg",
+                                "version": "3.03-17"
+                            },
+                            "smartmontools": {
+                                "type": "dpkg",
+                                "version": "5.41+svn3365-1"
+                            },
+                            "smbclient": {
+                                "type": "dpkg",
+                                "version": "2:3.6.6-3"
+                            },
+                            "snmp": {
+                                "type": "dpkg",
+                                "version": "5.4.3~dfsg-2.7"
+                            },
+                            "squashfs-tools": {
+                                "type": "dpkg",
+                                "version": "1:4.2-5"
+                            },
+                            "sshfs": {
+                                "type": "dpkg",
+                                "version": "2.4-1"
+                            },
+                            "ssmtp": {
+                                "type": "dpkg",
+                                "version": "2.64-7"
+                            },
+                            "strace": {
+                                "type": "dpkg",
+                                "version": "4.5.20-2.3"
+                            },
+                            "stress": {
+                                "type": "dpkg",
+                                "version": "1.0.1-1"
+                            },
+                            "stunnel4": {
+                                "type": "dpkg",
+                                "version": "3:4.53-1"
+                            },
+                            "sudo": {
+                                "type": "dpkg",
+                                "version": "1.8.5p2-1"
+                            },
+                            "syslinux": {
+                                "type": "dpkg",
+                                "version": "2:4.05+dfsg-6+deb",
+                                "version_possibly_truncated": true
+                            },
+                            "syslinux-common": {
+                                "type": "dpkg",
+                                "version": "2:4.05+dfsg-6+deb",
+                                "version_possibly_truncated": true
+                            },
+                            "sysv-rc": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "sysvinit": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "sysvinit-utils": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "tar": {
+                                "type": "dpkg",
+                                "version": "1.26-4"
+                            },
+                            "tcpd": {
+                                "type": "dpkg",
+                                "version": "7.6.q-24"
+                            },
+                            "tcpdump": {
+                                "type": "dpkg",
+                                "version": "4.3.0-1"
+                            },
+                            "telnet-ssl": {
+                                "type": "dpkg",
+                                "version": "0.17.24+0.1-23"
+                            },
+                            "testdisk": {
+                                "type": "dpkg",
+                                "version": "6.13-1"
+                            },
+                            "tftp": {
+                                "type": "dpkg",
+                                "version": "0.17-18"
+                            },
+                            "tftpd-hpa": {
+                                "type": "dpkg",
+                                "version": "5.2-4"
+                            },
+                            "time": {
+                                "type": "dpkg",
+                                "version": "1.7-24"
+                            },
+                            "tmux": {
+                                "type": "dpkg",
+                                "version": "1.6-2"
+                            },
+                            "tofrodos": {
+                                "type": "dpkg",
+                                "version": "1.7.9.debian.1-1"
+                            },
+                            "traceroute": {
+                                "type": "dpkg",
+                                "version": "1:2.0.18-3"
+                            },
+                            "twuewand": {
+                                "type": "dpkg",
+                                "version": "2.0-0~1finnix2"
+                            },
+                            "tzdata": {
+                                "type": "dpkg",
+                                "version": "2012j-1"
+                            },
+                            "ucf": {
+                                "type": "dpkg",
+                                "version": "3.0025+nmu3"
+                            },
+                            "udev": {
+                                "type": "dpkg",
+                                "version": "175-7"
+                            },
+                            "udftools": {
+                                "type": "dpkg",
+                                "version": "1.0.0b3-14.2"
+                            },
+                            "units": {
+                                "type": "dpkg",
+                                "version": "1.88-1"
+                            },
+                            "unp": {
+                                "type": "dpkg",
+                                "version": "2.0~pre7+nmu1"
+                            },
+                            "unzip": {
+                                "type": "dpkg",
+                                "version": "6.0-8"
+                            },
+                            "update-inetd": {
+                                "type": "dpkg",
+                                "version": "4.43"
+                            },
+                            "usbutils": {
+                                "type": "dpkg",
+                                "version": "1:005-3"
+                            },
+                            "util-linux": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "uuid-runtime": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "vanityhash": {
+                                "type": "dpkg",
+                                "version": "1.1-0~1finnix2"
+                            },
+                            "vlan": {
+                                "type": "dpkg",
+                                "version": "1.9-3"
+                            },
+                            "wget": {
+                                "type": "dpkg",
+                                "version": "1.13.4-3"
+                            },
+                            "whiptail": {
+                                "type": "dpkg",
+                                "version": "0.52.14-10"
+                            },
+                            "whois": {
+                                "type": "dpkg",
+                                "version": "5.0.20"
+                            },
+                            "wipe": {
+                                "type": "dpkg",
+                                "version": "0.22-1"
+                            },
+                            "wireless-tools": {
+                                "type": "dpkg",
+                                "version": "30~pre9-8"
+                            },
+                            "wodim": {
+                                "type": "dpkg",
+                                "version": "9:1.1.11-2"
+                            },
+                            "wpasupplicant": {
+                                "type": "dpkg",
+                                "version": "1.0-3+b1"
+                            },
+                            "xfsdump": {
+                                "type": "dpkg",
+                                "version": "3.0.6"
+                            },
+                            "xfsprogs": {
+                                "type": "dpkg",
+                                "version": "3.1.7+b1"
+                            },
+                            "xz-utils": {
+                                "type": "dpkg",
+                                "version": "5.1.1alpha+201206",
+                                "version_possibly_truncated": true
+                            },
+                            "zerofree": {
+                                "type": "dpkg",
+                                "version": "1.0.2-1"
+                            },
+                            "zile": {
+                                "type": "dpkg",
+                                "version": "2.3.21-1"
+                            },
+                            "zip": {
+                                "type": "dpkg",
+                                "version": "3.0-6"
+                            },
+                            "zlib1g": {
+                                "type": "dpkg",
+                                "version": "1:1.2.7.dfsg-13"
+                            }
+                        }
+                    },
+                    "powerpc": {
+                        "base_os": "Debian testing (2012-12-23)",
+                        "files": {
+                            "finnix-ppc-107.iso": {
+                                "md5_checksum": "f107ff39845b500a897dc3480cc0ef2d",
+                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niQIcBAABCAAGBQJQ11JuAAoJEH1vhcBDVubCl/0P/3ocfmfppi0CJHNCKvraOqlN\nMWMKxhBFVWr884z16abtcQy1i0XzQ1rXDW6QmYmnM/OxUkpfpADYkr6dnTdX/Q64\nes0czfBO0HJCF6ldwnWwxw3siLzszvZ5qJ7igsuD6qMPBsSFs5FPZL8wxfDZXTnb\ntjAxoMGqW+hE7L0lFA37GclvFXx5fG5K598+AqiA+OpkJOTX3MeFms8RsTjVKBRm\nCM7Si4D9z6S6EnzxsRUdAomdDzf/BoRiZBeitE0SLo6FyBugBzofNwi7LRFWUtfe\ngnr4ExrmPLDglObaHxn2jv2VbBvr38KQ9iKOQJsCiLi1DqAg2lGVQhLl0DaZk7/Z\nWoSJq6W5cl4xtzTZ/00iwMYjrJ96bqD74ayAekgYioU8dUjlp8bJtYoVJ/YM1eIz\nKpvj5PEV2ZcJIDWfihpOFmUu/7wZqgC6vrCGr/8u3e4mWl1iTvLywoInWavrhVOi\n4tqh7v/w/qo2xXnqkA6/rkY/tdRflbpUbkPmFi2PK6iYhT+dqvX58z2E7b8KwjXD\n4XRYqrYnhNOyFsgnKQnat6XdE6gycyBp4ap86t6eiHx479CAp6Gyq02Avq2s0hVN\nHbYTD05F6dAwEauNfuzB7CQrGgOjNpmOMZxIt8Y0hJauapZyghoxi9NJaC1hGL+e\n1hSIuszFVms9mhTH+4oI\n=XVw5\n-----END PGP SIGNATURE-----",
+                                "sha256_checksum": "7516d444f9fad82377253d4d937880ab7cb267f46627cbdbb4865a76b36c54f5",
+                                "sha512_checksum": "dac9dde39d9c409864809550500e17abe371bcebaceae31b6caeb10957f7003fd6935a5d1f967f4f80c524edcbf3fed3b3db7cdd7b7fb30f8ba331eafb91c010",
+                                "size": 121872384
+                            }
+                        },
+                        "kernel": "Linux 3.6",
+                        "packages": {
+                            "2ping": {
+                                "type": "dpkg",
+                                "version": "2.0-1"
+                            },
+                            "adduser": {
+                                "type": "dpkg",
+                                "version": "3.113+nmu3"
+                            },
+                            "apmd": {
+                                "type": "dpkg",
+                                "version": "3.2.2-14+b1"
+                            },
+                            "apt": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "apt-utils": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "arj": {
+                                "type": "dpkg",
+                                "version": "3.10.22-10"
+                            },
+                            "arping": {
+                                "type": "dpkg",
+                                "version": "2.11-1"
+                            },
+                            "arpwatch": {
+                                "type": "dpkg",
+                                "version": "2.1a15-1.2"
+                            },
+                            "ash": {
+                                "type": "dpkg",
+                                "version": "0.5.7-3"
+                            },
+                            "at": {
+                                "type": "dpkg",
+                                "version": "3.1.13-2"
+                            },
+                            "attr": {
+                                "type": "dpkg",
+                                "version": "1:2.4.46-8"
+                            },
+                            "base-files": {
+                                "type": "dpkg",
+                                "version": "6.11"
+                            },
+                            "base-passwd": {
+                                "type": "dpkg",
+                                "version": "3.5.26"
+                            },
+                            "bash": {
+                                "type": "dpkg",
+                                "version": "4.2-4"
+                            },
+                            "bc": {
+                                "type": "dpkg",
+                                "version": "1.06.95-2"
+                            },
+                            "bind9-host": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "binutils": {
+                                "type": "dpkg",
+                                "version": "2.22-7.1"
+                            },
+                            "bittornado": {
+                                "type": "dpkg",
+                                "version": "0.3.18-10"
+                            },
+                            "bonnie++": {
+                                "type": "dpkg",
+                                "version": "1.96"
+                            },
+                            "bootchart": {
+                                "type": "dpkg",
+                                "version": "0.10~svn407-3.3"
+                            },
+                            "bridge-utils": {
+                                "type": "dpkg",
+                                "version": "1.5-6"
+                            },
+                            "bsd-mailx": {
+                                "type": "dpkg",
+                                "version": "8.1.2-0.20111106c",
+                                "version_possibly_truncated": true
+                            },
+                            "bsdmainutils": {
+                                "type": "dpkg",
+                                "version": "9.0.3"
+                            },
+                            "bsdutils": {
+                                "type": "dpkg",
+                                "version": "1:2.20.1-5.3"
+                            },
+                            "btrfs-tools": {
+                                "type": "dpkg",
+                                "version": "0.19+20120328-7"
+                            },
+                            "buffer": {
+                                "type": "dpkg",
+                                "version": "1.19-11"
+                            },
+                            "bzip2": {
+                                "type": "dpkg",
+                                "version": "1.0.6-4"
+                            },
+                            "ca-certificates": {
+                                "type": "dpkg",
+                                "version": "20120623"
+                            },
+                            "cabextract": {
+                                "type": "dpkg",
+                                "version": "1.4-3"
+                            },
+                            "cdbackup": {
+                                "type": "dpkg",
+                                "version": "0.7.0-5"
+                            },
+                            "cdpr": {
+                                "type": "dpkg",
+                                "version": "2.4-1"
+                            },
+                            "chkrootkit": {
+                                "type": "dpkg",
+                                "version": "0.49-4.1"
+                            },
+                            "chntpw": {
+                                "type": "dpkg",
+                                "version": "0.99.6-2"
+                            },
+                            "cifs-utils": {
+                                "type": "dpkg",
+                                "version": "2:5.5-1"
+                            },
+                            "console-data": {
+                                "type": "dpkg",
+                                "version": "2:1.12-2"
+                            },
+                            "console-tools": {
+                                "type": "dpkg",
+                                "version": "1:0.2.3dbs-70"
+                            },
+                            "coreutils": {
+                                "type": "dpkg",
+                                "version": "8.13-3.4"
+                            },
+                            "cpio": {
+                                "type": "dpkg",
+                                "version": "2.11-8"
+                            },
+                            "cron": {
+                                "type": "dpkg",
+                                "version": "3.0pl1-124"
+                            },
+                            "cryptsetup": {
+                                "type": "dpkg",
+                                "version": "2:1.4.3-4"
+                            },
+                            "cryptsetup-bin": {
+                                "type": "dpkg",
+                                "version": "2:1.4.3-4"
+                            },
+                            "curl": {
+                                "type": "dpkg",
+                                "version": "7.26.0-1"
+                            },
+                            "dash": {
+                                "type": "dpkg",
+                                "version": "0.5.7-3"
+                            },
+                            "debconf": {
+                                "type": "dpkg",
+                                "version": "1.5.48"
+                            },
+                            "debconf-i18n": {
+                                "type": "dpkg",
+                                "version": "1.5.48"
+                            },
+                            "debian-archive-keyring": {
+                                "type": "dpkg",
+                                "version": "2012.4"
+                            },
+                            "debianutils": {
+                                "type": "dpkg",
+                                "version": "4.3.2"
+                            },
+                            "debootstrap": {
+                                "type": "dpkg",
+                                "version": "1.0.44"
+                            },
+                            "diffutils": {
+                                "type": "dpkg",
+                                "version": "1:3.2-6"
+                            },
+                            "dmsetup": {
+                                "type": "dpkg",
+                                "version": "2:1.02.74-4"
+                            },
+                            "dnsutils": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "dosfstools": {
+                                "type": "dpkg",
+                                "version": "3.0.13-1"
+                            },
+                            "dpkg": {
+                                "type": "dpkg",
+                                "version": "1.16.9"
+                            },
+                            "dselect": {
+                                "type": "dpkg",
+                                "version": "1.16.9"
+                            },
+                            "dump": {
+                                "type": "dpkg",
+                                "version": "0.4b44-1"
+                            },
+                            "dvd+rw-tools": {
+                                "type": "dpkg",
+                                "version": "7.1-10"
+                            },
+                            "e2fslibs": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "e2fsprogs": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "ed": {
+                                "type": "dpkg",
+                                "version": "1.6-2"
+                            },
+                            "eject": {
+                                "type": "dpkg",
+                                "version": "2.1.5+deb1+cvs200",
+                                "version_possibly_truncated": true
+                            },
+                            "elinks-lite": {
+                                "type": "dpkg",
+                                "version": "0.12~pre5-9"
+                            },
+                            "emad": {
+                                "type": "dpkg",
+                                "version": "1.0-0~1finnix2"
+                            },
+                            "etherwake": {
+                                "type": "dpkg",
+                                "version": "1.09-3"
+                            },
+                            "ethtool": {
+                                "type": "dpkg",
+                                "version": "1:3.4.2-1"
+                            },
+                            "fdutils": {
+                                "type": "dpkg",
+                                "version": "5.5-20060227-6"
+                            },
+                            "fetchmail": {
+                                "type": "dpkg",
+                                "version": "6.3.21-4"
+                            },
+                            "file": {
+                                "type": "dpkg",
+                                "version": "5.11-2"
+                            },
+                            "findutils": {
+                                "type": "dpkg",
+                                "version": "4.4.2-4"
+                            },
+                            "finger": {
+                                "type": "dpkg",
+                                "version": "0.17-15"
+                            },
+                            "finnix-base": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-keyring": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-netboot": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-release": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-scripts": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-standard": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-standard-arch": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "finnix-utmp": {
+                                "type": "dpkg",
+                                "version": "107"
+                            },
+                            "fsarchiver": {
+                                "type": "dpkg",
+                                "version": "0.6.15-1"
+                            },
+                            "fuse": {
+                                "type": "dpkg",
+                                "version": "2.9.0-2"
+                            },
+                            "fuse-utils": {
+                                "type": "dpkg",
+                                "version": "2.9.0-2"
+                            },
+                            "fuseext2": {
+                                "type": "dpkg",
+                                "version": "0.4-1"
+                            },
+                            "fxload": {
+                                "type": "dpkg",
+                                "version": "0.0.20081013-1"
+                            },
+                            "gawk": {
+                                "type": "dpkg",
+                                "version": "1:4.0.1+dfsg-2"
+                            },
+                            "gcc-4.7-base": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "gddrescue": {
+                                "type": "dpkg",
+                                "version": "1.16-1"
+                            },
+                            "gdisk-noicu": {
+                                "type": "dpkg",
+                                "version": "0.8.5-1+finnix2"
+                            },
+                            "genisoimage": {
+                                "type": "dpkg",
+                                "version": "9:1.1.11-2"
+                            },
+                            "genromfs": {
+                                "type": "dpkg",
+                                "version": "0.5.2-2"
+                            },
+                            "gettext-base": {
+                                "type": "dpkg",
+                                "version": "0.18.1.1-9"
+                            },
+                            "gnupg": {
+                                "type": "dpkg",
+                                "version": "1.4.12-6"
+                            },
+                            "gpgv": {
+                                "type": "dpkg",
+                                "version": "1.4.12-6"
+                            },
+                            "gpm": {
+                                "type": "dpkg",
+                                "version": "1.20.4-6"
+                            },
+                            "grep": {
+                                "type": "dpkg",
+                                "version": "2.12-2"
+                            },
+                            "grepcidr": {
+                                "type": "dpkg",
+                                "version": "1.3-5"
+                            },
+                            "groff-base": {
+                                "type": "dpkg",
+                                "version": "1.21-9"
+                            },
+                            "growisofs": {
+                                "type": "dpkg",
+                                "version": "7.1-10"
+                            },
+                            "gzip": {
+                                "type": "dpkg",
+                                "version": "1.5-1.1"
+                            },
+                            "hdparm": {
+                                "type": "dpkg",
+                                "version": "9.39-1+b1"
+                            },
+                            "hexedit": {
+                                "type": "dpkg",
+                                "version": "1.2.12-4"
+                            },
+                            "hfsutils": {
+                                "type": "dpkg",
+                                "version": "3.2.6-11"
+                            },
+                            "hostname": {
+                                "type": "dpkg",
+                                "version": "3.11"
+                            },
+                            "htop": {
+                                "type": "dpkg",
+                                "version": "1.0.1-1"
+                            },
+                            "ifenslave-2.6": {
+                                "type": "dpkg",
+                                "version": "1.1.0-20"
+                            },
+                            "iftop": {
+                                "type": "dpkg",
+                                "version": "1.0~pre2-3"
+                            },
+                            "ifupdown": {
+                                "type": "dpkg",
+                                "version": "0.7.5"
+                            },
+                            "initscripts": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "insserv": {
+                                "type": "dpkg",
+                                "version": "1.14.0-5"
+                            },
+                            "iotop": {
+                                "type": "dpkg",
+                                "version": "0.4.4-4"
+                            },
+                            "ipcalc": {
+                                "type": "dpkg",
+                                "version": "0.41-2.1"
+                            },
+                            "iproute": {
+                                "type": "dpkg",
+                                "version": "20120521-3"
+                            },
+                            "iptables": {
+                                "type": "dpkg",
+                                "version": "1.4.14-3"
+                            },
+                            "iptraf": {
+                                "type": "dpkg",
+                                "version": "3.0.0-8.1"
+                            },
+                            "iputils-ping": {
+                                "type": "dpkg",
+                                "version": "3:20101006-1+b1"
+                            },
+                            "irssi": {
+                                "type": "dpkg",
+                                "version": "0.8.15-5"
+                            },
+                            "isc-dhcp-client": {
+                                "type": "dpkg",
+                                "version": "4.2.2.dfsg.1-5+de",
+                                "version_possibly_truncated": true
+                            },
+                            "isc-dhcp-common": {
+                                "type": "dpkg",
+                                "version": "4.2.2.dfsg.1-5+de",
+                                "version_possibly_truncated": true
+                            },
+                            "isomd5sum": {
+                                "type": "dpkg",
+                                "version": "1:1.0.7+git.20110",
+                                "version_possibly_truncated": true
+                            },
+                            "jfsutils": {
+                                "type": "dpkg",
+                                "version": "1.1.15-2"
+                            },
+                            "joe": {
+                                "type": "dpkg",
+                                "version": "3.7-2.3"
+                            },
+                            "kmod": {
+                                "type": "dpkg",
+                                "version": "9-2"
+                            },
+                            "less": {
+                                "type": "dpkg",
+                                "version": "444-4"
+                            },
+                            "lftp": {
+                                "type": "dpkg",
+                                "version": "4.3.6-1+deb7u1"
+                            },
+                            "libacl1": {
+                                "type": "dpkg",
+                                "version": "2.2.51-8"
+                            },
+                            "libapm1": {
+                                "type": "dpkg",
+                                "version": "3.2.2-14+b1"
+                            },
+                            "libapt-inst1.5": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "libapt-pkg4.12": {
+                                "type": "dpkg",
+                                "version": "0.9.7.6"
+                            },
+                            "libasprintf0c2": {
+                                "type": "dpkg",
+                                "version": "0.18.1.1-9"
+                            },
+                            "libattr1": {
+                                "type": "dpkg",
+                                "version": "1:2.4.46-8"
+                            },
+                            "libbind9-80": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libblas3": {
+                                "type": "dpkg",
+                                "version": "1.2.20110419-5"
+                            },
+                            "libblas3gf": {
+                                "type": "dpkg",
+                                "version": "1.2.20110419-5"
+                            },
+                            "libblkid1": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "libbsd0": {
+                                "type": "dpkg",
+                                "version": "0.4.2-1"
+                            },
+                            "libbz2-1.0": {
+                                "type": "dpkg",
+                                "version": "1.0.6-4"
+                            },
+                            "libc-bin": {
+                                "type": "dpkg",
+                                "version": "2.13-37"
+                            },
+                            "libc6": {
+                                "type": "dpkg",
+                                "version": "2.13-37"
+                            },
+                            "libcap-ng0": {
+                                "type": "dpkg",
+                                "version": "0.6.6-2"
+                            },
+                            "libcap2": {
+                                "type": "dpkg",
+                                "version": "1:2.22-1.2"
+                            },
+                            "libclass-isa-perl": {
+                                "type": "dpkg",
+                                "version": "0.36-3"
+                            },
+                            "libcomerr2": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "libconsole": {
+                                "type": "dpkg",
+                                "version": "1:0.2.3dbs-70"
+                            },
+                            "libcryptsetup4": {
+                                "type": "dpkg",
+                                "version": "2:1.4.3-4"
+                            },
+                            "libcurl3": {
+                                "type": "dpkg",
+                                "version": "7.26.0-1"
+                            },
+                            "libdb5.1": {
+                                "type": "dpkg",
+                                "version": "5.1.29-5"
+                            },
+                            "libdbus-1-3": {
+                                "type": "dpkg",
+                                "version": "1.6.8-1"
+                            },
+                            "libdevmapper-event1.02.1": {
+                                "type": "dpkg",
+                                "version": "2:1.02.74-4"
+                            },
+                            "libdevmapper1.02.1": {
+                                "type": "dpkg",
+                                "version": "2:1.02.74-4"
+                            },
+                            "libdns81": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libdpkg-perl": {
+                                "type": "dpkg",
+                                "version": "1.16.9"
+                            },
+                            "libedit2": {
+                                "type": "dpkg",
+                                "version": "2.11-20080614-5"
+                            },
+                            "libelfg0": {
+                                "type": "dpkg",
+                                "version": "0.8.13-3"
+                            },
+                            "libevent-2.0-5": {
+                                "type": "dpkg",
+                                "version": "2.0.19-stable-3"
+                            },
+                            "libexpat1": {
+                                "type": "dpkg",
+                                "version": "2.1.0-1"
+                            },
+                            "libffi5": {
+                                "type": "dpkg",
+                                "version": "3.0.10-3"
+                            },
+                            "libfile-copy-recursive-perl": {
+                                "type": "dpkg",
+                                "version": "0.38-1"
+                            },
+                            "libfuse2": {
+                                "type": "dpkg",
+                                "version": "2.9.0-2"
+                            },
+                            "libgcc1": {
+                                "type": "dpkg",
+                                "version": "1:4.7.2-4"
+                            },
+                            "libgcrypt11": {
+                                "type": "dpkg",
+                                "version": "1.5.0-3"
+                            },
+                            "libgdbm3": {
+                                "type": "dpkg",
+                                "version": "1.8.3-11"
+                            },
+                            "libgeoip1": {
+                                "type": "dpkg",
+                                "version": "1.4.8+dfsg-3"
+                            },
+                            "libgfortran3": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "libglib2.0-0": {
+                                "type": "dpkg",
+                                "version": "2.33.12+really2.3",
+                                "version_possibly_truncated": true
+                            },
+                            "libgnutls-openssl27": {
+                                "type": "dpkg",
+                                "version": "2.12.20-2"
+                            },
+                            "libgnutls26": {
+                                "type": "dpkg",
+                                "version": "2.12.20-2"
+                            },
+                            "libgpg-error0": {
+                                "type": "dpkg",
+                                "version": "1.10-3.1"
+                            },
+                            "libgpgme11": {
+                                "type": "dpkg",
+                                "version": "1.2.0-1.4"
+                            },
+                            "libgpm2": {
+                                "type": "dpkg",
+                                "version": "1.20.4-6"
+                            },
+                            "libgssapi-krb5-2": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libgssglue1": {
+                                "type": "dpkg",
+                                "version": "0.4-2"
+                            },
+                            "libidn11": {
+                                "type": "dpkg",
+                                "version": "1.25-2"
+                            },
+                            "libisc83": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libisccc80": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libisccfg82": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "libiw30": {
+                                "type": "dpkg",
+                                "version": "30~pre9-8"
+                            },
+                            "libjpeg8": {
+                                "type": "dpkg",
+                                "version": "8d-1"
+                            },
+                            "libk5crypto3": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libkeyutils1": {
+                                "type": "dpkg",
+                                "version": "1.5.5-3"
+                            },
+                            "libkmod2": {
+                                "type": "dpkg",
+                                "version": "9-2"
+                            },
+                            "libkrb5-3": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libkrb5support0": {
+                                "type": "dpkg",
+                                "version": "1.10.1+dfsg-3"
+                            },
+                            "libldap-2.4-2": {
+                                "type": "dpkg",
+                                "version": "2.4.31-1"
+                            },
+                            "liblinear1": {
+                                "type": "dpkg",
+                                "version": "1.8+dfsg-1"
+                            },
+                            "liblocale-gettext-perl": {
+                                "type": "dpkg",
+                                "version": "1.05-7+b1"
+                            },
+                            "liblockfile-bin": {
+                                "type": "dpkg",
+                                "version": "1.09-5"
+                            },
+                            "liblockfile1": {
+                                "type": "dpkg",
+                                "version": "1.09-5"
+                            },
+                            "liblua5.1-0": {
+                                "type": "dpkg",
+                                "version": "5.1.5-4"
+                            },
+                            "liblwres80": {
+                                "type": "dpkg",
+                                "version": "1:9.8.1.dfsg.P1-4",
+                                "version_possibly_truncated": true
+                            },
+                            "liblzma5": {
+                                "type": "dpkg",
+                                "version": "5.1.1alpha+201206",
+                                "version_possibly_truncated": true
+                            },
+                            "liblzo2-2": {
+                                "type": "dpkg",
+                                "version": "2.06-1"
+                            },
+                            "libmagic1": {
+                                "type": "dpkg",
+                                "version": "5.11-2"
+                            },
+                            "libmount1": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "libncurses5": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "libncursesw5": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "libnet1": {
+                                "type": "dpkg",
+                                "version": "1.1.4-2.1"
+                            },
+                            "libnewt0.52": {
+                                "type": "dpkg",
+                                "version": "0.52.14-10"
+                            },
+                            "libnfnetlink0": {
+                                "type": "dpkg",
+                                "version": "1.0.0-1"
+                            },
+                            "libnfsidmap2": {
+                                "type": "dpkg",
+                                "version": "0.25-4"
+                            },
+                            "libnl-3-200": {
+                                "type": "dpkg",
+                                "version": "3.2.7-4"
+                            },
+                            "libnl-genl-3-200": {
+                                "type": "dpkg",
+                                "version": "3.2.7-4"
+                            },
+                            "libntfs10": {
+                                "type": "dpkg",
+                                "version": "2.0.0-1+b1"
+                            },
+                            "libp11-kit0": {
+                                "type": "dpkg",
+                                "version": "0.12-3"
+                            },
+                            "libpam-modules": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libpam-modules-bin": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libpam-runtime": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libpam0g": {
+                                "type": "dpkg",
+                                "version": "1.1.3-7.1"
+                            },
+                            "libparted0debian1": {
+                                "type": "dpkg",
+                                "version": "2.3-11"
+                            },
+                            "libpcap0.8": {
+                                "type": "dpkg",
+                                "version": "1.3.0-1"
+                            },
+                            "libpci3": {
+                                "type": "dpkg",
+                                "version": "1:3.1.9-6"
+                            },
+                            "libpcre3": {
+                                "type": "dpkg",
+                                "version": "1:8.30-5"
+                            },
+                            "libpcsclite1": {
+                                "type": "dpkg",
+                                "version": "1.8.4-1"
+                            },
+                            "libperl5.14": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "libpipeline1": {
+                                "type": "dpkg",
+                                "version": "1.2.1-1"
+                            },
+                            "libpkcs11-helper1": {
+                                "type": "dpkg",
+                                "version": "1.09-1"
+                            },
+                            "libpopt0": {
+                                "type": "dpkg",
+                                "version": "1.16-7"
+                            },
+                            "libprocps0": {
+                                "type": "dpkg",
+                                "version": "1:3.3.3-2"
+                            },
+                            "libpth20": {
+                                "type": "dpkg",
+                                "version": "2.0.7-16"
+                            },
+                            "libreadline5": {
+                                "type": "dpkg",
+                                "version": "5.2-12"
+                            },
+                            "libreadline6": {
+                                "type": "dpkg",
+                                "version": "6.2-8"
+                            },
+                            "librsync1": {
+                                "type": "dpkg",
+                                "version": "0.9.7-9"
+                            },
+                            "librtmp0": {
+                                "type": "dpkg",
+                                "version": "2.4+20111222.git4",
+                                "version_possibly_truncated": true
+                            },
+                            "libsasl2-2": {
+                                "type": "dpkg",
+                                "version": "2.1.25.dfsg1-6"
+                            },
+                            "libselinux1": {
+                                "type": "dpkg",
+                                "version": "2.1.9-5"
+                            },
+                            "libsemanage-common": {
+                                "type": "dpkg",
+                                "version": "2.1.6-6"
+                            },
+                            "libsemanage1": {
+                                "type": "dpkg",
+                                "version": "2.1.6-6"
+                            },
+                            "libsensors4": {
+                                "type": "dpkg",
+                                "version": "1:3.3.2-2"
+                            },
+                            "libsepol1": {
+                                "type": "dpkg",
+                                "version": "2.1.4-3"
+                            },
+                            "libsigsegv2": {
+                                "type": "dpkg",
+                                "version": "2.9-4"
+                            },
+                            "libslang2": {
+                                "type": "dpkg",
+                                "version": "2.2.4-15"
+                            },
+                            "libsnmp-base": {
+                                "type": "dpkg",
+                                "version": "5.4.3~dfsg-2.7"
+                            },
+                            "libsnmp15": {
+                                "type": "dpkg",
+                                "version": "5.4.3~dfsg-2.7"
+                            },
+                            "libsqlite3-0": {
+                                "type": "dpkg",
+                                "version": "3.7.13-1"
+                            },
+                            "libss2": {
+                                "type": "dpkg",
+                                "version": "1.42.5-1"
+                            },
+                            "libssh2-1": {
+                                "type": "dpkg",
+                                "version": "1.4.2-1.1"
+                            },
+                            "libssl1.0.0": {
+                                "type": "dpkg",
+                                "version": "1.0.1c-4"
+                            },
+                            "libstdc++6": {
+                                "type": "dpkg",
+                                "version": "4.7.2-4"
+                            },
+                            "libswitch-perl": {
+                                "type": "dpkg",
+                                "version": "2.16-2"
+                            },
+                            "libtalloc2": {
+                                "type": "dpkg",
+                                "version": "2.0.7+git20120207",
+                                "version_possibly_truncated": true
+                            },
+                            "libtasn1-3": {
+                                "type": "dpkg",
+                                "version": "2.13-2"
+                            },
+                            "libtdb1": {
+                                "type": "dpkg",
+                                "version": "1.2.10-2"
+                            },
+                            "libtext-charwidth-perl": {
+                                "type": "dpkg",
+                                "version": "0.04-7+b1"
+                            },
+                            "libtext-iconv-perl": {
+                                "type": "dpkg",
+                                "version": "1.7-5"
+                            },
+                            "libtext-wrapi18n-perl": {
+                                "type": "dpkg",
+                                "version": "0.06-7"
+                            },
+                            "libtimedate-perl": {
+                                "type": "dpkg",
+                                "version": "1.2000-1"
+                            },
+                            "libtinfo5": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "libtirpc1": {
+                                "type": "dpkg",
+                                "version": "0.2.2-5"
+                            },
+                            "libtokyocabinet9": {
+                                "type": "dpkg",
+                                "version": "1.4.47-2"
+                            },
+                            "libudev0": {
+                                "type": "dpkg",
+                                "version": "175-7"
+                            },
+                            "libusb-0.1-4": {
+                                "type": "dpkg",
+                                "version": "2:0.1.12-20+nmu1"
+                            },
+                            "libusb-1.0-0": {
+                                "type": "dpkg",
+                                "version": "2:1.0.11-1"
+                            },
+                            "libustr-1.0-1": {
+                                "type": "dpkg",
+                                "version": "1.0.4-3"
+                            },
+                            "libuuid1": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "libwbclient0": {
+                                "type": "dpkg",
+                                "version": "2:3.6.6-3"
+                            },
+                            "libwrap0": {
+                                "type": "dpkg",
+                                "version": "7.6.q-24"
+                            },
+                            "lm-sensors": {
+                                "type": "dpkg",
+                                "version": "1:3.3.2-2"
+                            },
+                            "login": {
+                                "type": "dpkg",
+                                "version": "1:4.1.5.1-1"
+                            },
+                            "lpr": {
+                                "type": "dpkg",
+                                "version": "1:2008.05.17+nmu1",
+                                "version_possibly_truncated": true
+                            },
+                            "lrzsz": {
+                                "type": "dpkg",
+                                "version": "0.12.21-5"
+                            },
+                            "lsb-base": {
+                                "type": "dpkg",
+                                "version": "4.1+Debian8"
+                            },
+                            "lsb-release": {
+                                "type": "dpkg",
+                                "version": "4.1+Debian8"
+                            },
+                            "lshw": {
+                                "type": "dpkg",
+                                "version": "02.16-1"
+                            },
+                            "lsof": {
+                                "type": "dpkg",
+                                "version": "4.86+dfsg-1"
+                            },
+                            "ltrace": {
+                                "type": "dpkg",
+                                "version": "0.5.3-2.1"
+                            },
+                            "lvm2": {
+                                "type": "dpkg",
+                                "version": "2.02.95-4"
+                            },
+                            "mac-fdisk": {
+                                "type": "dpkg",
+                                "version": "0.1-16"
+                            },
+                            "makedev": {
+                                "type": "dpkg",
+                                "version": "2.3.1-92"
+                            },
+                            "man-db": {
+                                "type": "dpkg",
+                                "version": "2.6.2-1"
+                            },
+                            "mawk": {
+                                "type": "dpkg",
+                                "version": "1.3.3-17"
+                            },
+                            "mbr": {
+                                "type": "dpkg",
+                                "version": "1.1.11-5"
+                            },
+                            "mc": {
+                                "type": "dpkg",
+                                "version": "3:4.8.3-10"
+                            },
+                            "mc-data": {
+                                "type": "dpkg",
+                                "version": "3:4.8.3-10"
+                            },
+                            "mdadm": {
+                                "type": "dpkg",
+                                "version": "3.2.5-3"
+                            },
+                            "memtester": {
+                                "type": "dpkg",
+                                "version": "4.2.2-1"
+                            },
+                            "mii-diag": {
+                                "type": "dpkg",
+                                "version": "2.11-3+b1"
+                            },
+                            "mime-support": {
+                                "type": "dpkg",
+                                "version": "3.52-1"
+                            },
+                            "minicom": {
+                                "type": "dpkg",
+                                "version": "2.6.1-1"
+                            },
+                            "module-init-tools": {
+                                "type": "dpkg",
+                                "version": "9-2"
+                            },
+                            "mount": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "mt-st": {
+                                "type": "dpkg",
+                                "version": "1.1-4"
+                            },
+                            "mtools": {
+                                "type": "dpkg",
+                                "version": "4.0.17-1"
+                            },
+                            "mtr-tiny": {
+                                "type": "dpkg",
+                                "version": "0.82-3"
+                            },
+                            "multiarch-support": {
+                                "type": "dpkg",
+                                "version": "2.13-37"
+                            },
+                            "mutt": {
+                                "type": "dpkg",
+                                "version": "1.5.21-6.2"
+                            },
+                            "nano": {
+                                "type": "dpkg",
+                                "version": "2.2.6-1+b1"
+                            },
+                            "ncurses-base": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "ncurses-bin": {
+                                "type": "dpkg",
+                                "version": "5.9-10"
+                            },
+                            "net-tools": {
+                                "type": "dpkg",
+                                "version": "1.60-24.2"
+                            },
+                            "netbase": {
+                                "type": "dpkg",
+                                "version": "5.0"
+                            },
+                            "netcat-openbsd": {
+                                "type": "dpkg",
+                                "version": "1.105-7"
+                            },
+                            "nfs-common": {
+                                "type": "dpkg",
+                                "version": "1:1.2.6-3"
+                            },
+                            "nfs-kernel-server": {
+                                "type": "dpkg",
+                                "version": "1:1.2.6-3"
+                            },
+                            "nmap": {
+                                "type": "dpkg",
+                                "version": "6.00-0.2"
+                            },
+                            "ntfs-3g": {
+                                "type": "dpkg",
+                                "version": "1:2012.1.15AR.5-2",
+                                "version_possibly_truncated": true
+                            },
+                            "ntpdate": {
+                                "type": "dpkg",
+                                "version": "1:4.2.6.p5+dfsg-2",
+                                "version_possibly_truncated": true
+                            },
+                            "nvi": {
+                                "type": "dpkg",
+                                "version": "1.81.6-8.2"
+                            },
+                            "openbsd-inetd": {
+                                "type": "dpkg",
+                                "version": "0.20091229-2"
+                            },
+                            "openssh-client": {
+                                "type": "dpkg",
+                                "version": "1:6.0p1-3"
+                            },
+                            "openssh-server": {
+                                "type": "dpkg",
+                                "version": "1:6.0p1-3"
+                            },
+                            "openssl": {
+                                "type": "dpkg",
+                                "version": "1.0.1c-4"
+                            },
+                            "openvpn": {
+                                "type": "dpkg",
+                                "version": "2.2.1-8"
+                            },
+                            "oui": {
+                                "type": "dpkg",
+                                "version": "1.0-0~1finnix2"
+                            },
+                            "p7zip": {
+                                "type": "dpkg",
+                                "version": "9.20.1~dfsg.1-4"
+                            },
+                            "parted": {
+                                "type": "dpkg",
+                                "version": "2.3-11"
+                            },
+                            "partimage": {
+                                "type": "dpkg",
+                                "version": "0.6.8-2.2"
+                            },
+                            "passwd": {
+                                "type": "dpkg",
+                                "version": "1:4.1.5.1-1"
+                            },
+                            "patch": {
+                                "type": "dpkg",
+                                "version": "2.6.1-3"
+                            },
+                            "pciutils": {
+                                "type": "dpkg",
+                                "version": "1:3.1.9-6"
+                            },
+                            "pcmciautils": {
+                                "type": "dpkg",
+                                "version": "018-8"
+                            },
+                            "perl": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "perl-base": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "perl-modules": {
+                                "type": "dpkg",
+                                "version": "5.14.2-16"
+                            },
+                            "pidentd": {
+                                "type": "dpkg",
+                                "version": "3.0.19.ds1-7"
+                            },
+                            "powermgmt-base": {
+                                "type": "dpkg",
+                                "version": "1.31"
+                            },
+                            "powerpc-utils": {
+                                "type": "dpkg",
+                                "version": "1.1.3-24"
+                            },
+                            "ppp": {
+                                "type": "dpkg",
+                                "version": "2.4.5-5.1+b1"
+                            },
+                            "pppconfig": {
+                                "type": "dpkg",
+                                "version": "2.3.18+nmu4"
+                            },
+                            "pppoe": {
+                                "type": "dpkg",
+                                "version": "3.8-3"
+                            },
+                            "pppoeconf": {
+                                "type": "dpkg",
+                                "version": "1.20"
+                            },
+                            "pptp-linux": {
+                                "type": "dpkg",
+                                "version": "1.7.2-7"
+                            },
+                            "procinfo": {
+                                "type": "dpkg",
+                                "version": "1:2.0.304-1"
+                            },
+                            "procps": {
+                                "type": "dpkg",
+                                "version": "1:3.3.3-2"
+                            },
+                            "psmisc": {
+                                "type": "dpkg",
+                                "version": "22.19-1"
+                            },
+                            "pump": {
+                                "type": "dpkg",
+                                "version": "0.8.24-7"
+                            },
+                            "pv": {
+                                "type": "dpkg",
+                                "version": "1.2.0-1"
+                            },
+                            "pwgen": {
+                                "type": "dpkg",
+                                "version": "2.06-1+b2"
+                            },
+                            "python": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-1"
+                            },
+                            "python-minimal": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-1"
+                            },
+                            "python-support": {
+                                "type": "dpkg",
+                                "version": "1.0.15"
+                            },
+                            "python2.7": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-2.1"
+                            },
+                            "python2.7-minimal": {
+                                "type": "dpkg",
+                                "version": "2.7.3~rc2-2.1"
+                            },
+                            "rdate": {
+                                "type": "dpkg",
+                                "version": "1:1.2-5"
+                            },
+                            "rdiff-backup": {
+                                "type": "dpkg",
+                                "version": "1.2.8-7"
+                            },
+                            "readline-common": {
+                                "type": "dpkg",
+                                "version": "6.2-8"
+                            },
+                            "reiser4progs": {
+                                "type": "dpkg",
+                                "version": "1.0.7-6.3"
+                            },
+                            "reiserfsprogs": {
+                                "type": "dpkg",
+                                "version": "1:3.6.21-1"
+                            },
+                            "rlwrap": {
+                                "type": "dpkg",
+                                "version": "0.37-3"
+                            },
+                            "robotfindskitten": {
+                                "type": "dpkg",
+                                "version": "1.7320508.406-3"
+                            },
+                            "rpcbind": {
+                                "type": "dpkg",
+                                "version": "0.2.0-8"
+                            },
+                            "rsync": {
+                                "type": "dpkg",
+                                "version": "3.0.9-4"
+                            },
+                            "runit": {
+                                "type": "dpkg",
+                                "version": "2.1.1-6.2"
+                            },
+                            "samba-common": {
+                                "type": "dpkg",
+                                "version": "2:3.6.6-3"
+                            },
+                            "screen": {
+                                "type": "dpkg",
+                                "version": "4.1.0~20120320git",
+                                "version_possibly_truncated": true
+                            },
+                            "sed": {
+                                "type": "dpkg",
+                                "version": "4.2.1-10"
+                            },
+                            "sendfile": {
+                                "type": "dpkg",
+                                "version": "2.1b.20080616-5.2",
+                                "version_possibly_truncated": true
+                            },
+                            "sensible-utils": {
+                                "type": "dpkg",
+                                "version": "0.0.7"
+                            },
+                            "setserial": {
+                                "type": "dpkg",
+                                "version": "2.17-47"
+                            },
+                            "sharutils": {
+                                "type": "dpkg",
+                                "version": "1:4.11.1-1"
+                            },
+                            "sl": {
+                                "type": "dpkg",
+                                "version": "3.03-17"
+                            },
+                            "smartmontools": {
+                                "type": "dpkg",
+                                "version": "5.41+svn3365-1"
+                            },
+                            "smbclient": {
+                                "type": "dpkg",
+                                "version": "2:3.6.6-3"
+                            },
+                            "snmp": {
+                                "type": "dpkg",
+                                "version": "5.4.3~dfsg-2.7"
+                            },
+                            "squashfs-tools": {
+                                "type": "dpkg",
+                                "version": "1:4.2-5"
+                            },
+                            "sshfs": {
+                                "type": "dpkg",
+                                "version": "2.4-1"
+                            },
+                            "ssmtp": {
+                                "type": "dpkg",
+                                "version": "2.64-7"
+                            },
+                            "strace": {
+                                "type": "dpkg",
+                                "version": "4.5.20-2.3"
+                            },
+                            "stress": {
+                                "type": "dpkg",
+                                "version": "1.0.1-1"
+                            },
+                            "stunnel4": {
+                                "type": "dpkg",
+                                "version": "3:4.53-1"
+                            },
+                            "sudo": {
+                                "type": "dpkg",
+                                "version": "1.8.5p2-1"
+                            },
+                            "sysv-rc": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "sysvinit": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "sysvinit-utils": {
+                                "type": "dpkg",
+                                "version": "2.88dsf-34"
+                            },
+                            "tar": {
+                                "type": "dpkg",
+                                "version": "1.26-4"
+                            },
+                            "tcpd": {
+                                "type": "dpkg",
+                                "version": "7.6.q-24"
+                            },
+                            "tcpdump": {
+                                "type": "dpkg",
+                                "version": "4.3.0-1"
+                            },
+                            "telnet-ssl": {
+                                "type": "dpkg",
+                                "version": "0.17.24+0.1-23"
+                            },
+                            "testdisk": {
+                                "type": "dpkg",
+                                "version": "6.13-1"
+                            },
+                            "tftp": {
+                                "type": "dpkg",
+                                "version": "0.17-18"
+                            },
+                            "tftpd-hpa": {
+                                "type": "dpkg",
+                                "version": "5.2-4"
+                            },
+                            "time": {
+                                "type": "dpkg",
+                                "version": "1.7-24"
+                            },
+                            "tmux": {
+                                "type": "dpkg",
+                                "version": "1.6-2"
+                            },
+                            "tofrodos": {
+                                "type": "dpkg",
+                                "version": "1.7.9.debian.1-1"
+                            },
+                            "traceroute": {
+                                "type": "dpkg",
+                                "version": "1:2.0.18-3"
+                            },
+                            "twuewand": {
+                                "type": "dpkg",
+                                "version": "2.0-0~1finnix2"
+                            },
+                            "tzdata": {
+                                "type": "dpkg",
+                                "version": "2012j-1"
+                            },
+                            "ucf": {
+                                "type": "dpkg",
+                                "version": "3.0025+nmu3"
+                            },
+                            "udev": {
+                                "type": "dpkg",
+                                "version": "175-7"
+                            },
+                            "udftools": {
+                                "type": "dpkg",
+                                "version": "1.0.0b3-14.2"
+                            },
+                            "units": {
+                                "type": "dpkg",
+                                "version": "1.88-1"
+                            },
+                            "unp": {
+                                "type": "dpkg",
+                                "version": "2.0~pre7+nmu1"
+                            },
+                            "unzip": {
+                                "type": "dpkg",
+                                "version": "6.0-8"
+                            },
+                            "update-inetd": {
+                                "type": "dpkg",
+                                "version": "4.43"
+                            },
+                            "usbutils": {
+                                "type": "dpkg",
+                                "version": "1:005-3"
+                            },
+                            "util-linux": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "uuid-runtime": {
+                                "type": "dpkg",
+                                "version": "2.20.1-5.3"
+                            },
+                            "vanityhash": {
+                                "type": "dpkg",
+                                "version": "1.1-0~1finnix2"
+                            },
+                            "vlan": {
+                                "type": "dpkg",
+                                "version": "1.9-3"
+                            },
+                            "wget": {
+                                "type": "dpkg",
+                                "version": "1.13.4-3"
+                            },
+                            "whiptail": {
+                                "type": "dpkg",
+                                "version": "0.52.14-10"
+                            },
+                            "whois": {
+                                "type": "dpkg",
+                                "version": "5.0.20"
+                            },
+                            "wipe": {
+                                "type": "dpkg",
+                                "version": "0.22-1"
+                            },
+                            "wireless-tools": {
+                                "type": "dpkg",
+                                "version": "30~pre9-8"
+                            },
+                            "wodim": {
+                                "type": "dpkg",
+                                "version": "9:1.1.11-2"
+                            },
+                            "wpasupplicant": {
+                                "type": "dpkg",
+                                "version": "1.0-3+b2"
+                            },
+                            "xfsdump": {
+                                "type": "dpkg",
+                                "version": "3.0.6"
+                            },
+                            "xfsprogs": {
+                                "type": "dpkg",
+                                "version": "3.1.7+b1"
+                            },
+                            "xz-utils": {
+                                "type": "dpkg",
+                                "version": "5.1.1alpha+201206",
+                                "version_possibly_truncated": true
+                            },
+                            "yaboot": {
+                                "type": "dpkg",
+                                "version": "1.3.16-4"
+                            },
+                            "zerofree": {
+                                "type": "dpkg",
+                                "version": "1.0.2-1"
+                            },
+                            "zile": {
+                                "type": "dpkg",
+                                "version": "2.3.21-1"
+                            },
+                            "zip": {
+                                "type": "dpkg",
+                                "version": "3.0-6"
+                            },
+                            "zlib1g": {
+                                "type": "dpkg",
+                                "version": "1:1.2.7.dfsg-13"
+                            }
+                        }
+                    }
+                },
+                "codename": "Oconomowoc",
+                "date": "2012-12-25",
+                "name": "Finnix 107"
+            }
+        }
+    }
+}

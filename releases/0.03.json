@@ -1,0 +1,996 @@
+{
+    "finnix": {
+        "releases": {
+            "0.03": {
+                "architectures": {
+                    "i386": {
+                        "base_os": "Red Hat Linux 6.1",
+                        "files": {
+                            "finnix-0.03.iso": {
+                                "md5_checksum": "802c5cf6c34fa57d5f4efd5a2afff78e",
+                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEyxrLKZYQqSA+yiURAhvHAJsHO0EIsc3f+IJzB+vRlosIXn34dACdEDmf\nKzZifd+86nwXLdSm3HA8na8=\n=vItX\n-----END PGP SIGNATURE-----",
+                                "sha256_checksum": "3aae68ec944a0b972bbe83f0c6fe7a7390b222552cbeea12c4ed8285a38a12ab",
+                                "sha512_checksum": "246aa3df8c6f37a4c7732ce90052062593e12e0c63fad3aa659c1c44185dd433bba0100de2ec48066102470ae9f58ebe4372e061aa44714a484bf40e9125c06c",
+                                "size": 337541120
+                            }
+                        },
+                        "kernel": "Linux 2.2.12",
+                        "packages": {
+                            "ElectricFence": {
+                                "type": "rpm",
+                                "version": "2.1-1"
+                            },
+                            "MAKEDEV": {
+                                "type": "rpm",
+                                "version": "2.5-2"
+                            },
+                            "SysVinit": {
+                                "type": "rpm",
+                                "version": "2.77-2"
+                            },
+                            "XFree86-75dpi-fonts": {
+                                "type": "rpm",
+                                "version": "3.3.5-3"
+                            },
+                            "XFree86-libs": {
+                                "type": "rpm",
+                                "version": "3.3.5-3"
+                            },
+                            "XFree86-xfs": {
+                                "type": "rpm",
+                                "version": "3.3.5-3"
+                            },
+                            "apmd": {
+                                "type": "rpm",
+                                "version": "3.0beta9-3"
+                            },
+                            "arpwatch": {
+                                "type": "rpm",
+                                "version": "2.1a4-16"
+                            },
+                            "ash": {
+                                "type": "rpm",
+                                "version": "0.2-18"
+                            },
+                            "at": {
+                                "type": "rpm",
+                                "version": "3.1.7-11"
+                            },
+                            "authconfig": {
+                                "type": "rpm",
+                                "version": "2.0-2"
+                            },
+                            "autoconf": {
+                                "type": "rpm",
+                                "version": "2.13-5"
+                            },
+                            "automake": {
+                                "type": "rpm",
+                                "version": "1.4-5"
+                            },
+                            "basesystem": {
+                                "type": "rpm",
+                                "version": "6.0-4"
+                            },
+                            "bash": {
+                                "type": "rpm",
+                                "version": "1.14.7-16"
+                            },
+                            "bc": {
+                                "type": "rpm",
+                                "version": "1.05a-4"
+                            },
+                            "bdflush": {
+                                "type": "rpm",
+                                "version": "1.5-10"
+                            },
+                            "bind-utils": {
+                                "type": "rpm",
+                                "version": "8.2.2_P3-1"
+                            },
+                            "binutils": {
+                                "type": "rpm",
+                                "version": "2.9.1.0.23-6"
+                            },
+                            "bison": {
+                                "type": "rpm",
+                                "version": "1.28-1"
+                            },
+                            "byacc": {
+                                "type": "rpm",
+                                "version": "1.9-11"
+                            },
+                            "bzip2": {
+                                "type": "rpm",
+                                "version": "0.9.5c-1"
+                            },
+                            "cdecl": {
+                                "type": "rpm",
+                                "version": "2.5-9"
+                            },
+                            "chkconfig": {
+                                "type": "rpm",
+                                "version": "1.0.7-2"
+                            },
+                            "chkfontpath": {
+                                "type": "rpm",
+                                "version": "1.5-1"
+                            },
+                            "console-tools": {
+                                "type": "rpm",
+                                "version": "19990302-17"
+                            },
+                            "cpio": {
+                                "type": "rpm",
+                                "version": "2.4.2-13"
+                            },
+                            "cpp": {
+                                "type": "rpm",
+                                "version": "1.1.2-24"
+                            },
+                            "cproto": {
+                                "type": "rpm",
+                                "version": "4.6-2"
+                            },
+                            "cracklib": {
+                                "type": "rpm",
+                                "version": "2.7-5"
+                            },
+                            "cracklib-dicts": {
+                                "type": "rpm",
+                                "version": "2.7-5"
+                            },
+                            "crontabs": {
+                                "type": "rpm",
+                                "version": "1.7-7"
+                            },
+                            "ctags": {
+                                "type": "rpm",
+                                "version": "3.2-1"
+                            },
+                            "cvs": {
+                                "type": "rpm",
+                                "version": "1.10.6-2"
+                            },
+                            "dev": {
+                                "type": "rpm",
+                                "version": "2.7.10-2"
+                            },
+                            "dev86": {
+                                "type": "rpm",
+                                "version": "0.14.9-1"
+                            },
+                            "diffutils": {
+                                "type": "rpm",
+                                "version": "2.7-16"
+                            },
+                            "dip": {
+                                "type": "rpm",
+                                "version": "3.3.7o-15"
+                            },
+                            "dump": {
+                                "type": "rpm",
+                                "version": "0.4b4-11"
+                            },
+                            "e2fsprogs": {
+                                "type": "rpm",
+                                "version": "1.17-1"
+                            },
+                            "ed": {
+                                "type": "rpm",
+                                "version": "0.2-12"
+                            },
+                            "egcs": {
+                                "type": "rpm",
+                                "version": "1.1.2-24"
+                            },
+                            "egcs-c++": {
+                                "type": "rpm",
+                                "version": "1.1.2-24"
+                            },
+                            "eject": {
+                                "type": "rpm",
+                                "version": "2.0.2-3"
+                            },
+                            "elm": {
+                                "type": "rpm",
+                                "version": "2.5.1-1"
+                            },
+                            "etcskel": {
+                                "type": "rpm",
+                                "version": "2.0-1"
+                            },
+                            "faces-devel": {
+                                "type": "rpm",
+                                "version": "1.6.1-17"
+                            },
+                            "fetchmail": {
+                                "type": "rpm",
+                                "version": "5.1.0-1"
+                            },
+                            "file": {
+                                "type": "rpm",
+                                "version": "3.27-3"
+                            },
+                            "filesystem": {
+                                "type": "rpm",
+                                "version": "1.3.5-1"
+                            },
+                            "fileutils": {
+                                "type": "rpm",
+                                "version": "4.0-8"
+                            },
+                            "findutils": {
+                                "type": "rpm",
+                                "version": "4.1-32"
+                            },
+                            "finger": {
+                                "type": "rpm",
+                                "version": "0.10-25"
+                            },
+                            "flex": {
+                                "type": "rpm",
+                                "version": "2.5.4a-7"
+                            },
+                            "ftp": {
+                                "type": "rpm",
+                                "version": "0.15-1"
+                            },
+                            "fwhois": {
+                                "type": "rpm",
+                                "version": "1.00-11"
+                            },
+                            "gawk": {
+                                "type": "rpm",
+                                "version": "3.0.4-1"
+                            },
+                            "gd": {
+                                "type": "rpm",
+                                "version": "1.3-5"
+                            },
+                            "gd-devel": {
+                                "type": "rpm",
+                                "version": "1.3-5"
+                            },
+                            "gdb": {
+                                "type": "rpm",
+                                "version": "4.18-4"
+                            },
+                            "gdbm": {
+                                "type": "rpm",
+                                "version": "1.8.0-2"
+                            },
+                            "gdbm-devel": {
+                                "type": "rpm",
+                                "version": "1.8.0-2"
+                            },
+                            "gettext": {
+                                "type": "rpm",
+                                "version": "0.10.35-13"
+                            },
+                            "getty_ps": {
+                                "type": "rpm",
+                                "version": "2.0.7j-7"
+                            },
+                            "ghostscript": {
+                                "type": "rpm",
+                                "version": "5.10-10"
+                            },
+                            "ghostscript-fonts": {
+                                "type": "rpm",
+                                "version": "5.10-3"
+                            },
+                            "git": {
+                                "type": "rpm",
+                                "version": "4.3.17-5"
+                            },
+                            "glib": {
+                                "type": "rpm",
+                                "version": "1.2.5-1"
+                            },
+                            "glibc": {
+                                "type": "rpm",
+                                "version": "2.1.2-11"
+                            },
+                            "glibc-devel": {
+                                "type": "rpm",
+                                "version": "2.1.2-11"
+                            },
+                            "gmp": {
+                                "type": "rpm",
+                                "version": "2.0.2-10"
+                            },
+                            "gpm": {
+                                "type": "rpm",
+                                "version": "1.17.9-3"
+                            },
+                            "gpm-devel": {
+                                "type": "rpm",
+                                "version": "1.17.9-3"
+                            },
+                            "grep": {
+                                "type": "rpm",
+                                "version": "2.3-2"
+                            },
+                            "groff": {
+                                "type": "rpm",
+                                "version": "1.15-1"
+                            },
+                            "gzip": {
+                                "type": "rpm",
+                                "version": "1.2.4-14"
+                            },
+                            "hdparm": {
+                                "type": "rpm",
+                                "version": "3.5-1"
+                            },
+                            "indent": {
+                                "type": "rpm",
+                                "version": "2.2.0-1"
+                            },
+                            "indexhtml": {
+                                "type": "rpm",
+                                "version": "6.1-1"
+                            },
+                            "inews": {
+                                "type": "rpm",
+                                "version": "2.2.1-1"
+                            },
+                            "info": {
+                                "type": "rpm",
+                                "version": "3.12h-2"
+                            },
+                            "initscripts": {
+                                "type": "rpm",
+                                "version": "4.48-1"
+                            },
+                            "ipchains": {
+                                "type": "rpm",
+                                "version": "1.3.9-3"
+                            },
+                            "isapnptools": {
+                                "type": "rpm",
+                                "version": "1.18c-1"
+                            },
+                            "ispell": {
+                                "type": "rpm",
+                                "version": "3.1.20-22"
+                            },
+                            "kbdconfig": {
+                                "type": "rpm",
+                                "version": "1.9.2.1-1"
+                            },
+                            "kernel": {
+                                "type": "rpm",
+                                "version": "2.2.12-20"
+                            },
+                            "kernel-headers": {
+                                "type": "rpm",
+                                "version": "2.2.12-20"
+                            },
+                            "kernel-pcmcia-cs": {
+                                "type": "rpm",
+                                "version": "2.2.12-20"
+                            },
+                            "knfsd-clients": {
+                                "type": "rpm",
+                                "version": "1.4.7-7"
+                            },
+                            "kudzu": {
+                                "type": "rpm",
+                                "version": "0.20-1"
+                            },
+                            "kudzu-devel": {
+                                "type": "rpm",
+                                "version": "0.20-1"
+                            },
+                            "ld.so": {
+                                "type": "rpm",
+                                "version": "1.9.5-11"
+                            },
+                            "ldconfig": {
+                                "type": "rpm",
+                                "version": "1.9.5-15"
+                            },
+                            "less": {
+                                "type": "rpm",
+                                "version": "340-1"
+                            },
+                            "libc": {
+                                "type": "rpm",
+                                "version": "5.3.12-31"
+                            },
+                            "libgr": {
+                                "type": "rpm",
+                                "version": "2.0.13-20"
+                            },
+                            "libgr-devel": {
+                                "type": "rpm",
+                                "version": "2.0.13-20"
+                            },
+                            "libjpeg": {
+                                "type": "rpm",
+                                "version": "6b-9"
+                            },
+                            "libjpeg-devel": {
+                                "type": "rpm",
+                                "version": "6b-9"
+                            },
+                            "libpng": {
+                                "type": "rpm",
+                                "version": "1.0.3-4"
+                            },
+                            "libpng-devel": {
+                                "type": "rpm",
+                                "version": "1.0.3-4"
+                            },
+                            "libstdc++": {
+                                "type": "rpm",
+                                "version": "2.9.0-24"
+                            },
+                            "libtermcap": {
+                                "type": "rpm",
+                                "version": "2.0.8-18"
+                            },
+                            "libtermcap-devel": {
+                                "type": "rpm",
+                                "version": "2.0.8-18"
+                            },
+                            "libtiff": {
+                                "type": "rpm",
+                                "version": "3.5.4-1"
+                            },
+                            "libtiff-devel": {
+                                "type": "rpm",
+                                "version": "3.5.4-1"
+                            },
+                            "libungif-devel": {
+                                "type": "rpm",
+                                "version": "4.1.0-2"
+                            },
+                            "lilo": {
+                                "type": "rpm",
+                                "version": "0.21-10"
+                            },
+                            "linuxconf": {
+                                "type": "rpm",
+                                "version": "1.16r10-2"
+                            },
+                            "linuxconf-devel": {
+                                "type": "rpm",
+                                "version": "1.16r10-2"
+                            },
+                            "logrotate": {
+                                "type": "rpm",
+                                "version": "3.3-1"
+                            },
+                            "losetup": {
+                                "type": "rpm",
+                                "version": "2.9u-4"
+                            },
+                            "lpr": {
+                                "type": "rpm",
+                                "version": "0.48-1"
+                            },
+                            "lrzsz": {
+                                "type": "rpm",
+                                "version": "0.12.20-2"
+                            },
+                            "lsof": {
+                                "type": "rpm",
+                                "version": "4.45-1"
+                            },
+                            "lynx": {
+                                "type": "rpm",
+                                "version": "2.8.2-3"
+                            },
+                            "m4": {
+                                "type": "rpm",
+                                "version": "1.4-12"
+                            },
+                            "mailcap": {
+                                "type": "rpm",
+                                "version": "2.0.3-1"
+                            },
+                            "mailx": {
+                                "type": "rpm",
+                                "version": "8.1.1-9"
+                            },
+                            "make": {
+                                "type": "rpm",
+                                "version": "3.77-6"
+                            },
+                            "metamail": {
+                                "type": "rpm",
+                                "version": "2.7-22"
+                            },
+                            "mingetty": {
+                                "type": "rpm",
+                                "version": "0.9.4-10"
+                            },
+                            "minicom": {
+                                "type": "rpm",
+                                "version": "1.82.1-1"
+                            },
+                            "mkbootdisk": {
+                                "type": "rpm",
+                                "version": "1.2.2-1"
+                            },
+                            "mkinitrd": {
+                                "type": "rpm",
+                                "version": "2.3-1"
+                            },
+                            "mktemp": {
+                                "type": "rpm",
+                                "version": "1.5-1"
+                            },
+                            "modutils": {
+                                "type": "rpm",
+                                "version": "2.1.121-14"
+                            },
+                            "mount": {
+                                "type": "rpm",
+                                "version": "2.9u-4"
+                            },
+                            "mouseconfig": {
+                                "type": "rpm",
+                                "version": "4.1-1"
+                            },
+                            "mpage": {
+                                "type": "rpm",
+                                "version": "2.4-7"
+                            },
+                            "mt-st": {
+                                "type": "rpm",
+                                "version": "0.5b-4"
+                            },
+                            "mutt": {
+                                "type": "rpm",
+                                "version": "1.0pre3us-1"
+                            },
+                            "ncftp": {
+                                "type": "rpm",
+                                "version": "3.0beta19-2"
+                            },
+                            "ncompress": {
+                                "type": "rpm",
+                                "version": "4.2.4-14"
+                            },
+                            "ncurses": {
+                                "type": "rpm",
+                                "version": "4.2-25"
+                            },
+                            "ncurses-devel": {
+                                "type": "rpm",
+                                "version": "4.2-25"
+                            },
+                            "net-tools": {
+                                "type": "rpm",
+                                "version": "1.53-1"
+                            },
+                            "netkit-base": {
+                                "type": "rpm",
+                                "version": "0.10-37"
+                            },
+                            "newt": {
+                                "type": "rpm",
+                                "version": "0.50-13"
+                            },
+                            "newt-devel": {
+                                "type": "rpm",
+                                "version": "0.50-13"
+                            },
+                            "ntsysv": {
+                                "type": "rpm",
+                                "version": "1.0.7-2"
+                            },
+                            "pam": {
+                                "type": "rpm",
+                                "version": "0.68-10"
+                            },
+                            "passwd": {
+                                "type": "rpm",
+                                "version": "0.63-1"
+                            },
+                            "patch": {
+                                "type": "rpm",
+                                "version": "2.5-9"
+                            },
+                            "pciutils": {
+                                "type": "rpm",
+                                "version": "2.0-2"
+                            },
+                            "pciutils-devel": {
+                                "type": "rpm",
+                                "version": "2.0-2"
+                            },
+                            "perl": {
+                                "type": "rpm",
+                                "version": "5.00503-6"
+                            },
+                            "pidentd": {
+                                "type": "rpm",
+                                "version": "3.0.7-5"
+                            },
+                            "pine": {
+                                "type": "rpm",
+                                "version": "4.10-3"
+                            },
+                            "pmake": {
+                                "type": "rpm",
+                                "version": "2.1.33-5"
+                            },
+                            "popt": {
+                                "type": "rpm",
+                                "version": "1.4-1"
+                            },
+                            "portmap": {
+                                "type": "rpm",
+                                "version": "4.0-17"
+                            },
+                            "ppp": {
+                                "type": "rpm",
+                                "version": "2.3.10-3"
+                            },
+                            "procinfo": {
+                                "type": "rpm",
+                                "version": "17-1"
+                            },
+                            "procmail": {
+                                "type": "rpm",
+                                "version": "3.13.1-4"
+                            },
+                            "procps": {
+                                "type": "rpm",
+                                "version": "2.0.4-2"
+                            },
+                            "psmisc": {
+                                "type": "rpm",
+                                "version": "18-3"
+                            },
+                            "pump": {
+                                "type": "rpm",
+                                "version": "0.7.2-2"
+                            },
+                            "pwdb": {
+                                "type": "rpm",
+                                "version": "0.60-1"
+                            },
+                            "python": {
+                                "type": "rpm",
+                                "version": "1.5.2-7"
+                            },
+                            "quota": {
+                                "type": "rpm",
+                                "version": "1.66-8"
+                            },
+                            "raidtools": {
+                                "type": "rpm",
+                                "version": "0.90-5"
+                            },
+                            "rcs": {
+                                "type": "rpm",
+                                "version": "5.7-10"
+                            },
+                            "rdate": {
+                                "type": "rpm",
+                                "version": "0.960923-8"
+                            },
+                            "rdist": {
+                                "type": "rpm",
+                                "version": "6.1.5-11"
+                            },
+                            "readline": {
+                                "type": "rpm",
+                                "version": "2.2.1-5"
+                            },
+                            "readline-devel": {
+                                "type": "rpm",
+                                "version": "2.2.1-5"
+                            },
+                            "redhat-logos": {
+                                "type": "rpm",
+                                "version": "1.1.0-1"
+                            },
+                            "redhat-release": {
+                                "type": "rpm",
+                                "version": "6.1-1"
+                            },
+                            "rhl-gsg": {
+                                "type": "rpm",
+                                "version": "6.1en-2"
+                            },
+                            "rhl-ig": {
+                                "type": "rpm",
+                                "version": "6.1en-1"
+                            },
+                            "rhl-rg": {
+                                "type": "rpm",
+                                "version": "6.1en-1"
+                            },
+                            "rhs-printfilters": {
+                                "type": "rpm",
+                                "version": "1.57-3"
+                            },
+                            "rmt": {
+                                "type": "rpm",
+                                "version": "0.4b4-11"
+                            },
+                            "rootfiles": {
+                                "type": "rpm",
+                                "version": "5.2-5"
+                            },
+                            "routed": {
+                                "type": "rpm",
+                                "version": "0.10-16"
+                            },
+                            "rpm": {
+                                "type": "rpm",
+                                "version": "3.0.3-2"
+                            },
+                            "rpm-devel": {
+                                "type": "rpm",
+                                "version": "3.0.3-2"
+                            },
+                            "rsh": {
+                                "type": "rpm",
+                                "version": "0.10-28"
+                            },
+                            "rsync": {
+                                "type": "rpm",
+                                "version": "2.3.1-2"
+                            },
+                            "rusers": {
+                                "type": "rpm",
+                                "version": "0.15-6"
+                            },
+                            "rwho": {
+                                "type": "rpm",
+                                "version": "0.15-2"
+                            },
+                            "samba": {
+                                "type": "rpm",
+                                "version": "2.0.5a-12"
+                            },
+                            "samba-client": {
+                                "type": "rpm",
+                                "version": "2.0.5a-12"
+                            },
+                            "samba-common": {
+                                "type": "rpm",
+                                "version": "2.0.5a-12"
+                            },
+                            "sash": {
+                                "type": "rpm",
+                                "version": "3.3-1"
+                            },
+                            "screen": {
+                                "type": "rpm",
+                                "version": "3.9.4-3"
+                            },
+                            "sed": {
+                                "type": "rpm",
+                                "version": "3.02-4"
+                            },
+                            "sendmail": {
+                                "type": "rpm",
+                                "version": "8.9.3-15"
+                            },
+                            "setconsole": {
+                                "type": "rpm",
+                                "version": "1.0-8"
+                            },
+                            "setserial": {
+                                "type": "rpm",
+                                "version": "2.15-2"
+                            },
+                            "setup": {
+                                "type": "rpm",
+                                "version": "2.0.5-1"
+                            },
+                            "setuptool": {
+                                "type": "rpm",
+                                "version": "1.2-3"
+                            },
+                            "sh-utils": {
+                                "type": "rpm",
+                                "version": "2.0-1"
+                            },
+                            "shadow-utils": {
+                                "type": "rpm",
+                                "version": "19990827-2"
+                            },
+                            "shapecfg": {
+                                "type": "rpm",
+                                "version": "2.2.12-2"
+                            },
+                            "sharutils": {
+                                "type": "rpm",
+                                "version": "4.2.1-1.6.1"
+                            },
+                            "slang": {
+                                "type": "rpm",
+                                "version": "1.2.2-4"
+                            },
+                            "slang-devel": {
+                                "type": "rpm",
+                                "version": "1.2.2-4"
+                            },
+                            "slocate": {
+                                "type": "rpm",
+                                "version": "2.0-3"
+                            },
+                            "slrn": {
+                                "type": "rpm",
+                                "version": "0.9.5.7-2"
+                            },
+                            "stat": {
+                                "type": "rpm",
+                                "version": "1.5-11"
+                            },
+                            "statserial": {
+                                "type": "rpm",
+                                "version": "1.1-13"
+                            },
+                            "strace": {
+                                "type": "rpm",
+                                "version": "3.99.1-2"
+                            },
+                            "svgalib": {
+                                "type": "rpm",
+                                "version": "1.4.0-2"
+                            },
+                            "svgalib-devel": {
+                                "type": "rpm",
+                                "version": "1.4.0-2"
+                            },
+                            "sysklogd": {
+                                "type": "rpm",
+                                "version": "1.3.31-14"
+                            },
+                            "talk": {
+                                "type": "rpm",
+                                "version": "0.11-3"
+                            },
+                            "tar": {
+                                "type": "rpm",
+                                "version": "1.13.11-1"
+                            },
+                            "tcp_wrappers": {
+                                "type": "rpm",
+                                "version": "7.6-9"
+                            },
+                            "tcpdump": {
+                                "type": "rpm",
+                                "version": "3.4-16"
+                            },
+                            "tcsh": {
+                                "type": "rpm",
+                                "version": "6.08.00-6"
+                            },
+                            "telnet": {
+                                "type": "rpm",
+                                "version": "0.10-31"
+                            },
+                            "termcap": {
+                                "type": "rpm",
+                                "version": "9.12.6-15"
+                            },
+                            "texinfo": {
+                                "type": "rpm",
+                                "version": "3.12h-2"
+                            },
+                            "textutils": {
+                                "type": "rpm",
+                                "version": "2.0-2"
+                            },
+                            "tftp": {
+                                "type": "rpm",
+                                "version": "0.15-1"
+                            },
+                            "time": {
+                                "type": "rpm",
+                                "version": "1.7-9"
+                            },
+                            "timeconfig": {
+                                "type": "rpm",
+                                "version": "3.0-5"
+                            },
+                            "timed": {
+                                "type": "rpm",
+                                "version": "0.10-23"
+                            },
+                            "tin": {
+                                "type": "rpm",
+                                "version": "1.4_990517-1"
+                            },
+                            "tmpwatch": {
+                                "type": "rpm",
+                                "version": "2.0-1"
+                            },
+                            "traceroute": {
+                                "type": "rpm",
+                                "version": "1.4a5-16"
+                            },
+                            "trn": {
+                                "type": "rpm",
+                                "version": "3.6-18"
+                            },
+                            "ucd-snmp": {
+                                "type": "rpm",
+                                "version": "4.0.1-4"
+                            },
+                            "ucd-snmp-utils": {
+                                "type": "rpm",
+                                "version": "4.0.1-4"
+                            },
+                            "urlview": {
+                                "type": "rpm",
+                                "version": "0.7-4"
+                            },
+                            "urw-fonts": {
+                                "type": "rpm",
+                                "version": "1.1-8"
+                            },
+                            "utempter": {
+                                "type": "rpm",
+                                "version": "0.5.1-2"
+                            },
+                            "util-linux": {
+                                "type": "rpm",
+                                "version": "2.9w-24"
+                            },
+                            "uucp": {
+                                "type": "rpm",
+                                "version": "1.06.1-20"
+                            },
+                            "vim-common": {
+                                "type": "rpm",
+                                "version": "5.4-2"
+                            },
+                            "vim-minimal": {
+                                "type": "rpm",
+                                "version": "5.4-2"
+                            },
+                            "vixie-cron": {
+                                "type": "rpm",
+                                "version": "3.0.1-39"
+                            },
+                            "which": {
+                                "type": "rpm",
+                                "version": "2.8-1"
+                            },
+                            "words": {
+                                "type": "rpm",
+                                "version": "2-12"
+                            },
+                            "wvdial": {
+                                "type": "rpm",
+                                "version": "1.40-5"
+                            },
+                            "yp-tools": {
+                                "type": "rpm",
+                                "version": "2.3-2"
+                            },
+                            "ypbind": {
+                                "type": "rpm",
+                                "version": "3.3-24"
+                            },
+                            "zlib": {
+                                "type": "rpm",
+                                "version": "1.1.3-5"
+                            },
+                            "zlib-devel": {
+                                "type": "rpm",
+                                "version": "1.1.3-5"
+                            }
+                        }
+                    }
+                },
+                "codename": null,
+                "date": "2000-03-22",
+                "name": "Finnix 0.03"
+            }
+        }
+    }
+}
