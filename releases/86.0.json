@@ -7,10 +7,17 @@
                         "base_os": "Debian testing (2005-10-22)",
                         "files": {
                             "finnix-86.0.iso": {
-                                "md5_checksum": "3d82c200a4bbe6d8b1b9b3a2fa07b7bc",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEyxrPKZYQqSA+yiURAt8jAJ4wPhsHixcYqzSkb66sbzGhOpBWrgCfQsBa\nZbDIJlTJaC4kTpKfivunMcc=\n=Qg13\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "0093f726dfb1b2fb82db6919bd37005b79374cb68f1cf3bda08626108ac891b6",
-                                "sha512_checksum": "74e9e1797ba6a0583d37321953561f775c69a21c164013ea2a676b40433bc3e6d2573a04ad6ab3ef1396d378da54be7d7b7364dab4ff25178a78170a933adb71",
+                                "checksums": {
+                                    "md5": "3d82c200a4bbe6d8b1b9b3a2fa07b7bc",
+                                    "sha256": "0093f726dfb1b2fb82db6919bd37005b79374cb68f1cf3bda08626108ac891b6",
+                                    "sha512": "74e9e1797ba6a0583d37321953561f775c69a21c164013ea2a676b40433bc3e6d2573a04ad6ab3ef1396d378da54be7d7b7364dab4ff25178a78170a933adb71"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEyxrPKZYQqSA+yiURAt8jAJ4wPhsHixcYqzSkb66sbzGhOpBWrgCfQsBa\nZbDIJlTJaC4kTpKfivunMcc=\n=Qg13\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 101867520
                             }
                         },

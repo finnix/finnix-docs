@@ -8,10 +8,17 @@
                         "build_id": "2359",
                         "files": {
                             "finnix-100.iso": {
-                                "md5_checksum": "f100ffa1d470b7d119979c58f18bb6b1",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niEYEABECAAYFAkzGuUYACgkQKZYQqSA+yiW9KQCcCAX1QEvzRT9xwbtWg8AthrLF\nAYQAniRG0RBwYwaN5hzrBT3WH/lyBj/G\n=I4Lg\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "0f294f45512a9763877f1bc8291c890d74a4806f706948eedae4e77a15abebd5",
-                                "sha512_checksum": "b5bc5e9956ab20120d7d24d6d9f91a2a29b2abfb21d90a9ee36f60c403a086ca7c17e3cd209da54ce249dd41d204d14ebbbdfe6daad99051ea4a08bfad3001ff",
+                                "checksums": {
+                                    "md5": "f100ffa1d470b7d119979c58f18bb6b1",
+                                    "sha256": "0f294f45512a9763877f1bc8291c890d74a4806f706948eedae4e77a15abebd5",
+                                    "sha512": "b5bc5e9956ab20120d7d24d6d9f91a2a29b2abfb21d90a9ee36f60c403a086ca7c17e3cd209da54ce249dd41d204d14ebbbdfe6daad99051ea4a08bfad3001ff"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niEYEABECAAYFAkzGuUYACgkQKZYQqSA+yiW9KQCcCAX1QEvzRT9xwbtWg8AthrLF\nAYQAniRG0RBwYwaN5hzrBT3WH/lyBj/G\n=I4Lg\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 131024900
                             }
                         },

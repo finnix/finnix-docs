@@ -7,10 +7,17 @@
                         "base_os": "Debian testing (2014-05-01)",
                         "files": {
                             "finnix-110.iso": {
-                                "md5_checksum": "f110fffbd371967db86a4b1271a67f1c",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niQIcBAABCAAGBQJTYih4AAoJEH1vhcBDVubC9WoQANzbcsQ15ov5QLPxNJm/hulj\nR95Z6RKTYZvwpBA+cfn+QYxvban96AwR2/YxYXsqUp8dTp4FslMcS1XRGP2BpOZJ\noszFGImThCrschPq5zhyfBkYPeNq/EExkvlOuoc04mV4xbkCQz7LIi06BasJ3aoH\nOrHyCqdTrL1Gzobq8Y84R667Li6NvS/BIve/41Kg9Azb7tMHKucW7eSYfvPuQldM\nVAw50TuEtKr14eetGX6N+kCjXXze0yMepbjpgb6FNI8xp8DjeskjS5bNk4EaXFuJ\nNTft236eFQ451PvEQTu1lwIjV/GLKeasbQpQWXYB6cAqZX6nPZgM2oEyOEQpiYg8\ntZWyhA/6D37sFkTJ7E3LRMTR3SiDjw7472aNC4iv/1lkqw7L5GAZwDFceLWDYhL/\nAG4cOVWcs+dPj2TNgSUhJ3vMg0HnmYSI5Objgl+9zASXctTump73om0w8fm1EJq3\nxko5sX7WEpHiqfx06NBIsdgBD7JVD7i3JOtZ1Clkay5yGAm+f8hcUgMzkdmzLVor\nCUPCHstcH317JD6a4mA4BEl7qKKKTiy0ju/nvHKv48Sz5u+nI415gE5P7oJ3iMDU\nGfzqhDWU+R0rb8jPE5NcqKHfUwEHhJPR6kZsPcrW5yV8CFrYecD+P+p5iESagB1h\n22GyHEC0sSWkUdiuECzG\n=bJ1H\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "c1d71447cd73c7e0132e2a08fcb7109e85523f39e35086ee9e27ed1b1cdfd2e5",
-                                "sha512_checksum": "e2bda97ef79fa3eccde7d68af6af255bf16b33b2ff8756777f086999b9185961af808dc0114d2dbb56375a676d3b95052d261d4ad1496474e309f41184bf35e5",
+                                "checksums": {
+                                    "md5": "f110fffbd371967db86a4b1271a67f1c",
+                                    "sha256": "c1d71447cd73c7e0132e2a08fcb7109e85523f39e35086ee9e27ed1b1cdfd2e5",
+                                    "sha512": "e2bda97ef79fa3eccde7d68af6af255bf16b33b2ff8756777f086999b9185961af808dc0114d2dbb56375a676d3b95052d261d4ad1496474e309f41184bf35e5"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIcBAABCAAGBQJTYih4AAoJEH1vhcBDVubC9WoQANzbcsQ15ov5QLPxNJm/hulj\nR95Z6RKTYZvwpBA+cfn+QYxvban96AwR2/YxYXsqUp8dTp4FslMcS1XRGP2BpOZJ\noszFGImThCrschPq5zhyfBkYPeNq/EExkvlOuoc04mV4xbkCQz7LIi06BasJ3aoH\nOrHyCqdTrL1Gzobq8Y84R667Li6NvS/BIve/41Kg9Azb7tMHKucW7eSYfvPuQldM\nVAw50TuEtKr14eetGX6N+kCjXXze0yMepbjpgb6FNI8xp8DjeskjS5bNk4EaXFuJ\nNTft236eFQ451PvEQTu1lwIjV/GLKeasbQpQWXYB6cAqZX6nPZgM2oEyOEQpiYg8\ntZWyhA/6D37sFkTJ7E3LRMTR3SiDjw7472aNC4iv/1lkqw7L5GAZwDFceLWDYhL/\nAG4cOVWcs+dPj2TNgSUhJ3vMg0HnmYSI5Objgl+9zASXctTump73om0w8fm1EJq3\nxko5sX7WEpHiqfx06NBIsdgBD7JVD7i3JOtZ1Clkay5yGAm+f8hcUgMzkdmzLVor\nCUPCHstcH317JD6a4mA4BEl7qKKKTiy0ju/nvHKv48Sz5u+nI415gE5P7oJ3iMDU\nGfzqhDWU+R0rb8jPE5NcqKHfUwEHhJPR6kZsPcrW5yV8CFrYecD+P+p5iESagB1h\n22GyHEC0sSWkUdiuECzG\n=bJ1H\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 141557760
                             }
                         },
@@ -1833,10 +1840,17 @@
                         "base_os": "Debian testing (2014-05-01)",
                         "files": {
                             "finnix-ppc-110.iso": {
-                                "md5_checksum": "f110ff32d20aee8c201f8f7f23e7f193",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niQIcBAABCAAGBQJTYi2DAAoJEH1vhcBDVubChqUQAIXcfhrQ9ybFDSKyNdi6Sg3O\nRTORBdyaTqv9jxNozuJKyhVvlMnWWyhTNv0E+sxrLnrLM3xLiwo3t0qpJzrb5GR1\nR2rl7i7670ej76d3ErOLLqcg6DPpfL+c4Qxg8Xd0Sc1NozPkzaV2wtmqDH3hj52K\n70bouKpjXOHCyNBEwmZkjUgsSh9ADGptEysak0hReHPtCONC8oJe5ttTwYEYiiby\nBLkUZ7Vg9jnQZeejlIWYG3d/7FN6kZy6BUsQf+MOKDhwL/bZXa6KQHGz+Dgb50Tn\n96DqQtt50aSWUFPlhu/rivc+wFUxTlZ211J2mJD83COWJzZeXOjM84kHrxCe722E\ntEH7RX5LiQ8TCGFp7MrfE20KjNggzENkpY80VWvpr51xwrQ1qQtAv9L5yxSQnjMT\njKOJlY+M599wnDRz41tRFsiCtbYsk+6SBgtU9vq9GQJ7A+fASYr612aFnuvRy7VD\nBkLmPkJ3DTR/zzxsladsRniQir0vnYdQU5qdmys8IyktXsI6ADZRyn+qY+oRpczO\nSk0886xy/sR31d0oAWrWOpHWUJgGkEHSvdlpUX/bpgKe24mZ14JyTYU3ICboIXj/\nkeIIY6hiIZ9mH0awKdqbSWCbFY/C/ujb8ROmwidcMsDFvCL4dKE8bSVtSJl5aXfI\neDAYKhF3L4o1/S5RDIiT\n=7rDC\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "f1f4915278d8a0091e2efcdc026af9b8ebf87de54ef5cc4ed657056c42096ecd",
-                                "sha512_checksum": "8dc954fffe96bbc446a546721ea374f011d288e41648355c663b541d9c9b52d7b22bc4b7098212dce70f6c2870ac6a3b6edea4ce92cbff88290b35f4620d7566",
+                                "checksums": {
+                                    "md5": "f110ff32d20aee8c201f8f7f23e7f193",
+                                    "sha256": "f1f4915278d8a0091e2efcdc026af9b8ebf87de54ef5cc4ed657056c42096ecd",
+                                    "sha512": "8dc954fffe96bbc446a546721ea374f011d288e41648355c663b541d9c9b52d7b22bc4b7098212dce70f6c2870ac6a3b6edea4ce92cbff88290b35f4620d7566"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIcBAABCAAGBQJTYi2DAAoJEH1vhcBDVubChqUQAIXcfhrQ9ybFDSKyNdi6Sg3O\nRTORBdyaTqv9jxNozuJKyhVvlMnWWyhTNv0E+sxrLnrLM3xLiwo3t0qpJzrb5GR1\nR2rl7i7670ej76d3ErOLLqcg6DPpfL+c4Qxg8Xd0Sc1NozPkzaV2wtmqDH3hj52K\n70bouKpjXOHCyNBEwmZkjUgsSh9ADGptEysak0hReHPtCONC8oJe5ttTwYEYiiby\nBLkUZ7Vg9jnQZeejlIWYG3d/7FN6kZy6BUsQf+MOKDhwL/bZXa6KQHGz+Dgb50Tn\n96DqQtt50aSWUFPlhu/rivc+wFUxTlZ211J2mJD83COWJzZeXOjM84kHrxCe722E\ntEH7RX5LiQ8TCGFp7MrfE20KjNggzENkpY80VWvpr51xwrQ1qQtAv9L5yxSQnjMT\njKOJlY+M599wnDRz41tRFsiCtbYsk+6SBgtU9vq9GQJ7A+fASYr612aFnuvRy7VD\nBkLmPkJ3DTR/zzxsladsRniQir0vnYdQU5qdmys8IyktXsI6ADZRyn+qY+oRpczO\nSk0886xy/sR31d0oAWrWOpHWUJgGkEHSvdlpUX/bpgKe24mZ14JyTYU3ICboIXj/\nkeIIY6hiIZ9mH0awKdqbSWCbFY/C/ujb8ROmwidcMsDFvCL4dKE8bSVtSJl5aXfI\neDAYKhF3L4o1/S5RDIiT\n=7rDC\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 139460608
                             }
                         },

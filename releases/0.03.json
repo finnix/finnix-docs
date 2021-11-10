@@ -7,10 +7,17 @@
                         "base_os": "Red Hat Linux 6.1",
                         "files": {
                             "finnix-0.03.iso": {
-                                "md5_checksum": "802c5cf6c34fa57d5f4efd5a2afff78e",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEyxrLKZYQqSA+yiURAhvHAJsHO0EIsc3f+IJzB+vRlosIXn34dACdEDmf\nKzZifd+86nwXLdSm3HA8na8=\n=vItX\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "3aae68ec944a0b972bbe83f0c6fe7a7390b222552cbeea12c4ed8285a38a12ab",
-                                "sha512_checksum": "246aa3df8c6f37a4c7732ce90052062593e12e0c63fad3aa659c1c44185dd433bba0100de2ec48066102470ae9f58ebe4372e061aa44714a484bf40e9125c06c",
+                                "checksums": {
+                                    "md5": "802c5cf6c34fa57d5f4efd5a2afff78e",
+                                    "sha256": "3aae68ec944a0b972bbe83f0c6fe7a7390b222552cbeea12c4ed8285a38a12ab",
+                                    "sha512": "246aa3df8c6f37a4c7732ce90052062593e12e0c63fad3aa659c1c44185dd433bba0100de2ec48066102470ae9f58ebe4372e061aa44714a484bf40e9125c06c"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEyxrLKZYQqSA+yiURAhvHAJsHO0EIsc3f+IJzB+vRlosIXn34dACdEDmf\nKzZifd+86nwXLdSm3HA8na8=\n=vItX\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 337541120
                             }
                         },

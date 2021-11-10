@@ -7,10 +7,17 @@
                         "base_os": "Debian testing (2021-02-06)",
                         "files": {
                             "finnix-122.iso": {
-                                "md5_checksum": "9b21ff7868aec4fdd39f53322f1d3e8a",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niQJJBAABCAAzFiEEhnJ5uDv46BWiNtOefW+FwENW5sIFAmAfeQQVHGtleW1hc3Rl\nckBmaW5uaXgub3JnAAoJEH1vhcBDVubCwRkP/30Tn5teIT9ftyFV/8TrBo2zxJ7P\n9V6ttHOsG+1ihif2ToAWM7EZMWybGugeRhWHStV3/7Kf29bFZgT6IOgQZyR7II+y\n6kPRAxGs5hyWPodqQwFAWOFBQlro4b9w87dVu9VDv0w2irUDiMPXq8NroPHx53lo\nlXr8H3UWAmiw1sQHgxVIL4jGTavDBuG/y+tlaoYS3d8ALyX30W/rkzLeSi8F6yYr\nAiaoL41Ox5unZ00hFQJKI32K2AZUxwoEtnS7YHA891DwjgNDaVM0VMROOxwx+R3o\n5GtvbCz/hLbHFon9iOU7Yo/KS9t2IrDtzBLA/8hnNt2ik07fCYWQ2XVifK58TvXt\napkpSGhVIyBU95JWc8JXl1Cf6/M621ChBYKHaXXn4n14o0GK96fFcgzS1amRt2W1\nLvfyaq1n3bEZDy54MryzlTpI8hT4XdGMoAWooAgIUSIyJJMzvLt3H0MbttWS0oRA\nJYjeAjUX9J7X3IXx+s/Cnw++QT6bSn3EgIAb5t1TDJfwMGLgawi8MTtgVvF78IIZ\nOx6m2nOPg74ETf3c0Yvc4VVj9tuij8lodVeQnuIRliCsDbepdAKS3O7rjrCgLOtY\nUuu3ZbcmwGP4SikiP8bijk+Sc83ICCja0dfE1gYunLs72pHdqdB+JqPjAWyVzrTX\nu8ILZeNO+1E1pqVB\n=gSOV\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "72e3079402f669d80eee35d82c7abeb26f4588877d4067d960ae977bd8876332",
-                                "sha512_checksum": "1aefd14ce02b313e712470d5d805061296f105b191f9111eef0d41e97e67956f9a8f5b173e3f2e46330d7c27f27564455458361a6f2a20d6194945d476d50150",
+                                "checksums": {
+                                    "md5": "9b21ff7868aec4fdd39f53322f1d3e8a",
+                                    "sha256": "72e3079402f669d80eee35d82c7abeb26f4588877d4067d960ae977bd8876332",
+                                    "sha512": "1aefd14ce02b313e712470d5d805061296f105b191f9111eef0d41e97e67956f9a8f5b173e3f2e46330d7c27f27564455458361a6f2a20d6194945d476d50150"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQJJBAABCAAzFiEEhnJ5uDv46BWiNtOefW+FwENW5sIFAmAfeQQVHGtleW1hc3Rl\nckBmaW5uaXgub3JnAAoJEH1vhcBDVubCwRkP/30Tn5teIT9ftyFV/8TrBo2zxJ7P\n9V6ttHOsG+1ihif2ToAWM7EZMWybGugeRhWHStV3/7Kf29bFZgT6IOgQZyR7II+y\n6kPRAxGs5hyWPodqQwFAWOFBQlro4b9w87dVu9VDv0w2irUDiMPXq8NroPHx53lo\nlXr8H3UWAmiw1sQHgxVIL4jGTavDBuG/y+tlaoYS3d8ALyX30W/rkzLeSi8F6yYr\nAiaoL41Ox5unZ00hFQJKI32K2AZUxwoEtnS7YHA891DwjgNDaVM0VMROOxwx+R3o\n5GtvbCz/hLbHFon9iOU7Yo/KS9t2IrDtzBLA/8hnNt2ik07fCYWQ2XVifK58TvXt\napkpSGhVIyBU95JWc8JXl1Cf6/M621ChBYKHaXXn4n14o0GK96fFcgzS1amRt2W1\nLvfyaq1n3bEZDy54MryzlTpI8hT4XdGMoAWooAgIUSIyJJMzvLt3H0MbttWS0oRA\nJYjeAjUX9J7X3IXx+s/Cnw++QT6bSn3EgIAb5t1TDJfwMGLgawi8MTtgVvF78IIZ\nOx6m2nOPg74ETf3c0Yvc4VVj9tuij8lodVeQnuIRliCsDbepdAKS3O7rjrCgLOtY\nUuu3ZbcmwGP4SikiP8bijk+Sc83ICCja0dfE1gYunLs72pHdqdB+JqPjAWyVzrTX\nu8ILZeNO+1E1pqVB\n=gSOV\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 430964736
                             }
                         },

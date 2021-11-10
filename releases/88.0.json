@@ -8,10 +8,17 @@
                         "build_id": "1776",
                         "files": {
                             "finnix-88.0.iso": {
-                                "md5_checksum": "7201621989368a558fa179f41a638d49",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEvEyRKZYQqSA+yiURAgSRAJ9WL2fNdawErwOu2zQQKtpjvDs9jgCgiXFt\nH+Yw7Aom1bsTjj1jWyArTpU=\n=XxL0\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "7acd0e287c7247f5bacab318cfec0ad6c21d002fb0b04ed7f88c99927bc5f8f7",
-                                "sha512_checksum": "e611593f889c4ffb8f2de867fa8f35d02b28f69189c8e4a5a7eab3b28d269f5a10e7b34225425be539dda57eaa607b7696dceb58383a009f5fbbf12729278bd0",
+                                "checksums": {
+                                    "md5": "7201621989368a558fa179f41a638d49",
+                                    "sha256": "7acd0e287c7247f5bacab318cfec0ad6c21d002fb0b04ed7f88c99927bc5f8f7",
+                                    "sha512": "e611593f889c4ffb8f2de867fa8f35d02b28f69189c8e4a5a7eab3b28d269f5a10e7b34225425be539dda57eaa607b7696dceb58383a009f5fbbf12729278bd0"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEvEyRKZYQqSA+yiURAgSRAJ9WL2fNdawErwOu2zQQKtpjvDs9jgCgiXFt\nH+Yw7Aom1bsTjj1jWyArTpU=\n=XxL0\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 97785856
                             }
                         },
@@ -1460,10 +1467,17 @@
                         "build_id": "122",
                         "files": {
                             "finnix-ppc-88.0.iso": {
-                                "md5_checksum": "752ba696e8160e6eb011a0730864f4f7",
-                                "openpgp_signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEuz5HKZYQqSA+yiURAt7vAJ4sdmXq2REXOHYewDjfnpu1JrCikwCeIMb4\nPOjyZspPCyc2NZnbsDjLUBk=\n=+GnU\n-----END PGP SIGNATURE-----",
-                                "sha256_checksum": "128eb355644aa260944cfca7c3893e68987de5253345312731a2dc0c7b0aa56e",
-                                "sha512_checksum": "0cf4e1231ca48bd03ec9086a81d6967b03fa6818e0aad4907126b2e2506c62718d58b376241a157b3dc21c25a2bd1e52a93a28e49b407cd897bf8918eb48e143",
+                                "checksums": {
+                                    "md5": "752ba696e8160e6eb011a0730864f4f7",
+                                    "sha256": "128eb355644aa260944cfca7c3893e68987de5253345312731a2dc0c7b0aa56e",
+                                    "sha512": "0cf4e1231ca48bd03ec9086a81d6967b03fa6818e0aad4907126b2e2506c62718d58b376241a157b3dc21c25a2bd1e52a93a28e49b407cd897bf8918eb48e143"
+                                },
+                                "signatures": [
+                                    {
+                                        "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEuz5HKZYQqSA+yiURAt7vAJ4sdmXq2REXOHYewDjfnpu1JrCikwCeIMb4\nPOjyZspPCyc2NZnbsDjLUBk=\n=+GnU\n-----END PGP SIGNATURE-----",
+                                        "type": "openpgp"
+                                    }
+                                ],
                                 "size": 119816192
                             }
                         },
