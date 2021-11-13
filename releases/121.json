@@ -16,6 +16,10 @@
                                     {
                                         "signature": "-----BEGIN PGP SIGNATURE-----\n\niQJJBAABCAAzFiEEhnJ5uDv46BWiNtOefW+FwENW5sIFAl8uvJAVHGtleW1hc3Rl\nckBmaW5uaXgub3JnAAoJEH1vhcBDVubCLSoP/22cgWoKdKA0V2aEoB/Ia9W3IaB2\nz4Irndv8SDLm132tooGIchOW7FN7s/ucuZ01oIeEv3QOgJcnKz0MgTB+T3F202YJ\nt5z6K5U4sQhqPNnqxF6RGhpn9/Lo6T9AmqIQC+mamdFlmYIbmyI29//MSveP6MLE\nbrd/sn2An+/+URsP3Fqo/VrjB6mrtvB3bYCzLRLUesnU4yOAOKTnxlj/4x9CCsqR\nkiUz1luUqxfeFo+AmH7771fAJo2EIMjC/6+in0DEEOs6JAXrXzldgB2PU5j6800Q\nFXX46KVpptE3JzGEJjSMa9OP0rAXCDKN9mbCR5VQwd09ZGnFKIx/TMIRIKtiT5uw\nJv7NKKhv04ZYy7kd+zYyJnjzB2bEv/vek2XvgKin1WU9RpdVrIeuudu2sudODJVL\n5AFuf8Qjf6AczB6sJrPHQu+rQu6XgKkC8YXkTOAYCHcBfAsXIlKT+84oJqhnmUQ4\nGzSUkeBHS08TOd9DknrhUJTzbKkTjEpxHSEZME6gCFkKOFTZ8cZNYSCeI3VpB59S\nT7QFEqSbLJhq/i1GPanSLaP8E6dpXiMfHaoeTVArruL64T0e0UPdBzikMNZ5VGyb\nf/XAqEX7binOi4JTfiPA25DSe+pT1VWYAKZnIjkjqW8PI0WVgtr+tezDDIiBwDBY\neKyakSv3IAC7lGvF\n=TICD\n-----END PGP SIGNATURE-----",
                                         "type": "openpgp"
+                                    },
+                                    {
+                                        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAglATDkQl4v6UdL0OryJTy+BWBTp\nUBv6xWyK1BTy0eXfwAAAAEZmlsZQAAAAAAAAAGc2hhNTEyAAAAUwAAAAtzc2gtZWQyNTUx\nOQAAAEBNTTYp4KcE1hDWI9+FT2k38RYai2h1pwVDfGIvs5PiMDFi4AVwu9IlTK96+T7Nm1\ncDtdMCT43NYIXxEhCUJWMO\n-----END SSH SIGNATURE-----",
+                                        "type": "ssh"
                                     }
                                 ],
                                 "size": 533725184

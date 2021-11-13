@@ -6,6 +6,7 @@ This repository contains documentation and data related to the [Finnix](https://
 
   * [Platform support on Finnix](platforms.md)
   * [Finnix kernel command line options](kernel-command-line.md)
+  * [Finnix checksums and signatures](checksums-signatures.md)
 
 ## Data
 

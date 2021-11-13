@@ -17,6 +17,10 @@
                                     {
                                         "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBJKmIMKZYQqSA+yiURAnnCAJ9YFN5JyopaxWxyb5eivE4YXffBEQCgjqBe\nmqauWlEhvHIKwj+IhI2VqJU=\n=QIg3\n-----END PGP SIGNATURE-----",
                                         "type": "openpgp"
+                                    },
+                                    {
+                                        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAglATDkQl4v6UdL0OryJTy+BWBTp\nUBv6xWyK1BTy0eXfwAAAAEZmlsZQAAAAAAAAAGc2hhNTEyAAAAUwAAAAtzc2gtZWQyNTUx\nOQAAAEDSs86GeC44AjX++6BThZq7d72VxI43T7kri6JHk8+T0dThQPSGyJWsfWk3kmOr9j\n4hb/htBUsTRdAR7SKKBw4F\n-----END SSH SIGNATURE-----",
+                                        "type": "ssh"
                                     }
                                 ],
                                 "size": 115865600
@@ -1504,6 +1508,10 @@
                                     {
                                         "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBJKmmxKZYQqSA+yiURAiY+AJ94Di1+LTMxWdK811Qn5hqIp+NvrgCfcyNF\nsodmxsIbfinO99C3lWr7H1w=\n=gpaA\n-----END PGP SIGNATURE-----",
                                         "type": "openpgp"
+                                    },
+                                    {
+                                        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAglATDkQl4v6UdL0OryJTy+BWBTp\nUBv6xWyK1BTy0eXfwAAAAEZmlsZQAAAAAAAAAGc2hhNTEyAAAAUwAAAAtzc2gtZWQyNTUx\nOQAAAEAV+Ydu7RNNqQtkTAuoffpNPAhAkuoTpEIL/oJ0Qj3dBFuYJgzBsR//a2Mj1JpFW/\nfYcoOedZ64Zxm5HqB67a0M\n-----END SSH SIGNATURE-----",
+                                        "type": "ssh"
                                     }
                                 ],
                                 "size": 128681984

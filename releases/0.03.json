@@ -16,6 +16,10 @@
                                     {
                                         "signature": "-----BEGIN PGP SIGNATURE-----\n\niD8DBQBEyxrLKZYQqSA+yiURAhvHAJsHO0EIsc3f+IJzB+vRlosIXn34dACdEDmf\nKzZifd+86nwXLdSm3HA8na8=\n=vItX\n-----END PGP SIGNATURE-----",
                                         "type": "openpgp"
+                                    },
+                                    {
+                                        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAglATDkQl4v6UdL0OryJTy+BWBTp\nUBv6xWyK1BTy0eXfwAAAAEZmlsZQAAAAAAAAAGc2hhNTEyAAAAUwAAAAtzc2gtZWQyNTUx\nOQAAAEBGKtJ/FroZv4CRN7SOhZmJMIe7r2DtmQSEsYd3vOzrdmSaj8AcsF6XISH4dNp/ju\nRa1iFIm0wl/cipGOZUqisB\n-----END SSH SIGNATURE-----",
+                                        "type": "ssh"
                                     }
                                 ],
                                 "size": 337541120
