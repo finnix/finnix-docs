@@ -5,6 +5,7 @@ This repository contains documentation and data related to the [Finnix](https://
 ## Topics
 
   * [Platform support on Finnix](platforms.md)
+  * [Finnix kernel command line options](kernel-command-line.md)
 
 ## Data
 
