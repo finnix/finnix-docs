@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+
+# SPDX-PackageSummary: make-release-json
+# SPDX-FileCopyrightText: Copyright (C) 2021 Ryan Finnie
+# SPDX-License-Identifier: MPL-2.0
+
+import json
+
+PRODUCT = "Finnix"
+PRODUCT_ID = "finnix"
+VERSION = "999"
+BASE_OS = "Debian testing (2999-01-01)"
+KERNEL = "Linux 5.999 (Debian 5.999.0-1)"
+CODENAME = "XXX"
+DATE = "2999-01-01"
+SIZE = 999999999
+CHECKSUM_MD5 = "XXX"
+CHECKSUM_SHA256 = "XXX"
+CHECKSUM_SHA512 = "XXX"
+SIGNATURE_OPENPGP = """
+-----BEGIN PGP SIGNATURE-----
+
+XXX
+-----END PGP SIGNATURE-----
+""".strip()
+SIGNATURE_SSH = """
+-----BEGIN SSH SIGNATURE-----
+XXX
+-----END SSH SIGNATURE-----
+""".strip()
+PACKAGES = """
+XXX-a	1.999-1
+XXX-b	2.999-1
+""".strip()
+
+
+packages = {}
+for line in PACKAGES.split("\n"):
+    package_name, package_version = line.strip().split("\t", 1)
+    if ":" in package_name:
+        package_name, _ = package_name.split(":", 1)
+    packages[package_name] = {"version": package_version, "type": "dpkg"}
+
+out = {
+    PRODUCT_ID: {
+        "releases": {
+            VERSION: {
+                "name": "{} {}".format(PRODUCT, VERSION),
+                "date": DATE,
+                "codename": CODENAME,
+                "architectures": {
+                    "amd64": {
+                        "base_os": BASE_OS,
+                        "kernel": KERNEL,
+                        "files": {
+                            "{}-{}.iso".format(PRODUCT_ID, VERSION): {
+                                "size": SIZE,
+                                "checksums": {
+                                    "md5": CHECKSUM_MD5,
+                                    "sha256": CHECKSUM_SHA256,
+                                    "sha512": CHECKSUM_SHA512,
+                                },
+                                "signatures": [
+                                    {"signature": SIGNATURE_OPENPGP, "type": "openpgp"},
+                                    {"signature": SIGNATURE_SSH, "type": "ssh"},
+                                ],
+                            }
+                        },
+                        "packages": packages,
+                    }
+                },
+            }
+        }
+    }
+}
+
+print(json.dumps(out, sort_keys=True, indent=4), end="")
