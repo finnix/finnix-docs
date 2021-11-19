@@ -32,6 +32,7 @@ As of this writing, these architectures are:
   * armhf
   * ppc64el (not to be confused with the older PowerPC architecture)
   * s390x
+  * riscv64
 
 Please see the finnix-live-build README for details about these architectures.
 
