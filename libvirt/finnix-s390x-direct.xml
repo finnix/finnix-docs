@@ -1,0 +1,64 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh edit finnix-s390x-direct
+or other application using the libvirt API.
+-->
+
+<domain type='qemu'>
+  <name>finnix-s390x-direct</name>
+  <uuid>d33eae53-28d1-49f2-a113-e78af0e99154</uuid>
+  <memory unit='KiB'>1048576</memory>
+  <currentMemory unit='KiB'>1048576</currentMemory>
+  <vcpu placement='static'>1</vcpu>
+  <os>
+    <type arch='s390x' machine='s390-ccw-virtio-focal'>hvm</type>
+    <kernel>/var/lib/libvirt/images/finnix-s390x.vmlinuz</kernel>
+    <initrd>/var/lib/libvirt/images/finnix-s390x.initrd.img</initrd>
+    <cmdline>boot=live</cmdline>
+    <boot dev='hd'/>
+  </os>
+  <cpu mode='custom' match='exact' check='none'>
+    <model fallback='allow'>max</model>
+  </cpu>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <devices>
+    <emulator>/usr/bin/qemu-system-s390x</emulator>
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/var/lib/libvirt/images/finnix-s390x.iso'/>
+      <target dev='sda' bus='scsi'/>
+      <readonly/>
+      <address type='drive' controller='0' bus='0' target='0' unit='0'/>
+    </disk>
+    <controller type='pci' index='0' model='pci-root'/>
+    <controller type='scsi' index='0' model='virtio-scsi'>
+      <address type='ccw' cssid='0xfe' ssid='0x0' devno='0x0001'/>
+    </controller>
+    <interface type='network'>
+      <mac address='52:54:00:be:2e:73'/>
+      <source network='default'/>
+      <model type='virtio'/>
+      <address type='ccw' cssid='0xfe' ssid='0x0' devno='0x0002'/>
+    </interface>
+    <serial type='pty'>
+      <target type='sclp-serial' port='0'>
+        <model name='sclpconsole'/>
+      </target>
+    </serial>
+    <console type='pty'>
+      <target type='serial' port='0'/>
+    </console>
+    <memballoon model='virtio'>
+      <address type='ccw' cssid='0xfe' ssid='0x0' devno='0x0000'/>
+    </memballoon>
+    <rng model='virtio'>
+      <backend model='random'>/dev/urandom</backend>
+      <address type='ccw' cssid='0xfe' ssid='0x0' devno='0x0003'/>
+    </rng>
+    <panic model='s390'/>
+  </devices>
+</domain>

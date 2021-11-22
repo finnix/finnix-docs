@@ -1,0 +1,66 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh edit finnix-ppc64el-direct
+or other application using the libvirt API.
+-->
+
+<domain type='qemu'>
+  <name>finnix-ppc64el-direct</name>
+  <uuid>a0d8c547-1c67-419e-8e72-408ae0044286</uuid>
+  <memory unit='KiB'>1048576</memory>
+  <currentMemory unit='KiB'>1048576</currentMemory>
+  <vcpu placement='static'>1</vcpu>
+  <os>
+    <type arch='ppc64' machine='pseries-focal'>hvm</type>
+    <kernel>/var/lib/libvirt/images/finnix-ppc64el.vmlinux</kernel>
+    <initrd>/var/lib/libvirt/images/finnix-ppc64el.initrd.img</initrd>
+    <cmdline>ppc_tm=off boot=live</cmdline>
+    <boot dev='hd'/>
+  </os>
+  <cpu mode='custom' match='exact' check='none'>
+    <model fallback='allow'>power9_v2.0</model>
+  </cpu>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <devices>
+    <emulator>/usr/bin/qemu-system-ppc64</emulator>
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/var/lib/libvirt/images/finnix-ppc64el.iso'/>
+      <target dev='sda' bus='sata'/>
+      <readonly/>
+      <address type='drive' controller='0' bus='0' target='0' unit='0'/>
+    </disk>
+    <controller type='usb' index='0' model='pci-ohci'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+    </controller>
+    <controller type='pci' index='0' model='pci-root'>
+      <model name='spapr-pci-host-bridge'/>
+      <target index='0'/>
+    </controller>
+    <controller type='sata' index='0'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x0'/>
+    </controller>
+    <serial type='pty'>
+      <target type='spapr-vio-serial' port='0'>
+        <model name='spapr-vty'/>
+      </target>
+      <address type='spapr-vio' reg='0x30000000'/>
+    </serial>
+    <console type='pty'>
+      <target type='serial' port='0'/>
+      <address type='spapr-vio' reg='0x30000000'/>
+    </console>
+    <memballoon model='virtio'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
+    </memballoon>
+    <rng model='virtio'>
+      <backend model='random'>/dev/urandom</backend>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+    </rng>
+    <panic model='pseries'/>
+  </devices>
+</domain>
