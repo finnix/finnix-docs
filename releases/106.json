@@ -89,8 +89,7 @@
                             },
                             "bind9-host": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "binutils": {
                                 "type": "dpkg",
@@ -110,8 +109,7 @@
                             },
                             "bsd-mailx": {
                                 "type": "dpkg",
-                                "version": "8.1.2-0.20111106c",
-                                "version_possibly_truncated": true
+                                "version": "8.1.2-0.20111106cvs-1"
                             },
                             "bsdmainutils": {
                                 "type": "dpkg",
@@ -235,8 +233,7 @@
                             },
                             "dnsutils": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "dosfstools": {
                                 "type": "dpkg",
@@ -272,8 +269,7 @@
                             },
                             "eject": {
                                 "type": "dpkg",
-                                "version": "2.1.5+deb1+cvs200",
-                                "version_possibly_truncated": true
+                                "version": "2.1.5+deb1+cvs20081104-11"
                             },
                             "elinks-lite": {
                                 "type": "dpkg",
@@ -493,18 +489,15 @@
                             },
                             "isc-dhcp-client": {
                                 "type": "dpkg",
-                                "version": "4.2.2.dfsg.1-5+de",
-                                "version_possibly_truncated": true
+                                "version": "4.2.2.dfsg.1-5+deb70u2"
                             },
                             "isc-dhcp-common": {
                                 "type": "dpkg",
-                                "version": "4.2.2.dfsg.1-5+de",
-                                "version_possibly_truncated": true
+                                "version": "4.2.2.dfsg.1-5+deb70u2"
                             },
                             "isomd5sum": {
                                 "type": "dpkg",
-                                "version": "1:1.0.7+git.20110",
-                                "version_possibly_truncated": true
+                                "version": "1:1.0.7+git.20110618.6c9cd2f-1"
                             },
                             "jfsutils": {
                                 "type": "dpkg",
@@ -552,8 +545,7 @@
                             },
                             "libbind9-80": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libblas3": {
                                 "type": "dpkg",
@@ -629,8 +621,7 @@
                             },
                             "libdns81": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libdpkg-perl": {
                                 "type": "dpkg",
@@ -686,8 +677,7 @@
                             },
                             "libglib2.0-0": {
                                 "type": "dpkg",
-                                "version": "2.33.12+really2.3",
-                                "version_possibly_truncated": true
+                                "version": "2.33.12+really2.32.4-2"
                             },
                             "libgnutls-openssl27": {
                                 "type": "dpkg",
@@ -723,18 +713,15 @@
                             },
                             "libisc83": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libisccc80": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libisccfg82": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libiw30": {
                                 "type": "dpkg",
@@ -786,13 +773,11 @@
                             },
                             "liblwres80": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "liblzma5": {
                                 "type": "dpkg",
-                                "version": "5.1.1alpha+201206",
-                                "version_possibly_truncated": true
+                                "version": "5.1.1alpha+20120614-1"
                             },
                             "liblzo2-2": {
                                 "type": "dpkg",
@@ -916,8 +901,7 @@
                             },
                             "librtmp0": {
                                 "type": "dpkg",
-                                "version": "2.4+20111222.git4",
-                                "version_possibly_truncated": true
+                                "version": "2.4+20111222.git4e06e21-1"
                             },
                             "libsasl2-2": {
                                 "type": "dpkg",
@@ -985,8 +969,7 @@
                             },
                             "libtalloc2": {
                                 "type": "dpkg",
-                                "version": "2.0.7+git20120207",
-                                "version_possibly_truncated": true
+                                "version": "2.0.7+git20120207-1"
                             },
                             "libtasn1-3": {
                                 "type": "dpkg",
@@ -1066,8 +1049,7 @@
                             },
                             "lpr": {
                                 "type": "dpkg",
-                                "version": "1:2008.05.17+nmu1",
-                                "version_possibly_truncated": true
+                                "version": "1:2008.05.17+nmu1"
                             },
                             "lrzsz": {
                                 "type": "dpkg",
@@ -1207,13 +1189,11 @@
                             },
                             "ntfs-3g": {
                                 "type": "dpkg",
-                                "version": "1:2012.1.15AR.5-2",
-                                "version_possibly_truncated": true
+                                "version": "1:2012.1.15AR.5-2.1"
                             },
                             "ntpdate": {
                                 "type": "dpkg",
-                                "version": "1:4.2.6.p5+dfsg-2",
-                                "version_possibly_truncated": true
+                                "version": "1:4.2.6.p5+dfsg-2"
                             },
                             "nvi": {
                                 "type": "dpkg",
@@ -1401,8 +1381,7 @@
                             },
                             "screen": {
                                 "type": "dpkg",
-                                "version": "4.1.0~20120320git",
-                                "version_possibly_truncated": true
+                                "version": "4.1.0~20120320gitdb59704-7"
                             },
                             "sed": {
                                 "type": "dpkg",
@@ -1410,8 +1389,7 @@
                             },
                             "sendfile": {
                                 "type": "dpkg",
-                                "version": "2.1b.20080616-5.2",
-                                "version_possibly_truncated": true
+                                "version": "2.1b.20080616-5.2"
                             },
                             "sensible-utils": {
                                 "type": "dpkg",
@@ -1615,8 +1593,7 @@
                             },
                             "xz-utils": {
                                 "type": "dpkg",
-                                "version": "5.1.1alpha+201206",
-                                "version_possibly_truncated": true
+                                "version": "5.1.1alpha+20120614-1"
                             },
                             "zile": {
                                 "type": "dpkg",
@@ -1714,8 +1691,7 @@
                             },
                             "bind9-host": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "binutils": {
                                 "type": "dpkg",
@@ -1735,8 +1711,7 @@
                             },
                             "bsd-mailx": {
                                 "type": "dpkg",
-                                "version": "8.1.2-0.20111106c",
-                                "version_possibly_truncated": true
+                                "version": "8.1.2-0.20111106cvs-1"
                             },
                             "bsdmainutils": {
                                 "type": "dpkg",
@@ -1848,8 +1823,7 @@
                             },
                             "dnsutils": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "dosfstools": {
                                 "type": "dpkg",
@@ -1885,8 +1859,7 @@
                             },
                             "eject": {
                                 "type": "dpkg",
-                                "version": "2.1.5+deb1+cvs200",
-                                "version_possibly_truncated": true
+                                "version": "2.1.5+deb1+cvs20081104-11"
                             },
                             "elinks-lite": {
                                 "type": "dpkg",
@@ -2102,18 +2075,15 @@
                             },
                             "isc-dhcp-client": {
                                 "type": "dpkg",
-                                "version": "4.2.2.dfsg.1-5+de",
-                                "version_possibly_truncated": true
+                                "version": "4.2.2.dfsg.1-5+deb70u2"
                             },
                             "isc-dhcp-common": {
                                 "type": "dpkg",
-                                "version": "4.2.2.dfsg.1-5+de",
-                                "version_possibly_truncated": true
+                                "version": "4.2.2.dfsg.1-5+deb70u2"
                             },
                             "isomd5sum": {
                                 "type": "dpkg",
-                                "version": "1:1.0.7+git.20110",
-                                "version_possibly_truncated": true
+                                "version": "1:1.0.7+git.20110618.6c9cd2f-1"
                             },
                             "jfsutils": {
                                 "type": "dpkg",
@@ -2161,8 +2131,7 @@
                             },
                             "libbind9-80": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libblas3": {
                                 "type": "dpkg",
@@ -2238,8 +2207,7 @@
                             },
                             "libdns81": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libdpkg-perl": {
                                 "type": "dpkg",
@@ -2295,8 +2263,7 @@
                             },
                             "libglib2.0-0": {
                                 "type": "dpkg",
-                                "version": "2.33.12+really2.3",
-                                "version_possibly_truncated": true
+                                "version": "2.33.12+really2.32.4-2"
                             },
                             "libgnutls-openssl27": {
                                 "type": "dpkg",
@@ -2332,18 +2299,15 @@
                             },
                             "libisc83": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libisccc80": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libisccfg82": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "libiw30": {
                                 "type": "dpkg",
@@ -2395,13 +2359,11 @@
                             },
                             "liblwres80": {
                                 "type": "dpkg",
-                                "version": "1:9.8.1.dfsg.P1-4",
-                                "version_possibly_truncated": true
+                                "version": "1:9.8.1.dfsg.P1-4.2"
                             },
                             "liblzma5": {
                                 "type": "dpkg",
-                                "version": "5.1.1alpha+201206",
-                                "version_possibly_truncated": true
+                                "version": "5.1.1alpha+20120614-1"
                             },
                             "liblzo2-2": {
                                 "type": "dpkg",
@@ -2521,8 +2483,7 @@
                             },
                             "librtmp0": {
                                 "type": "dpkg",
-                                "version": "2.4+20111222.git4",
-                                "version_possibly_truncated": true
+                                "version": "2.4+20111222.git4e06e21-1"
                             },
                             "libsasl2-2": {
                                 "type": "dpkg",
@@ -2590,8 +2551,7 @@
                             },
                             "libtalloc2": {
                                 "type": "dpkg",
-                                "version": "2.0.7+git20120207",
-                                "version_possibly_truncated": true
+                                "version": "2.0.7+git20120207-1"
                             },
                             "libtasn1-3": {
                                 "type": "dpkg",
@@ -2667,8 +2627,7 @@
                             },
                             "lpr": {
                                 "type": "dpkg",
-                                "version": "1:2008.05.17+nmu1",
-                                "version_possibly_truncated": true
+                                "version": "1:2008.05.17+nmu1"
                             },
                             "lrzsz": {
                                 "type": "dpkg",
@@ -2812,13 +2771,11 @@
                             },
                             "ntfs-3g": {
                                 "type": "dpkg",
-                                "version": "1:2012.1.15AR.5-2",
-                                "version_possibly_truncated": true
+                                "version": "1:2012.1.15AR.5-2.1"
                             },
                             "ntpdate": {
                                 "type": "dpkg",
-                                "version": "1:4.2.6.p5+dfsg-2",
-                                "version_possibly_truncated": true
+                                "version": "1:4.2.6.p5+dfsg-2"
                             },
                             "nvi": {
                                 "type": "dpkg",
@@ -3010,8 +2967,7 @@
                             },
                             "screen": {
                                 "type": "dpkg",
-                                "version": "4.1.0~20120320git",
-                                "version_possibly_truncated": true
+                                "version": "4.1.0~20120320gitdb59704-7"
                             },
                             "sed": {
                                 "type": "dpkg",
@@ -3019,8 +2975,7 @@
                             },
                             "sendfile": {
                                 "type": "dpkg",
-                                "version": "2.1b.20080616-5.2",
-                                "version_possibly_truncated": true
+                                "version": "2.1b.20080616-5.2"
                             },
                             "sensible-utils": {
                                 "type": "dpkg",
@@ -3216,8 +3171,7 @@
                             },
                             "xz-utils": {
                                 "type": "dpkg",
-                                "version": "5.1.1alpha+201206",
-                                "version_possibly_truncated": true
+                                "version": "5.1.1alpha+20120614-1"
                             },
                             "yaboot": {
                                 "type": "dpkg",
