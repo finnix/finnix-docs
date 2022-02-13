@@ -5,6 +5,7 @@ This repository contains documentation and data related to the [Finnix](https://
 ## Topics
 
   * [Platform support on Finnix](platforms.md)
+  * [Downloading and seeding Finnix via BitTorrent](bittorrent.md)
   * [Finnix kernel command line options](kernel-command-line.md)
   * [Finnix checksums and signatures](checksums-signatures.md)
 
