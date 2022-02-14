@@ -1,12 +1,14 @@
 # Finnix release procedure
 
-## Verify packages
+## Release fitness
+
+Check the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and see if there are any issues which can be solved before the release.
 
 Debian packages are removed from the Finnix package lists because they drop out of Debian testing, usually due to RC issues. Check for any removed packages which re-appeared in Debian but were not added back to Finnix.
 
 ## SquashFS sort files
 
-Boot a release-quality build (i.e. as close to what will be release as possible, but doesn't have to be 100% exact), with `init=/usr/lib/finnix/strace-init` appended to the kernel command line.
+Boot a release-quality build (i.e. as close to what will be released as possible, but doesn't have to be 100% exact), with `init=/usr/lib/finnix/strace-init` appended to the kernel command line.
 
 Wait about 10 seconds after booting is complete, then run:
 
@@ -210,8 +212,48 @@ git branch -d v${FINNIX_VER?}-release
   * Blog release announcement
   * Tweets
 
+## Issue management
+
+Go to the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and close out:
+
+  * Any committed (fixed) issues
+  * The milestone tracking issue
+  * The milestone itself
+
+Open a new milestone and milestone tracking issue for the next release.
+
 ## Cleanup
 
 With the release files in multiple places, remove the ISOs from the build machine's `build/info/` location.
 
 Double check GPG/SSH keys have been deleted.
+
+## Release checklist
+
+Paste into milestone tracking ticket.
+
+- [ ] [Release fitness](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-fitness)
+- [ ] [SquashFS sort files](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#squashfs-sort-files)
+- [ ] [Release build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-build)
+- [ ] [Release testing](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-testing)
+  - [ ] Default UEFI VM boot
+  - [ ] Default BIOS VM boot
+  - [ ] Real hardware - USB
+  - [ ] Real hardware - CD
+  - [ ] Kernel command line: `sshd passwd=foo`
+  - [ ] Kernel command line: `toram`
+  - [ ] `wifi-connect` usability
+- [ ] [Signatures](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#signatures)
+  - [ ] OpenPGP
+  - [ ] SSH
+- [ ] [Torrent](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#torrent)
+  - [ ] File creation
+  - [ ] Tracker
+- [ ] [Upload](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#upload)
+  - [ ] Archive
+  - [ ] Internet Archive
+- [ ] [Release data](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-data)
+- [ ] [Finalize branch](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
+- [ ] [Documentation / site updates](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
+- [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
+- [ ] [Cleanup](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
