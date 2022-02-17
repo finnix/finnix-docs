@@ -138,8 +138,8 @@ Upload it to the main release box in a separate directory (home directory), so m
 
 ```
 mv ~/${FINNIX_VER?} /srv/www/releases.finnix.org/htdocs/finnix-releases/
-rm -f current
-ln -s ${FINNIX_VER?} current
+rm -f /srv/www/releases.finnix.org/htdocs/finnix-releases/current
+ln -s ${FINNIX_VER?} /srv/www/releases.finnix.org/htdocs/finnix-releases/current
 ```
 
 This should be done 24-36 hours before release announcement, to allow time for the community mirrors to complete.
