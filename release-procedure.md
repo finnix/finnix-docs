@@ -33,7 +33,7 @@ Edit `finnix-live-build`, change:
   * `SAVE_ISO` to true
   * `CACHE_FROZEN` to true
 
-Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${ARCH?}.sort`.
+Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 
 ```
 git add .
@@ -196,9 +196,9 @@ Update the following changes in `finnix-live-build` to go back to dev:
 
 
 ```
-rm -f files/squashfs.${FINNIX_VER?}.${ARCH?}.sort
+rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 git add .
-git commit -m "Finnix dev (${CODENAME?})"
+git commit -m "Finnix dev (${FINNIX_CODENAME?})"
 git checkout main
 git merge v${FINNIX_VER?}-release
 git push origin main
@@ -221,6 +221,17 @@ Go to the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and cl
   * The milestone itself
 
 Open a new milestone and milestone tracking issue for the next release.
+
+## Mirrors
+
+The [Finnix mirror network](https://mirrors.finnix.org/) tests using release ISOs, generally the latest release plus Finnix 109.  The Django settings should be updated for the new release a day or so after all the mirrors have synced (not before, as the checker would error out on a mirror about missing files).
+
+One of the tests is a partial range test, usually fetching 1 KiB from 1 MiB in.  To get the SHA256 to update the Djange settings with:
+
+```
+dd if=finnix-${FINNIX_VER?}.iso bs=1024 skip=1024 count=1 | sha256sum
+curl -v -H "Range: bytes=1048576-1049599" https://mirror-fmt.colobox.com/pub/mirrors/finnix/releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso | sha256sum
+```
 
 ## Cleanup
 
@@ -256,4 +267,5 @@ Paste into milestone tracking ticket.
 - [ ] [Finalize branch](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
 - [ ] [Documentation / site updates](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
 - [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
+- [ ] [Mirrors](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#mirrors)
 - [ ] [Cleanup](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
