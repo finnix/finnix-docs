@@ -62,6 +62,7 @@ The final files have been copied to e.g. `build/info/2022-02-02_020202_v${FINNIX
   * Default BIOS VM boot
   * Real hardware - USB
   * Real hardware - CD
+  * UEFI secure boot
   * Kernel command line: `sshd passwd=foo`
   * Kernel command line: `toram`
   * `wifi-connect` usability
@@ -251,6 +252,7 @@ Paste into milestone tracking ticket.
   - [ ] Default BIOS VM boot
   - [ ] Real hardware - USB
   - [ ] Real hardware - CD
+  - [ ] UEFI secure boot
   - [ ] Kernel command line: `sshd passwd=foo`
   - [ ] Kernel command line: `toram`
   - [ ] `wifi-connect` usability
