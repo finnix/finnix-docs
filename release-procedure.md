@@ -37,8 +37,8 @@ Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 
 ```
 git add .
-git commit -m "Finnix v${FINNIX_VER?}"
-git tag -m "Finnix v${FINNIX_VER?}" v${FINNIX_VER?}
+git commit -m "Finnix ${FINNIX_VER?}"
+git tag -m "Finnix ${FINNIX_VER?}" v${FINNIX_VER?}
 git push personal v${FINNIX_VER?}-release
 git push personal --tags
 ```
