@@ -106,7 +106,10 @@ mktorrent \
     --announce=https://ipv6.tracker.finnix.org/announce \
     --comment=finnix-${FINNIX_VER?}.iso \
     --output=finnix-${FINNIX_VER?}.iso.torrent \
-    --web-seed=https://mirror.datacenter.by/pub/mirrors/finnix/releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso,https://ftp.cc.uoc.gr/mirrors/linux/finnix/releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso,https://mirrors.catalyst.net.nz/finnix-releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso,https://mirrors.ocf.berkeley.edu/finnix-releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
+    --web-seed=https://mirror.aarnet.edu.au/pub/finnix/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
+    --web-seed=https://ftp.cc.uoc.gr/mirrors/linux/finnix/releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
+    --web-seed=https://mirrors.catalyst.net.nz/finnix-releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
+    --web-seed=https://mirrors.ocf.berkeley.edu/finnix-releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
     finnix-${FINNIX_VER?}.iso
 ```
 
