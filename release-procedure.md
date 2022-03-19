@@ -184,9 +184,9 @@ ia upload finnix_${FINNIX_VER?} \
 
 ## Release data
 
-Temporarily edit `finnix-docs/tools/make-release-json`, filling in all information gathered.  Run it and save the JSON file.  Add, commit the JSON file (do not commit the `make-release-json` edit) and push.
+Temporarily edit `finnix-docs/tools/make-release-json`, filling in all information gathered.  Run it and save the JSON file.  Add, and commit the JSON file (do not commit the `make-release-json` edit).
 
-This should be done a few hours after the release is on the primary archive.
+Push to origin few hours after the release is on the primary archive, but before release.
 
 ## Finalize branch
 
@@ -269,6 +269,8 @@ Paste into milestone tracking ticket.
   - [ ] Archive
   - [ ] Internet Archive
 - [ ] [Release data](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-data)
+  - [ ] Build
+  - [ ] Push
 - [ ] [Finalize branch](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
 - [ ] [Documentation / site updates](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
 - [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
