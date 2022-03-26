@@ -12,7 +12,7 @@ Boot a release-quality build (i.e. as close to what will be released as possible
 
 Wait about 10 seconds after booting is complete, then run:
 
-```
+```shell
 killall strace
 git clone --depth=1 https://github.com/finnix/finnix-live-build
 finnix-live-build/tools/strace-reorder </var/log/strace-init.trace >squashfs.sort
@@ -35,7 +35,7 @@ Edit `finnix-live-build`, change:
 
 Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 
-```
+```shell
 git add .
 git commit -m "Finnix ${FINNIX_VER?}"
 git tag -m "Finnix ${FINNIX_VER?}" v${FINNIX_VER?}
@@ -47,7 +47,7 @@ We're pushing to a personal remote since we may need to brown paper bag the rele
 
 On the build machine:
 
-```
+```shell
 git fetch personal
 git checkout v${FINNIX_VER?}
 time sudo ./finnix-live-build
@@ -73,7 +73,7 @@ Retrieve OpenPGP and SSH keys from the vault.
 
 ### OpenPGP
 
-```
+```shell
 gpg --import 867279B83BF8E815A236D39E7D6F85C04356E6C2.private.asc
 
 gpg --armor --detach-sign --local-user "Finnix Release Signing Key <keymaster@finnix.org>" finnix-${FINNIX_VER?}.iso
@@ -88,7 +88,7 @@ Remove `~/.gnupg` from the temporary user account.
 
 ### SSH
 
-```
+```shell
 ssh-keygen -Y sign -f finnix-file/id_ed25519 -n file finnix-${FINNIX_VER?}.iso
 ```
 
@@ -100,7 +100,7 @@ Remove the directory `finnix-file/`.
 
 ### File creation
 
-```
+```shell
 mktorrent \
     --announce=https://tracker.finnix.org/announce \
     --announce=https://ipv6.tracker.finnix.org/announce \
@@ -118,7 +118,7 @@ Web seed mirrors help, but are not critical to remain fresh/reliable.  Torrent f
 ### Tracker
 
 Get the hex hash of the torrent:
-```
+```shell
 btcheck -i -l finnix-${FINNIX_VER?}.iso.torrent
 ```
 
@@ -132,7 +132,7 @@ Commit, push, build Docker image, restart container.
 
 The release directory should look like so:
 
-```
+```shell
 ${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso
 ${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso.gpg
 ${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso.torrent
@@ -140,7 +140,7 @@ ${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso.torrent
 
 Upload it to the main release box in a separate directory (home directory), so mirrors don't see the release mid-upload. Then:
 
-```
+```shell
 mv ~/${FINNIX_VER?} /srv/www/releases.finnix.org/htdocs/finnix-releases/
 rm -f /srv/www/releases.finnix.org/htdocs/finnix-releases/current
 ln -s ${FINNIX_VER?} /srv/www/releases.finnix.org/htdocs/finnix-releases/current
@@ -150,7 +150,7 @@ This should be done 24-36 hours before release announcement, to allow time for t
 
 ### Internet Archive
 
-```
+```shell
 ia upload finnix_${FINNIX_VER?}_source \
     finnix-${FINNIX_VER?}-source.iso finnix-${FINNIX_VER?}-source.iso.gpg finnix-simple-sleeve.jpg \
     --metadata="collection:finnix" \
@@ -199,7 +199,7 @@ Update the following changes in `finnix-live-build` to go back to dev:
   * `CODENAME` to the next codename
 
 
-```
+```shell
 rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 git add .
 git commit -m "Finnix dev (${FINNIX_CODENAME?})"
@@ -232,7 +232,7 @@ The [Finnix mirror network](https://mirrors.finnix.org/) tests using release ISO
 
 For the example configuration in [finnix-mirrors-website](https://github.com/finnix/finnix-mirrors-website):
 
-```
+```shell
 utils/iso_randchunk_hashes \
     --position=1048576 \
     --path-base=releases \
@@ -242,7 +242,7 @@ utils/iso_randchunk_hashes \
 
 But for the actual site, we have it pick 128 random chunks to hash, which `iso_randchunk_hashes` does by default:
 
-```
+```shell
 utils/iso_randchunk_hashes \
     --path-base=releases \
     releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
