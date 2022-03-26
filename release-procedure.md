@@ -230,11 +230,23 @@ Open a new milestone and milestone tracking issue for the next release.
 
 The [Finnix mirror network](https://mirrors.finnix.org/) tests using release ISOs, generally the latest release plus Finnix 109.  The Django settings should be updated for the new release a day or so after all the mirrors have synced (not before, as the checker would error out on a mirror about missing files).
 
-One of the tests is a partial range test, usually fetching 1 KiB from 1 MiB in.  To get the SHA256 to update the Djange settings with:
+For the example configuration in [finnix-mirrors-website](https://github.com/finnix/finnix-mirrors-website):
 
 ```
-dd if=finnix-${FINNIX_VER?}.iso bs=1024 skip=1024 count=1 | sha256sum
-curl -v -H "Range: bytes=1048576-1049599" https://mirror-fmt.colobox.com/pub/mirrors/finnix/releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso | sha256sum
+utils/iso_randchunk_hashes \
+    --position=1048576 \
+    --path-base=releases \
+    releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
+    | black -q -
+```
+
+But for the actual site, we have it pick 128 random chunks to hash, which `iso_randchunk_hashes` does by default:
+
+```
+utils/iso_randchunk_hashes \
+    --path-base=releases \
+    releases/${FINNIX_VER?}/finnix-${FINNIX_VER?}.iso \
+    | black -q -
 ```
 
 ## Cleanup
