@@ -29,7 +29,6 @@ Branch finnix-live-build main to e.g. `v${FINNIX_VER?}-release`.  The branch nam
 Edit `finnix-live-build`, change:
 
   * `VERSION` to the final number
-  * `SOURCE_ISO` to true
   * `SAVE_ISO` to true
   * `CACHE_FROZEN` to true
 
@@ -55,6 +54,21 @@ git checkout main
 ```
 
 The final files have been copied to e.g. `build/info/2022-02-02_020202_v${FINNIX_VER?}/`.
+Update the "focus" symlink:
+
+```shell
+ln -sf 2022-02-02_020202_v${FINNIX_VER?} build/info/focus
+```
+
+## Release source build
+
+This procedure isn't the best, but we need to make a second build just for the source ISO.
+The binary ISO isn't usable (because it has "apt-src" lines enabled), so we're just doing this for the source ISO.
+
+```shell
+time sudo env SOURCE_ISO=true ./finnix-live-build
+sudo rm -f build/info/2022-02-02_030303_v${FINNIX_VER?}/finnix-amd64.hybrid.iso
+```
 
 ## Release testing
 
@@ -193,7 +207,6 @@ Push to origin few hours after the release is on the primary archive, but before
 Update the following changes in `finnix-live-build` to go back to dev:
 
   * `VERSION` to dev
-  * `SOURCE_ISO` to false
   * `SAVE_ISO` to false
   * `CACHE_FROZEN` to false
   * `CODENAME` to the next codename
@@ -262,6 +275,7 @@ Paste into milestone tracking ticket.
 - [ ] [Release fitness](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-fitness)
 - [ ] [SquashFS sort files](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#squashfs-sort-files)
 - [ ] [Release build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-build)
+- [ ] [Release source build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-source-build)
 - [ ] [Release testing](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-testing)
   - [ ] Default UEFI VM boot
   - [ ] Default BIOS VM boot
