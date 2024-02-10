@@ -2,7 +2,7 @@
 
 ## AMD64
 
-As of Finnix 120, AMD64 is the primary and only officially supported architecture. All 64-bit x86 systems going back to 2004 should be bootable by Finnix.  The latest Finnix release may be downloaded from [finnix.org](https://www.finnix.org/).
+From Finnix 120 onward, AMD64 is the primary and only officially supported architecture. All 64-bit x86 systems going back to 2003 should be bootable by Finnix.  The latest Finnix release may be downloaded from [finnix.org](https://www.finnix.org/).
 
 ## i386
 
@@ -42,8 +42,8 @@ Apple platforms are generally a moving target, with the rule of thumb for Linux 
 
 Finnix 109 (PowerPC) generally boots and functions well on Apple PowerPC systems, but keep in mind that Finnix 109 itself was released in 2013, and that no current Linux distributions support PowerPC anymore.
 
-The latest version of Finnix (AMD64) should work well on most Apple Intel systems, with the exceptions of the newest Intel systems.
+The latest version of Finnix (AMD64) should work well on all former Apple (Intel) systems.
 
-Finnix for arm64 is not officially supported, but is buildable, see above. That being said, as of 2021 it is not yet bootable directly on Apple Silicon (M1) Macs. However, it is bootable within virtualization on an M1 system, assuming the virtualization software emulates a UEFI system. This configuration has been test with [UTM](https://mac.getutm.app/).
+Finnix for arm64 is not officially supported, but is buildable, see above. That being said, it is not bootable directly on Apple Silicon Macs. However, it is bootable within virtualization on an Apple Silicon system, assuming the virtualization software emulates a UEFI system. This configuration has been test with [UTM](https://mac.getutm.app/).
 
 
