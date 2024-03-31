@@ -8,6 +8,8 @@ Debian packages are removed from the Finnix package lists because they drop out 
 
 ## SquashFS sort files
 
+*Note: As of Finnix 125, strace attaching to PID 1 is broken (systemd will freeze halfway through boot), so SquashFS optimization is currently not possible.*
+
 Boot a release-quality build (i.e. as close to what will be released as possible, but doesn't have to be 100% exact), with `init=/usr/lib/finnix/strace-init` appended to the kernel command line.
 
 Wait about 10 seconds after booting is complete, then run:
@@ -24,7 +26,7 @@ Copy `squashfs.sort` off the test machine.
 
 ## Release build
 
-Branch finnix-live-build main to e.g. `v${FINNIX_VER?}-release`.  The branch name is not critical but will be temporarily pushed publicly, so this is a good format. `v${FINNIX_VER?}` alone should not be used because that is the tag name.
+Branch finnix-live-build main to e.g. `v${FINNIX_VER?}-rc`.  The branch name is not critical but will be temporarily pushed publicly, so this is a good format. `v${FINNIX_VER?}` alone should not be used because that is the tag name.
 
 Edit `finnix-live-build`, change:
 
@@ -38,7 +40,7 @@ Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 git add .
 git commit -m "Finnix ${FINNIX_VER?}"
 git tag -m "Finnix ${FINNIX_VER?}" v${FINNIX_VER?}
-git push personal v${FINNIX_VER?}-release
+git push personal v${FINNIX_VER?}-rc
 git push personal --tags
 ```
 
@@ -50,14 +52,14 @@ On the build machine:
 git fetch personal
 git checkout v${FINNIX_VER?}
 time sudo ./finnix-live-build
-git checkout main
 ```
 
 The final files have been copied to e.g. `build/info/2022-02-02_020202_v${FINNIX_VER?}/`.
 Update the "focus" symlink:
 
 ```shell
-ln -sf 2022-02-02_020202_v${FINNIX_VER?} build/info/focus
+sudo rm -f build/info/focus
+sudo ln -s $(readlink build/info/previous) build/info/focus
 ```
 
 ## Release source build
@@ -66,8 +68,19 @@ This procedure isn't the best, but we need to make a second build just for the s
 The binary ISO isn't usable (because it has "apt-src" lines enabled), so we're just doing this for the source ISO.
 
 ```shell
-time sudo env SOURCE_ISO=true ./finnix-live-build
-sudo rm -f build/info/2022-02-02_030303_v${FINNIX_VER?}/finnix-amd64.hybrid.iso
+TEMP_CACHE_DIR="$(mktemp -d -p "$(pwd)")"
+time sudo env SOURCE_ISO=true LB_CACHE_DIR="${TEMP_CACHE_DIR?}" ./finnix-live-build
+SOURCE_BUILD="$(readlink build/info/previous)"
+echo "Source build directory: ${SOURCE_BUILD?}"
+sudo rm -f "build/info/${SOURCE_BUILD?}/finnix-amd64.hybrid.iso"
+sudo rm -rf "${TEMP_CACHE_DIR?}"
+```
+
+## Build cleanup
+
+```shell
+sudo rm -rf "${TEMP_CACHE_DIR?}"
+git checkout main
 ```
 
 ## Release testing
@@ -138,7 +151,7 @@ btcheck -i -l finnix-${FINNIX_VER?}.iso.torrent
 
 Edit [finnix-tracker](https://github.com/finnix/finnix-tracker)/`finnix-tracker.js`, add to `allowedHashes`.
 
-Commit, push, build Docker image, restart container.
+Commit, push, [build Docker image](https://github.com/finnix/finnix-tracker/actions/workflows/registry.yml), restart container.
 
 ## Upload
 
@@ -200,7 +213,7 @@ ia upload finnix_${FINNIX_VER?} \
 
 Temporarily edit `finnix-docs/tools/make-release-json`, filling in all information gathered.  Run it and save the JSON file.  Add, and commit the JSON file (do not commit the `make-release-json` edit).
 
-Push to origin few hours after the release is on the primary archive, but before release.
+Push to origin a few hours after the release is on the primary archive, but before release.
 
 ## Finalize branch
 
@@ -217,10 +230,10 @@ rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 git add .
 git commit -m "Finnix dev (${FINNIX_CODENAME?})"
 git checkout main
-git merge v${FINNIX_VER?}-release
+git merge v${FINNIX_VER?}-rc
 git push origin main
 git push origin --tags
-git branch -d v${FINNIX_VER?}-release
+git branch -d v${FINNIX_VER?}-rc
 ```
 
 ## Documentation / site updates
