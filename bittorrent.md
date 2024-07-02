@@ -10,7 +10,7 @@ Once you are finished downloading via BitTorrent, please leave your client open 
 
 If you would like to be a dedicated seeder, several BitTorrent clients support RSS feeds of torrents. Finnix publishes several feeds; the primary and recommended feed is:
 
-  * [seeder.rss](https://www.finnix.org/rss/bittorrent/seeder.rss) - Current Finnix releases
+* [seeder.rss](https://www.finnix.org/rss/bittorrent/seeder.rss) - Current Finnix releases
 
 This feed contains the last two releases, as well as legacy release Finnix 109 in both x86 and PPC flavors.
 
@@ -18,7 +18,7 @@ Additionally, before Finnix releases are made, this feed will be updated with th
 
 Other feeds are available:
 
-  * [all-releases.rss](https://www.finnix.org/rss/bittorrent/all-releases.rss) - Every Finnix release ever made
-  * [current-release.rss](https://www.finnix.org/rss/bittorrent/current-release.rss) - Only the current release
-  * [current-release-x86.rss](https://www.finnix.org/rss/bittorrent/current-release-x86.rss) - Only the current release, x86
-  * [current-release-ppc.rss](https://www.finnix.org/rss/bittorrent/current-release-ppc.rss) - Only the current release, PPC (as PowerPC releases have been discontinued, this always serves Finnix-PPC 109)
+* [all-releases.rss](https://www.finnix.org/rss/bittorrent/all-releases.rss) - Every Finnix release ever made
+* [current-release.rss](https://www.finnix.org/rss/bittorrent/current-release.rss) - Only the current release
+* [current-release-x86.rss](https://www.finnix.org/rss/bittorrent/current-release-x86.rss) - Only the current release, x86
+* [current-release-ppc.rss](https://www.finnix.org/rss/bittorrent/current-release-ppc.rss) - Only the current release, PPC (as PowerPC releases have been discontinued, this always serves Finnix-PPC 109)

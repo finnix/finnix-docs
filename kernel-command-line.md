@@ -2,8 +2,8 @@
 
 Finnix supports a number of kernel command line options. They may be specified by:
 
-  * UEFI GRUB: Press "e" on "Live system", go down to the "linux" line and append to the end of the line. When ready, press Ctrl-X to boot.
-  * BIOS isolinux: Press Tab on "Live (amd64)" and append to the end of the line. When ready, press Enter to boot.
+* UEFI GRUB: Press "e" on "Live system", go down to the "linux" line and append to the end of the line. When ready, press Ctrl-X to boot.
+* BIOS isolinux: Press Tab on "Live (amd64)" and append to the end of the line. When ready, press Enter to boot.
 
 ## Early boot
 
@@ -17,8 +17,8 @@ Likewise, systemd supports a number of kernel command line options, though many 
 
 The following kernel command line options are specific to Finnix:
 
-  * `sshd`: Start the SSH daemon upon boot.
-  * `passwd`: Set account passwords on the kernel command line.  For example:
-      * `passwd=foo` - Implicit root user, plain password "foo"
-      * `passwd=root:foo passwd=finnix:bar` - Set the root user to "foo" and the finnix user to "bar"
-      * `passwd=root:$1$QnvsFWnz$MppFa1JL0xsMjB/VQwvwv.` - Explicit root user, hashed password
+* `sshd`: Start the SSH daemon upon boot.
+* `passwd`: Set account passwords on the kernel command line.  For example:
+  * `passwd=foo` - Implicit root user, plain password "foo"
+  * `passwd=root:foo passwd=finnix:bar` - Set the root user to "foo" and the finnix user to "bar"
+  * `passwd=root:$1$QnvsFWnz$MppFa1JL0xsMjB/VQwvwv.` - Explicit root user, hashed password

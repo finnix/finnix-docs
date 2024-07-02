@@ -17,9 +17,9 @@ Pick a random minute in cron to do the syncs.
 
 ### Server setup
 
-  * As of 2020, all new mirrors must serve HTTPS at least.
-  * Public rsync modules are nice to have, but not required.
-  * FTP and HTTP will be noted on [mirrors.finnix.org](https://mirrors.finnix.org/), but are otherwise not handled by the download redirector.
+* As of 2020, all new mirrors must serve HTTPS at least.
+* Public rsync modules are nice to have, but not required.
+* FTP and HTTP will be noted on [mirrors.finnix.org](https://mirrors.finnix.org/), but are otherwise not handled by the download redirector.
 
 At the moment, only one primary rsync module is provided, finnix-releases.
 Please do not pick a directory structure in the format `/pub/mirrors/finnix` to rsync this to, as future modules may be desired.

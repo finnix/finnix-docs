@@ -33,9 +33,9 @@ git checkout -b v${FINNIX_VER?}-rc
 
 Edit `finnix-live-build`, change:
 
-  * `VERSION` to the final number
-  * `SAVE_ISO` to true
-  * `CACHE_FROZEN` to true
+* `VERSION` to the final number
+* `SAVE_ISO` to true
+* `CACHE_FROZEN` to true
 
 Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 
@@ -44,18 +44,19 @@ git add .
 git commit -m "Finnix ${FINNIX_VER?}"
 git push origin v${FINNIX_VER?}-rc
 ```
+
 Run the [release workflow](https://github.com/finnix/finnix-live-build/actions/workflows/release.yml), making sure to run the workflow against the RC branch, and download the built artifacts.
 
 ## Release testing
 
-  * Default UEFI VM boot
-  * Default BIOS VM boot
-  * Real hardware - USB
-  * Real hardware - CD
-  * UEFI secure boot
-  * Kernel command line: `sshd passwd=foo`
-  * Kernel command line: `toram`
-  * `wifi-connect` usability
+* Default UEFI VM boot
+* Default BIOS VM boot
+* Real hardware - USB
+* Real hardware - CD
+* UEFI secure boot
+* Kernel command line: `sshd passwd=foo`
+* Kernel command line: `toram`
+* `wifi-connect` usability
 
 ## Signatures
 
@@ -108,6 +109,7 @@ Web seed mirrors help, but are not critical to remain fresh/reliable.  Torrent f
 ### Tracker
 
 Get the hex hash of the torrent:
+
 ```shell
 btcheck -i -l finnix-${FINNIX_VER?}.iso.torrent
 ```
@@ -191,11 +193,10 @@ git push personal --tags
 
 Update the following changes in `finnix-live-build` to go back to dev:
 
-  * `VERSION` to dev
-  * `SAVE_ISO` to false
-  * `CACHE_FROZEN` to false
-  * `CODENAME` to the next codename
-
+* `VERSION` to dev
+* `SAVE_ISO` to false
+* `CACHE_FROZEN` to false
+* `CODENAME` to the next codename
 
 ```shell
 rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
@@ -209,17 +210,17 @@ Note that earlier, `git push personal --tags` does not actually push to main, ju
 
 ## Documentation / site updates
 
-  * Homepage
-  * Blog release announcement
-  * Tweets
+* Homepage
+* Blog release announcement
+* Tweets
 
 ## Issue management
 
 Go to the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and close out:
 
-  * Any committed (fixed) issues
-  * The milestone tracking issue
-  * The milestone itself
+* Any committed (fixed) issues
+* The milestone tracking issue
+* The milestone itself
 
 Open a new milestone and milestone tracking issue for the next release.
 
@@ -264,33 +265,33 @@ sudo ln -s $(readlink build/info/previous) build/info/focus
 
 Paste into milestone tracking ticket.
 
-- [ ] [Release fitness](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-fitness)
-- [ ] [SquashFS sort files](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#squashfs-sort-files)
-- [ ] [Release build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-build)
-- [ ] [Release source build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-source-build)
-- [ ] [Release testing](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-testing)
-  - [ ] Default UEFI VM boot
-  - [ ] Default BIOS VM boot
-  - [ ] Real hardware - USB
-  - [ ] Real hardware - CD
-  - [ ] UEFI secure boot
-  - [ ] Kernel command line: `sshd passwd=foo`
-  - [ ] Kernel command line: `toram`
-  - [ ] `wifi-connect` usability
-- [ ] [Signatures](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#signatures)
-  - [ ] OpenPGP
-  - [ ] SSH
-- [ ] [Torrent](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#torrent)
-  - [ ] File creation
-  - [ ] Tracker
-- [ ] [Upload](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#upload)
-  - [ ] Archive
-  - [ ] Internet Archive
-- [ ] [Release data](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-data)
-  - [ ] Build
-  - [ ] Push
-- [ ] [Finalize branch](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
-- [ ] [Documentation / site updates](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
-- [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
-- [ ] [Mirrors](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#mirrors)
-- [ ] [Cleanup](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
+* [ ] [Release fitness](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-fitness)
+* [ ] [SquashFS sort files](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#squashfs-sort-files)
+* [ ] [Release build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-build)
+* [ ] [Release source build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-source-build)
+* [ ] [Release testing](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-testing)
+  * [ ] Default UEFI VM boot
+  * [ ] Default BIOS VM boot
+  * [ ] Real hardware - USB
+  * [ ] Real hardware - CD
+  * [ ] UEFI secure boot
+  * [ ] Kernel command line: `sshd passwd=foo`
+  * [ ] Kernel command line: `toram`
+  * [ ] `wifi-connect` usability
+* [ ] [Signatures](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#signatures)
+  * [ ] OpenPGP
+  * [ ] SSH
+* [ ] [Torrent](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#torrent)
+  * [ ] File creation
+  * [ ] Tracker
+* [ ] [Upload](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#upload)
+  * [ ] Archive
+  * [ ] Internet Archive
+* [ ] [Release data](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-data)
+  * [ ] Build
+  * [ ] Push
+* [ ] [Finalize branch](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
+* [ ] [Documentation / site updates](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
+* [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
+* [ ] [Mirrors](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#mirrors)
+* [ ] [Cleanup](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
