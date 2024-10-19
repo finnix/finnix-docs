@@ -17,7 +17,7 @@ Likewise, systemd supports a number of kernel command line options, though many 
 
 The following kernel command line options are specific to Finnix:
 
-* `0`: Start locale (keyboard and language) configuration during early boot. This is the same as running the `0` command after boot. (`0` is chosen as it is hopefully as keyboard-agnostic of a key as possible before the keyboard layout can actually be specified).
+* `0` / `locale-config` : Start locale (keyboard and language) configuration during early boot. This is the same as running the `0` command after boot. (`0` is chosen as it is hopefully as keyboard-agnostic of a key as possible before the keyboard layout can actually be specified).
 * `sshd`: Start the SSH daemon upon boot.
 * `passwd`: Set account passwords on the kernel command line.  For example:
   * `passwd=foo` - Implicit root user, plain password "foo"
