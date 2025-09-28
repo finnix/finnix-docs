@@ -1,5 +1,16 @@
 # Finnix release procedure
 
+## Variables
+
+Gather the variables used throughout this document:
+
+```shell
+FINNIX_VER=999
+FINNIX_ARCH=amd64
+FINNIX_RELEASE_DATE=2099-01-01
+FINNIX_NEXT_CODENAME=hi
+```
+
 ## Release fitness
 
 Check the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and see if there are any issues which can be solved before the release.
@@ -40,12 +51,32 @@ Edit `finnix-live-build`, change:
 Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 
 ```shell
+cp /tmp/squashfs.sort files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
+cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license" <<"EOM"
+SPDX-PackageSummary: finnix-live-build
+SPDX-FileCopyrightText: None
+SPDX-License-Identifier: CC0-1.0
+EOM
+
 git add .
 git commit -m "Finnix ${FINNIX_VER?}"
 git push origin v${FINNIX_VER?}-rc
 ```
 
 Run the [release workflow](https://github.com/finnix/finnix-live-build/actions/workflows/release.yml), making sure to run the workflow against the RC branch, and download the built artifacts.
+
+### Docker riscv64 build
+
+*Still not sure if riscv64 will be part of the final release manifest, as it must be built manually.*
+
+On `flexo.snowman.lan` (StarFive VisionFive 2):
+
+```shell
+git fetch origin v${FINNIX_VER?}-rc
+git checkout origin/v${FINNIX_VER?}-rc
+env DOCKER_BUILD="true" ./finnix-live-build
+docker image build -t docker.io/finnix/finnix:rc-riscv64 build/docker
+```
 
 ## Release testing
 
@@ -174,9 +205,44 @@ ia upload finnix_${FINNIX_VER?} \
     --metadata="title:Finnix ${FINNIX_VER?}"
 ```
 
+## Docker
+
+```shell
+docker image pull ghcr.io/finnix/finnix-live-build:release-amd64
+docker image pull ghcr.io/finnix/finnix-live-build:release-arm64
+ssh flexo.snowman.lan docker image save docker.io/finnix/finnix:rc-riscv64 | docker image load
+docker image tag ghcr.io/finnix/finnix-live-build:release-amd64 docker.io/finnix/finnix:rc-amd64
+docker image tag ghcr.io/finnix/finnix-live-build:release-arm64 docker.io/finnix/finnix:rc-arm64
+docker image tag docker.io/finnix/finnix:riscv64-latest docker.io/finnix/finnix:rc-riscv64
+docker image push docker.io/finnix/finnix:rc-amd64
+docker image push docker.io/finnix/finnix:rc-arm64
+docker image push docker.io/finnix/finnix:rc-riscv64
+
+docker manifest rm docker.io/finnix/finnix:${FINNIX_VER?} || true
+docker manifest rm docker.io/finnix/finnix:latest || true
+docker manifest create docker.io/finnix/finnix:${FINNIX_VER?} \
+    docker.io/finnix/finnix:rc-amd64 \
+    docker.io/finnix/finnix:rc-arm64 \
+    docker.io/finnix/finnix:rc-riscv64
+docker manifest create docker.io/finnix/finnix:latest \
+    docker.io/finnix/finnix:rc-amd64 \
+    docker.io/finnix/finnix:rc-arm64 \
+    docker.io/finnix/finnix:rc-riscv64
+docker manifest push docker.io/finnix/finnix:${FINNIX_VER?}
+docker manifest push docker.io/finnix/finnix:latest
+```
+
+Afterward, go into the Docker Hub interface and untag the `rc` tags.
+
 ## Release data
 
-Temporarily edit `finnix-docs/tools/make-release-json`, filling in all information gathered.  Run it and save the JSON file.  Add, and commit the JSON file (do not commit the `make-release-json` edit).
+Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.asc`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://github.com/finnix/finnix-docs) clone:
+
+```shell
+tools/make-release-json finnix-${FINNIX_VER?}.iso ${FINNIX_RELEASE_DATE?} >releases/${FINNIX_VER?}.json
+```
+
+Double check the JSON file, add and commit it.
 
 Push to origin a few hours after the release is on the primary archive, but before release.
 
@@ -188,7 +254,7 @@ Tag and push the RC commit:
 git checkout main
 git merge v${FINNIX_VER?}-rc
 git tag -m "Finnix ${FINNIX_VER?}" v${FINNIX_VER?}
-git push personal --tags
+git push origin --tags
 ```
 
 Update the following changes in `finnix-live-build` to go back to dev:
@@ -201,18 +267,18 @@ Update the following changes in `finnix-live-build` to go back to dev:
 ```shell
 rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 git add .
-git commit -m "Finnix dev (${FINNIX_CODENAME?})"
+git commit -m "Finnix dev (${FINNIX_NEXT_CODENAME?})"
 git push
 git branch -d v${FINNIX_VER?}-rc
 ```
 
-Note that earlier, `git push personal --tags` does not actually push to main, just pushes the tag. The branch push doesn't occur until after the dev commit, after which point main advances by 2 commits (release then dev). This is desired to not have any automated opportunistic builds happen against the release commit itself (besides the release workflow we trigger against the RC branch, that is).
+Note that earlier, `git push origin --tags` does not actually push to main, just pushes the tag. The branch push doesn't occur until after the dev commit, after which point main advances by 2 commits (release then dev). This is desired to not have any automated opportunistic builds happen against the release commit itself (besides the release workflow we trigger against the RC branch, that is).
 
 ## Documentation / site updates
 
 * Homepage
 * Blog release announcement
-* Tweets
+* Social posts
 
 ## Issue management
 
