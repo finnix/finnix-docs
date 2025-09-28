@@ -4,34 +4,61 @@
 # SPDX-FileCopyrightText: Copyright (C) 2021 Ryan Finnie
 # SPDX-License-Identifier: MPL-2.0
 
+import itertools
 import json
+import logging
+import os
+import hashlib
+import shlex
+import subprocess
+import sys
 
-PRODUCT = "Finnix"
-PRODUCT_ID = "finnix"
-VERSION = "999"
-BASE_OS = "Debian testing (2999-01-01)"
-KERNEL = "Linux 5.999 (Debian 5.999.0-1)"
-CODENAME = "XXX"
-DATE = "2999-01-01"
-SIZE = 999999999
-CHECKSUM_MD5 = "XXX"
-CHECKSUM_SHA256 = "XXX"
-CHECKSUM_SHA512 = "XXX"
-SIGNATURE_OPENPGP = """
------BEGIN PGP SIGNATURE-----
 
-XXX
------END PGP SIGNATURE-----
-""".strip()
-SIGNATURE_SSH = """
------BEGIN SSH SIGNATURE-----
-XXX
------END SSH SIGNATURE-----
-""".strip()
-PACKAGES = """
-XXX-a	1.999-1
-XXX-b	2.999-1
-""".strip()
+def readiter(fh, size=1024):
+    return itertools.takewhile(
+        lambda t: t, map(lambda chunk: fh.read(size), itertools.count(0))
+    )
+
+
+def checksums(fn):
+    md5 = hashlib.new("MD5")
+    sha256 = hashlib.new("SHA256")
+    sha512 = hashlib.new("SHA512")
+    with open(fn, "rb") as fh:
+        for b in readiter(fh, 1024 * 1024):
+            md5.update(b)
+            sha256.update(b)
+            sha512.update(b)
+    return md5.hexdigest(), sha256.hexdigest(), sha512.hexdigest()
+
+
+logging.basicConfig(level=logging.INFO)
+fn = sys.argv[1]
+DATE = sys.argv[2]
+
+build_info_str = subprocess.check_output(
+    ["7z", "x", "-so", fn, ".disk/build_info"], encoding="UTF-8"
+)
+lex = shlex.shlex(build_info_str, posix=True)
+lex.whitespace_split = True
+lex.whitespace = "\n"
+build_info = dict(kv.split("=", 1) for kv in lex)
+build_date = build_info["DATETIME"].split(" ", 1)[0]
+
+PRODUCT = build_info["PRODUCT"]
+PRODUCT_ID = build_info["PRODUCT_ID"]
+VERSION = build_info["VERSION"]
+BASE_OS = "Debian testing ({build_date})".format(build_date=build_date)
+CODENAME = build_info["CODENAME"]
+SIZE = os.stat(fn).st_size
+CHECKSUM_MD5, CHECKSUM_SHA256, CHECKSUM_SHA512 = checksums(fn)
+SIGNATURE_OPENPGP = open(fn + ".asc", "r").read().strip()
+assert "-----BEGIN PGP SIGNATURE-----" in SIGNATURE_OPENPGP
+SIGNATURE_SSH = open(fn + ".sig", "r").read().strip()
+assert "-----BEGIN SSH SIGNATURE-----" in SIGNATURE_SSH
+PACKAGES = subprocess.check_output(
+    ["7z", "x", "-so", fn, "live/filesystem.packages"], encoding="UTF-8"
+).strip()
 
 
 packages = {}
@@ -40,6 +67,11 @@ for line in PACKAGES.split("\n"):
     if ":" in package_name:
         package_name, _ = package_name.split(":", 1)
     packages[package_name] = {"version": package_version, "type": "dpkg"}
+
+KERNEL = "Linux {kernel_base} (Debian {kernel_package_ver})".format(
+    kernel_base=".".join(packages["linux-image-amd64"]["version"].split(".")[0:2]),
+    kernel_package_ver=packages["linux-image-amd64"]["version"],
+)
 
 out = {
     PRODUCT_ID: {
@@ -75,3 +107,14 @@ out = {
 }
 
 print(json.dumps(out, sort_keys=True, indent=4), end="")
+
+logging.info(
+    "{product} {version} ({codename})".format(
+        product=PRODUCT, version=VERSION, codename=CODENAME
+    )
+)
+logging.info("{size} bytes, released {date}".format(size=SIZE, date=DATE))
+logging.info(BASE_OS)
+logging.info(KERNEL)
+logging.info("")
+logging.warning("This script is fragile. Double check its output.")
