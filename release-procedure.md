@@ -237,10 +237,10 @@ Afterward, go into the Docker Hub interface and untag the `rc` tags.
 
 ## Release data
 
-Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.asc`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://github.com/finnix/finnix-docs) clone:
+Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.gpg`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://github.com/finnix/finnix-docs) clone:
 
 ```shell
-tools/make-release-json finnix-${FINNIX_VER?}.iso ${FINNIX_RELEASE_DATE?} >releases/${FINNIX_VER?}.json
+tools/make-release-json --release-date=${FINNIX_RELEASE_DATE?} finnix-${FINNIX_VER?}.iso >releases/${FINNIX_VER?}.json
 ```
 
 Double check the JSON file, add and commit it.

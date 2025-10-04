@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
 # SPDX-License-Identifier: MPL-2.0
 
+import argparse
 import itertools
 import json
 import logging
@@ -18,6 +19,10 @@ def readiter(fh, size=1024):
     return itertools.takewhile(lambda t: t, map(lambda chunk: fh.read(size), itertools.count(0)))
 
 
+def iso_file_cat(iso_fn, contents_fn):
+    return subprocess.check_output(["7z", "x", "-so", iso_fn, contents_fn], encoding="UTF-8")
+
+
 def checksums(fn):
     md5 = hashlib.new("MD5")
     sha256 = hashlib.new("SHA256")
@@ -30,81 +35,143 @@ def checksums(fn):
     return md5.hexdigest(), sha256.hexdigest(), sha512.hexdigest()
 
 
-logging.basicConfig(level=logging.INFO)
-fn = sys.argv[1]
-DATE = sys.argv[2]
+class IsoInfo:
+    def __init__(self, fn):
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-build_info_str = subprocess.check_output(["7z", "x", "-so", fn, ".disk/build_info"], encoding="UTF-8")
-lex = shlex.shlex(build_info_str, posix=True)
-lex.whitespace_split = True
-lex.whitespace = "\n"
-build_info = dict(kv.split("=", 1) for kv in lex)
-build_date = build_info["DATETIME"].split(" ", 1)[0]
+        build_info_str = iso_file_cat(fn, ".disk/build_info")
+        lex = shlex.shlex(build_info_str, posix=True)
+        lex.whitespace_split = True
+        lex.whitespace = "\n"
+        build_info = dict(kv.split("=", 1) for kv in lex)
+        build_date = build_info["DATETIME"].split(" ", 1)[0]
 
-PRODUCT = build_info["PRODUCT"]
-PRODUCT_ID = build_info["PRODUCT_ID"]
-VERSION = build_info["VERSION"]
-BASE_OS = "Debian testing ({build_date})".format(build_date=build_date)
-CODENAME = build_info["CODENAME"]
-SIZE = os.stat(fn).st_size
-CHECKSUM_MD5, CHECKSUM_SHA256, CHECKSUM_SHA512 = checksums(fn)
-SIGNATURE_OPENPGP = open(fn + ".asc", "r").read().strip()
-assert "-----BEGIN PGP SIGNATURE-----" in SIGNATURE_OPENPGP
-SIGNATURE_SSH = open(fn + ".sig", "r").read().strip()
-assert "-----BEGIN SSH SIGNATURE-----" in SIGNATURE_SSH
-PACKAGES = subprocess.check_output(["7z", "x", "-so", fn, "live/filesystem.packages"], encoding="UTF-8").strip()
+        self.filename = os.path.basename(fn)
+        self.product = build_info["PRODUCT"]
+        self.product_id = build_info["PRODUCT_ID"]
+        self.version = build_info["VERSION"]
+        self.arch = build_info["ARCH"]
+        self.base_os = "Debian testing ({build_date})".format(build_date=build_date)
+        self.codename = build_info["CODENAME"]
+        self.size = os.stat(fn).st_size
+        self.checksum_md5, self.checksum_sha256, self.checksum_sha512 = checksums(fn)
+
+        self.signature_openpgp = None
+        openpgp_fn = fn + ".gpg"
+        if os.path.exists(openpgp_fn):
+            with open(openpgp_fn, "r") as f:
+                self.signature_openpgp = f.read().strip()
+            assert "-----BEGIN PGP SIGNATURE-----" in self.signature_openpgp
+        else:
+            self.logger.warning(
+                "{fn} does not exist, not including OpenPGP signature. Output is unsuitable for release.".format(fn=openpgp_fn)
+            )
+
+        self.signature_ssh = None
+        ssh_fn = fn + ".sig"
+        if os.path.exists(ssh_fn):
+            with open(ssh_fn, "r") as f:
+                self.signature_ssh = f.read().strip()
+            assert "-----BEGIN SSH SIGNATURE-----" in self.signature_ssh
+        else:
+            self.logger.warning(
+                "{fn} does not exist, not including SSH signature. Output is unsuitable for release.".format(fn=ssh_fn)
+            )
+
+        packages_raw = iso_file_cat(fn, "live/filesystem.packages")
+        self.packages = {}
+        for line in packages_raw.split("\n"):
+            package_name, package_version = line.strip().split("\t", 1)
+            if ":" in package_name:
+                package_name, _ = package_name.split(":", 1)
+            self.packages[package_name] = {"version": package_version, "type": "dpkg"}
+
+        kernel_package_name = "linux-image-{arch}".format(arch=self.arch)
+        self.kernel = "Linux {kernel_base} (Debian {kernel_package_ver})".format(
+            kernel_base=".".join(self.packages[kernel_package_name]["version"].split(".")[0:2]),
+            kernel_package_ver=self.packages[kernel_package_name]["version"],
+        )
+
+    def arch_dump(self):
+        signatures = []
+        if self.signature_openpgp:
+            signatures.append({"signature": self.signature_openpgp, "type": "openpgp"})
+        if self.signature_ssh:
+            signatures.append({"signature": self.signature_ssh, "type": "ssh"})
+        out = {
+            "base_os": self.base_os,
+            "kernel": self.kernel,
+            "files": {
+                self.filename: {
+                    "size": self.size,
+                    "checksums": {
+                        "md5": self.checksum_md5,
+                        "sha256": self.checksum_sha256,
+                        "sha512": self.checksum_sha512,
+                    },
+                    "signatures": signatures,
+                }
+            },
+            "packages": self.packages,
+        }
+        return out
 
 
-packages = {}
-for line in PACKAGES.split("\n"):
-    package_name, package_version = line.strip().split("\t", 1)
-    if ":" in package_name:
-        package_name, _ = package_name.split(":", 1)
-    packages[package_name] = {"version": package_version, "type": "dpkg"}
+class MakeReleaseJson:
+    def __init__(self):
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-KERNEL = "Linux {kernel_base} (Debian {kernel_package_ver})".format(
-    kernel_base=".".join(packages["linux-image-amd64"]["version"].split(".")[0:2]),
-    kernel_package_ver=packages["linux-image-amd64"]["version"],
-)
+    def parse_args(self, argv=None):
+        if argv is None:
+            argv = sys.argv
 
-out = {
-    PRODUCT_ID: {
-        "releases": {
-            VERSION: {
-                "name": "{} {}".format(PRODUCT, VERSION),
-                "date": DATE,
-                "codename": CODENAME,
-                "architectures": {
-                    "amd64": {
-                        "base_os": BASE_OS,
-                        "kernel": KERNEL,
-                        "files": {
-                            "{}-{}.iso".format(PRODUCT_ID, VERSION): {
-                                "size": SIZE,
-                                "checksums": {
-                                    "md5": CHECKSUM_MD5,
-                                    "sha256": CHECKSUM_SHA256,
-                                    "sha512": CHECKSUM_SHA512,
-                                },
-                                "signatures": [
-                                    {"signature": SIGNATURE_OPENPGP, "type": "openpgp"},
-                                    {"signature": SIGNATURE_SSH, "type": "ssh"},
-                                ],
-                            }
-                        },
-                        "packages": packages,
+        parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+        parser.add_argument("filenames", nargs="+", help="ISO filenames")
+
+        parser.add_argument("--release-date", help="Release date (YYYY-MM-DD)")
+        parser.add_argument("--debug", action="store_true", help="Print debugging information")
+
+        return parser.parse_args(args=argv[1:])
+
+    def main(self):
+        self.args = self.parse_args()
+
+        logging.basicConfig(level=(logging.DEBUG if self.args.debug else logging.INFO))
+
+        isos = [IsoInfo(fn) for fn in self.args.filenames]
+        for key in ("product", "version", "codename"):
+            s = set([getattr(iso, key) for iso in isos])
+            assert len(s) == 1
+
+        out = {
+            isos[0].product_id: {
+                "releases": {
+                    isos[0].version: {
+                        "name": "{} {}".format(isos[0].product, isos[0].version),
+                        "date": self.args.release_date,
+                        "codename": isos[0].codename,
+                        "architectures": {iso.arch: iso.arch_dump() for iso in isos},
                     }
-                },
+                }
             }
         }
-    }
-}
 
-print(json.dumps(out, sort_keys=True, indent=4), end="")
+        print(json.dumps(out, sort_keys=True, indent=4))
 
-logging.info("{product} {version} ({codename})".format(product=PRODUCT, version=VERSION, codename=CODENAME))
-logging.info("{size} bytes, released {date}".format(size=SIZE, date=DATE))
-logging.info(BASE_OS)
-logging.info(KERNEL)
-logging.info("")
-logging.warning("This script is fragile. Double check its output.")
+        self.logger.info(
+            "{product} {version} ({codename})".format(product=isos[0].product, version=isos[0].version, codename=isos[0].codename)
+        )
+        self.logger.info(isos[0].base_os)
+        self.logger.info("Released {date}".format(date=self.args.release_date))
+        self.logger.info("")
+        for iso in isos:
+            self.logger.info("{filename}: {size} bytes, {kernel}".format(filename=iso.filename, size=iso.size, kernel=iso.kernel))
+        self.logger.info("")
+        self.logger.warning("This script is fragile. Double check its output.")
+        if not self.args.release_date:
+            self.logger.warning("Release date not specified. Output is unsuitable for release.")
+
+
+if __name__ == "__main__":
+    sys.exit(MakeReleaseJson().main())
