@@ -75,6 +75,7 @@ On `flexo.snowman.lan` (StarFive VisionFive 2):
 git fetch origin v${FINNIX_VER?}-rc
 git checkout origin/v${FINNIX_VER?}-rc
 env DOCKER_BUILD="true" ./finnix-live-build
+docker image pull docker.io/library/debian:testing
 docker image build -t docker.io/finnix/finnix:rc-riscv64 build/docker
 ```
 
