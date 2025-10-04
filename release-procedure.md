@@ -53,7 +53,7 @@ Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 ```shell
 cp /tmp/squashfs.sort files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license" <<"EOM"
-SPDX-PackageSummary: finnix-live-build
+SPDX-PackageSummary: finnix-docs
 SPDX-FileCopyrightText: None
 SPDX-License-Identifier: CC0-1.0
 EOM
@@ -362,3 +362,11 @@ Paste into milestone tracking ticket.
 * [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
 * [ ] [Mirrors](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#mirrors)
 * [ ] [Cleanup](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
+
+## License
+
+This document is provided under the following license:
+
+    SPDX-PackageSummary: finnix-docs
+    SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+    SPDX-License-Identifier: CC-BY-SA-4.0

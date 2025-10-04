@@ -60,3 +60,11 @@ The files in `/project/trace/` will be checked to determine mirror freshness, an
 
 Outdated mirrors will be removed from the automatic rotation until they are current again.
 Mirrors that do not respond at all will be taken out of the rotation, and will be tested occasionally until they respond again.
+
+## License
+
+This document is provided under the following license:
+
+    SPDX-PackageSummary: finnix-docs
+    SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+    SPDX-License-Identifier: CC-BY-SA-4.0

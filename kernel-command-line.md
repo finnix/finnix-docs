@@ -23,3 +23,11 @@ The following kernel command line options are specific to Finnix:
   * `passwd=foo` - Implicit root user, plain password "foo"
   * `passwd=root:foo passwd=finnix:bar` - Set the root user to "foo" and the finnix user to "bar"
   * `passwd=root:$1$QnvsFWnz$MppFa1JL0xsMjB/VQwvwv.` - Explicit root user, hashed password
+
+## License
+
+This document is provided under the following license:
+
+    SPDX-PackageSummary: finnix-docs
+    SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+    SPDX-License-Identifier: CC-BY-SA-4.0

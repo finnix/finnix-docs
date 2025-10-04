@@ -22,3 +22,11 @@ Other feeds are available:
 * [current-release.rss](https://www.finnix.org/rss/bittorrent/current-release.rss) - Only the current release
 * [current-release-x86.rss](https://www.finnix.org/rss/bittorrent/current-release-x86.rss) - Only the current release, x86
 * [current-release-ppc.rss](https://www.finnix.org/rss/bittorrent/current-release-ppc.rss) - Only the current release, PPC (as PowerPC releases have been discontinued, this always serves Finnix-PPC 109)
+
+## License
+
+This document is provided under the following license:
+
+    SPDX-PackageSummary: finnix-docs
+    SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+    SPDX-License-Identifier: CC-BY-SA-4.0

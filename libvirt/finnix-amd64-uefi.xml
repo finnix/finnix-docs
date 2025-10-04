@@ -1,4 +1,10 @@
 <!--
+SPDX-PackageSummary: finnix-docs
+SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
+<!--
 WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
 OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
   virsh edit finnix-amd64-uefi

@@ -17,6 +17,8 @@ This repository contains documentation and data related to the [Finnix](https://
 
 ## License
 
-Copyright (C) 2021 [Ryan Finnie](https://www.finnie.org/)
+This document is provided under the following license:
 
-This work is licensed under Creative Commons [Attribution-ShareAlike 4.0 International](LICENSE.md).
+    SPDX-PackageSummary: finnix-docs
+    SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+    SPDX-License-Identifier: CC-BY-SA-4.0

@@ -1,0 +1,58 @@
+# SPDX-PackageSummary: finnix-docs
+# SPDX-FileCopyrightText: © 2023 Ryan Finnie <ryan@finnie.org>
+# SPDX-License-Identifier: MPL-2.0
+
+# https://pre-commit.com/hooks.html
+# pre-commit install --install-hooks
+# pre-commit autoupdate
+# pre-commit run -a
+
+---
+fail_fast: false
+
+repos:
+  - repo: "https://github.com/pre-commit/pre-commit-hooks"
+    rev: "v5.0.0"
+    hooks:
+      - id: "check-added-large-files"
+      - id: "check-case-conflict"
+      - id: "check-executables-have-shebangs"
+      - id: "check-json"
+      - id: "check-merge-conflict"
+      - id: "check-yaml"
+      - id: "check-shebang-scripts-are-executable"
+        exclude: |
+          (?x)^(
+            hooks/.*\.hook\.(chroot|binary)
+          )$
+      - id: "detect-private-key"
+      - id: "end-of-file-fixer"
+      - id: "fix-byte-order-marker"
+      - id: "mixed-line-ending"
+      - id: "trailing-whitespace"
+
+  - repo: "https://github.com/adrienverge/yamllint"
+    rev: "v1.35.1"
+    hooks:
+      - id: "yamllint"
+
+  - repo: "https://github.com/fsfe/reuse-tool"
+    rev: "v5.0.2"
+    hooks:
+      - id: "reuse"
+
+  - repo: "https://github.com/rhysd/actionlint"
+    rev: "v1.7.7"
+    hooks:
+      - id: "actionlint"
+
+  - repo: "https://github.com/psf/black"
+    rev: "25.1.0"
+    hooks:
+      - id: "black"
+
+  - repo: "https://github.com/pycqa/flake8"
+    rev: "7.2.0"
+    hooks:
+      - id: "flake8"
+        additional_dependencies: ["Flake8-pyproject"]

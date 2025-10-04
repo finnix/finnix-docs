@@ -45,3 +45,11 @@ Finnix 109 (PowerPC) generally boots and functions well on Apple PowerPC systems
 The latest version of Finnix (AMD64) should work well on all former Apple (Intel) systems.
 
 Finnix for arm64 is not officially supported, but is buildable, see above. That being said, it is not bootable directly on Apple Silicon Macs. However, it is bootable within virtualization on an Apple Silicon system, assuming the virtualization software emulates a UEFI system. This configuration has been tested with [UTM](https://mac.getutm.app/).
+
+## License
+
+This document is provided under the following license:
+
+    SPDX-PackageSummary: finnix-docs
+    SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+    SPDX-License-Identifier: CC-BY-SA-4.0

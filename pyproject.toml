@@ -1,0 +1,10 @@
+# SPDX-PackageSummary: finnix-docs
+# SPDX-FileCopyrightText: © 2025 Ryan Finnie <ryan@finnie.org>
+# SPDX-License-Identifier: MPL-2.0
+
+[tool.black]
+line-length = 132
+
+# https://pypi.org/project/Flake8-pyproject/
+[tool.flake8]
+max-line-length = 132

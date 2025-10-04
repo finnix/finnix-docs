@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # SPDX-PackageSummary: make-release-json
-# SPDX-FileCopyrightText: Copyright (C) 2021 Ryan Finnie
+# SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
 # SPDX-License-Identifier: MPL-2.0
 
 import itertools
@@ -15,9 +15,7 @@ import sys
 
 
 def readiter(fh, size=1024):
-    return itertools.takewhile(
-        lambda t: t, map(lambda chunk: fh.read(size), itertools.count(0))
-    )
+    return itertools.takewhile(lambda t: t, map(lambda chunk: fh.read(size), itertools.count(0)))
 
 
 def checksums(fn):
@@ -36,9 +34,7 @@ logging.basicConfig(level=logging.INFO)
 fn = sys.argv[1]
 DATE = sys.argv[2]
 
-build_info_str = subprocess.check_output(
-    ["7z", "x", "-so", fn, ".disk/build_info"], encoding="UTF-8"
-)
+build_info_str = subprocess.check_output(["7z", "x", "-so", fn, ".disk/build_info"], encoding="UTF-8")
 lex = shlex.shlex(build_info_str, posix=True)
 lex.whitespace_split = True
 lex.whitespace = "\n"
@@ -56,9 +52,7 @@ SIGNATURE_OPENPGP = open(fn + ".asc", "r").read().strip()
 assert "-----BEGIN PGP SIGNATURE-----" in SIGNATURE_OPENPGP
 SIGNATURE_SSH = open(fn + ".sig", "r").read().strip()
 assert "-----BEGIN SSH SIGNATURE-----" in SIGNATURE_SSH
-PACKAGES = subprocess.check_output(
-    ["7z", "x", "-so", fn, "live/filesystem.packages"], encoding="UTF-8"
-).strip()
+PACKAGES = subprocess.check_output(["7z", "x", "-so", fn, "live/filesystem.packages"], encoding="UTF-8").strip()
 
 
 packages = {}
@@ -108,11 +102,7 @@ out = {
 
 print(json.dumps(out, sort_keys=True, indent=4), end="")
 
-logging.info(
-    "{product} {version} ({codename})".format(
-        product=PRODUCT, version=VERSION, codename=CODENAME
-    )
-)
+logging.info("{product} {version} ({codename})".format(product=PRODUCT, version=VERSION, codename=CODENAME))
 logging.info("{size} bytes, released {date}".format(size=SIZE, date=DATE))
 logging.info(BASE_OS)
 logging.info(KERNEL)
