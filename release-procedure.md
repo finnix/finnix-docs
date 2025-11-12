@@ -53,7 +53,7 @@ Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 ```shell
 cp /tmp/squashfs.sort files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license" <<"EOM"
-SPDX-PackageSummary: finnix-docs
+SPDX-PackageSummary: finnix-live-build
 SPDX-FileCopyrightText: None
 SPDX-License-Identifier: CC0-1.0
 EOM
