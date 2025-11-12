@@ -81,6 +81,8 @@ class IsoInfo:
         packages_raw = iso_file_cat(fn, "live/filesystem.packages")
         self.packages = {}
         for line in packages_raw.split("\n"):
+            if not line:
+                continue
             package_name, package_version = line.strip().split("\t", 1)
             if ":" in package_name:
                 package_name, _ = package_name.split(":", 1)
