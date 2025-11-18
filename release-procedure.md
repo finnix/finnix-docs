@@ -74,9 +74,30 @@ On `flexo.snowman.lan` (StarFive VisionFive 2):
 ```shell
 git fetch origin v${FINNIX_VER?}-rc
 git checkout origin/v${FINNIX_VER?}-rc
-env DOCKER_BUILD="true" ./finnix-live-build
+git submodule update
+sudo schroot -c noble env DOCKER_BUILD="true" ./finnix-live-build
 docker image pull docker.io/library/debian:testing
 docker image build -t docker.io/finnix/finnix:rc-riscv64 build/docker
+```
+
+## Docker RC
+
+```shell
+docker image pull ghcr.io/finnix/finnix-live-build:release-amd64
+docker image pull ghcr.io/finnix/finnix-live-build:release-arm64
+ssh flexo.snowman.lan docker image save docker.io/finnix/finnix:rc-riscv64 | docker image load
+docker image tag ghcr.io/finnix/finnix-live-build:release-amd64 docker.io/finnix/finnix:rc-amd64
+docker image tag ghcr.io/finnix/finnix-live-build:release-arm64 docker.io/finnix/finnix:rc-arm64
+docker image push docker.io/finnix/finnix:rc-amd64
+docker image push docker.io/finnix/finnix:rc-arm64
+docker image push docker.io/finnix/finnix:rc-riscv64
+
+docker manifest rm docker.io/finnix/finnix:rc || true
+docker manifest create docker.io/finnix/finnix:rc \
+    docker.io/finnix/finnix:rc-amd64 \
+    docker.io/finnix/finnix:rc-arm64 \
+    docker.io/finnix/finnix:rc-riscv64
+docker manifest push docker.io/finnix/finnix:rc
 ```
 
 ## Release testing
@@ -148,7 +169,7 @@ btcheck -i -l finnix-${FINNIX_VER?}.iso.torrent
 
 Edit [finnix-tracker](https://github.com/finnix/finnix-tracker)/`finnix-tracker.js`, add to `allowedHashes`.
 
-Commit, push, [build Docker image](https://github.com/finnix/finnix-tracker/actions/workflows/registry.yml), restart container.
+Commit, push, [build Docker image](https://github.com/finnix/finnix-tracker/actions/workflows/registry.yml), image pull, restart container.
 
 ## Upload
 
@@ -206,19 +227,26 @@ ia upload finnix_${FINNIX_VER?} \
     --metadata="title:Finnix ${FINNIX_VER?}"
 ```
 
-## Docker
+## Release data
+
+Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.gpg`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://github.com/finnix/finnix-docs) clone:
 
 ```shell
-docker image pull ghcr.io/finnix/finnix-live-build:release-amd64
-docker image pull ghcr.io/finnix/finnix-live-build:release-arm64
-ssh flexo.snowman.lan docker image save docker.io/finnix/finnix:rc-riscv64 | docker image load
-docker image tag ghcr.io/finnix/finnix-live-build:release-amd64 docker.io/finnix/finnix:rc-amd64
-docker image tag ghcr.io/finnix/finnix-live-build:release-arm64 docker.io/finnix/finnix:rc-arm64
-docker image tag docker.io/finnix/finnix:riscv64-latest docker.io/finnix/finnix:rc-riscv64
-docker image push docker.io/finnix/finnix:rc-amd64
-docker image push docker.io/finnix/finnix:rc-arm64
-docker image push docker.io/finnix/finnix:rc-riscv64
+tools/make-release-json --release-date=${FINNIX_RELEASE_DATE?} finnix-${FINNIX_VER?}.iso >releases/${FINNIX_VER?}.json
+cat >releases/${FINNIX_VER?}.json.license <<"EOM"
+SPDX-PackageSummary: finnix-docs
+SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
+SPDX-License-Identifier: CC0-1.0
+EOM
+```
 
+Double check the JSON file, add and commit it.
+
+Push to origin a few hours after the release is on the primary archive, but before release.
+
+## Docker promotion
+
+```shell
 docker manifest rm docker.io/finnix/finnix:${FINNIX_VER?} || true
 docker manifest rm docker.io/finnix/finnix:latest || true
 docker manifest create docker.io/finnix/finnix:${FINNIX_VER?} \
@@ -235,18 +263,6 @@ docker manifest push docker.io/finnix/finnix:latest
 
 Afterward, go into the Docker Hub interface and untag the `rc` tags.
 
-## Release data
-
-Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.gpg`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://github.com/finnix/finnix-docs) clone:
-
-```shell
-tools/make-release-json --release-date=${FINNIX_RELEASE_DATE?} finnix-${FINNIX_VER?}.iso >releases/${FINNIX_VER?}.json
-```
-
-Double check the JSON file, add and commit it.
-
-Push to origin a few hours after the release is on the primary archive, but before release.
-
 ## Finalize branch
 
 Tag and push the RC commit:
@@ -258,6 +274,10 @@ git tag -m "Finnix ${FINNIX_VER?}" v${FINNIX_VER?}
 git push origin --tags
 ```
 
+This will kick off an official-looking "Finnix ${FINNIX_VER?}" GHA build, but in the [ci workflow](https://github.com/finnix/finnix-live-build/actions/workflows/ci.yml), not the release workflow.
+Technically this isn't a problem but can cause confusion, so you should cancel the run while it's in progress.
+
+
 Update the following changes in `finnix-live-build` to go back to dev:
 
 * `VERSION` to dev
@@ -266,7 +286,8 @@ Update the following changes in `finnix-live-build` to go back to dev:
 * `CODENAME` to the next codename
 
 ```shell
-rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
+rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort \
+    files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license
 git add .
 git commit -m "Finnix dev (${FINNIX_NEXT_CODENAME?})"
 git push
