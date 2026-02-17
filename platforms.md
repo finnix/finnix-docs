@@ -50,6 +50,8 @@ Finnix for arm64 is not officially supported, but is buildable, see above. That 
 
 This document is provided under the following license:
 
-    SPDX-PackageSummary: finnix-docs
+    SPDX-PackageName: finnix-docs
+    SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+    SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
     SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0

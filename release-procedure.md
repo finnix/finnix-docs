@@ -53,7 +53,9 @@ Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
 ```shell
 cp /tmp/squashfs.sort files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license" <<"EOM"
-SPDX-PackageSummary: finnix-live-build
+SPDX-PackageName: finnix-live-build
+SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-live-build
 SPDX-FileCopyrightText: None
 SPDX-License-Identifier: CC0-1.0
 EOM
@@ -234,7 +236,9 @@ Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.gpg`) and SSH signat
 ```shell
 tools/make-release-json --release-date=${FINNIX_RELEASE_DATE?} finnix-${FINNIX_VER?}.iso >releases/${FINNIX_VER?}.json
 cat >releases/${FINNIX_VER?}.json.license <<"EOM"
-SPDX-PackageSummary: finnix-docs
+SPDX-PackageName: finnix-docs
+SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
 SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
 SPDX-License-Identifier: CC0-1.0
 EOM
@@ -388,6 +392,8 @@ Paste into milestone tracking ticket.
 
 This document is provided under the following license:
 
-    SPDX-PackageSummary: finnix-docs
+    SPDX-PackageName: finnix-docs
+    SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+    SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
     SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0

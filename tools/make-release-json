@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-# SPDX-PackageSummary: make-release-json
+# SPDX-PackageName: finnix-docs
+# SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+# SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
+# SPDX-FileComment: make-release-json
 # SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
 # SPDX-License-Identifier: MPL-2.0
 
