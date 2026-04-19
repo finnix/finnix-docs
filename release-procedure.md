@@ -40,27 +40,32 @@ Branch finnix-live-build main to e.g. `v${FINNIX_VER?}-rc`.  The branch name is 
 ```shell
 git pull
 git checkout -b v${FINNIX_VER?}-rc
-```
 
-Edit `finnix-live-build`, change:
-
-* `VERSION` to the final number
-* `SAVE_ISO` to true
-* `CACHE_FROZEN` to true
-
-Place `squashfs.sort` as `files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort`.
-
-```shell
-cp /tmp/squashfs.sort files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
-cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license" <<"EOM"
+cat >"conf.d/90-release.sh" <<EOM
 SPDX-PackageName: finnix-live-build
 SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
 SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-live-build
 SPDX-FileCopyrightText: None
 SPDX-License-Identifier: CC0-1.0
+
+VERSION="${FINNIX_VER?}"
+SAVE_ISO="true"
+CACHE_FROZEN="true"
 EOM
 
-git add .
+cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort <<"EOM"
+# SPDX-PackageName: finnix-live-build
+# SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+# SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-live-build
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+#
+EOM
+cat /tmp/squashfs.sort >>files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
+
+git add \
+    conf.d/90-release.sh \
+    files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 git commit -m "Finnix ${FINNIX_VER?}"
 git push origin v${FINNIX_VER?}-rc
 ```
@@ -246,7 +251,18 @@ EOM
 
 Double check the JSON file, add and commit it.
 
+```shell
+git add \
+    releases/${FINNIX_VER?}.json \
+    releases/${FINNIX_VER?}.json.license
+git commit -m "Finnix ${FINNIX_VER?}"
+```
+
 Push to origin a few hours after the release is on the primary archive, but before release.
+
+```shell
+git push
+```
 
 ## Docker promotion
 
@@ -281,18 +297,17 @@ git push origin --tags
 This will kick off an official-looking "Finnix ${FINNIX_VER?}" GHA build, but in the [ci workflow](https://github.com/finnix/finnix-live-build/actions/workflows/ci.yml), not the release workflow.
 Technically this isn't a problem but can cause confusion, so you should cancel the run while it's in progress.
 
-
-Update the following changes in `finnix-live-build` to go back to dev:
-
-* `VERSION` to dev
-* `SAVE_ISO` to false
-* `CACHE_FROZEN` to false
-* `CODENAME` to the next codename
+Then:
 
 ```shell
-rm -f files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort \
-    files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort.license
-git add .
+sed -ie "s/\${CODENAME:-.*}/\${CODENAME:-${FINNIX_NEXT_CODENAME?}}/g" conf.d/10-finnix.sh
+rm -f \
+    conf.d/90-release.sh \
+    files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
+git add \
+    conf.d/10-finnix.sh \
+    conf.d/90-release.sh \
+    files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort
 git commit -m "Finnix dev (${FINNIX_NEXT_CODENAME?})"
 git push
 git branch -d v${FINNIX_VER?}-rc
