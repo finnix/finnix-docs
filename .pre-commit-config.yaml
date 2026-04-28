@@ -52,3 +52,8 @@ repos:
     rev: "v6.2.0"
     hooks:
       - id: "reuse-lint-file"
+
+  - repo: "https://codeberg.org/rfinnie/woodpecker-shellcheck"
+    rev: "v1.0.1"
+    hooks:
+      - id: "woodpecker-shellcheck"
