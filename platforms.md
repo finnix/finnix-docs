@@ -22,7 +22,7 @@ No currently supported mainstream Linux distribution officially supports Apple-e
 
 ## Buildable current architectures
 
-While AMD64 is the only architecture currently supported by Finnix and the only architecture with ISOs being released, [finnix-live-build](https://github.com/finnix/finnix-live-build), the system which produces Finnix builds is capable of building images for a number of architectures.
+While AMD64 is the only architecture currently supported by Finnix and the only architecture with ISOs being released, [finnix-live-build](https://codeberg.org/finnix/finnix-live-build), the system which produces Finnix builds is capable of building images for a number of architectures.
 
 As of this writing, these architectures are:
 
@@ -52,6 +52,6 @@ This document is provided under the following license:
 
     SPDX-PackageName: finnix-docs
     SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-    SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
+    SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-docs
     SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0

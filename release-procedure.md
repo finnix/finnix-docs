@@ -13,7 +13,7 @@ FINNIX_NEXT_CODENAME=hi
 
 ## Release fitness
 
-Check the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and see if there are any issues which can be solved before the release.
+Check the [Finnix issue tracker](https://codeberg.org/finnix/finnix/issues) and see if there are any issues which can be solved before the release.
 
 Debian packages are removed from the Finnix package lists because they drop out of Debian testing, usually due to RC issues. Check for any removed packages which re-appeared in Debian but were not added back to Finnix.
 
@@ -25,7 +25,7 @@ Wait about 10 seconds after booting is complete, then run:
 
 ```shell
 killall strace
-git clone --depth=1 https://github.com/finnix/finnix-live-build
+git clone --depth=1 https://codeberg.org/finnix/finnix-live-build
 finnix-live-build/tools/strace-reorder </var/log/strace-init.trace >squashfs.sort
 ```
 
@@ -44,7 +44,7 @@ git checkout -b v${FINNIX_VER?}-rc
 cat >"conf.d/90-release.sh" <<EOM
 SPDX-PackageName: finnix-live-build
 SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-live-build
+SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-live-build
 SPDX-FileCopyrightText: None
 SPDX-License-Identifier: CC0-1.0
 
@@ -56,7 +56,7 @@ EOM
 cat >"files/squashfs.${FINNIX_VER?}.${FINNIX_ARCH?}.sort <<"EOM"
 # SPDX-PackageName: finnix-live-build
 # SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-# SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-live-build
+# SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-live-build
 # SPDX-FileCopyrightText: None
 # SPDX-License-Identifier: CC0-1.0
 #
@@ -70,7 +70,7 @@ git commit -m "Finnix ${FINNIX_VER?}"
 git push origin v${FINNIX_VER?}-rc
 ```
 
-Run the [release workflow](https://github.com/finnix/finnix-live-build/actions/workflows/release.yml), making sure to run the workflow against the RC branch, and download the built artifacts.
+Run the [release workflow](https://codeberg.org/finnix/finnix-live-build/actions/workflows/release.yml), making sure to run the workflow against the RC branch, and download the built artifacts.
 
 ### Docker riscv64 build
 
@@ -174,9 +174,9 @@ Get the hex hash of the torrent:
 btcheck -i -l finnix-${FINNIX_VER?}.iso.torrent
 ```
 
-Edit [finnix-tracker](https://github.com/finnix/finnix-tracker)/`finnix-tracker.js`, add to `allowedHashes`.
+Edit [finnix-tracker](https://codeberg.org/finnix/finnix-tracker)/`finnix-tracker.js`, add to `allowedHashes`.
 
-Commit, push, [build Docker image](https://github.com/finnix/finnix-tracker/actions/workflows/registry.yml), image pull, restart container.
+Commit, push, [build Docker image](https://codeberg.org/finnix/finnix-tracker/actions/workflows/registry.yml), image pull, restart container.
 
 ## Upload
 
@@ -236,14 +236,14 @@ ia upload finnix_${FINNIX_VER?} \
 
 ## Release data
 
-Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.gpg`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://github.com/finnix/finnix-docs) clone:
+Make sure the OpenPGP signature (`finnix-${FINNIX_VER?}.iso.gpg`) and SSH signature (`finnix-${FINNIX_VER?}.iso.sig`) are in the same directory as the ISO. Then, in the [finnix-docs](https://codeberg.org/finnix/finnix-docs) clone:
 
 ```shell
 tools/make-release-json --release-date=${FINNIX_RELEASE_DATE?} finnix-${FINNIX_VER?}.iso >releases/${FINNIX_VER?}.json
 cat >releases/${FINNIX_VER?}.json.license <<"EOM"
 SPDX-PackageName: finnix-docs
 SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
+SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-docs
 SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
 SPDX-License-Identifier: CC0-1.0
 EOM
@@ -294,7 +294,7 @@ git tag -m "Finnix ${FINNIX_VER?}" v${FINNIX_VER?}
 git push origin --tags
 ```
 
-This will kick off an official-looking "Finnix ${FINNIX_VER?}" GHA build, but in the [ci workflow](https://github.com/finnix/finnix-live-build/actions/workflows/ci.yml), not the release workflow.
+This will kick off an official-looking "Finnix ${FINNIX_VER?}" GHA build, but in the [ci workflow](https://codeberg.org/finnix/finnix-live-build/actions/workflows/ci.yml), not the release workflow.
 Technically this isn't a problem but can cause confusion, so you should cancel the run while it's in progress.
 
 Then:
@@ -323,7 +323,7 @@ Note that earlier, `git push origin --tags` does not actually push to main, just
 
 ## Issue management
 
-Go to the [Finnix issue tracker](https://github.com/finnix/finnix/issues) and close out:
+Go to the [Finnix issue tracker](https://codeberg.org/finnix/finnix/issues) and close out:
 
 * Any committed (fixed) issues
 * The milestone tracking issue
@@ -335,7 +335,7 @@ Open a new milestone and milestone tracking issue for the next release.
 
 The [Finnix mirror network](https://mirrors.finnix.org/) tests using release ISOs, generally the latest release plus Finnix 109.  The Django settings should be updated for the new release a day or so after all the mirrors have synced (not before, as the checker would error out on a mirror about missing files).
 
-For the example configuration in [finnix-mirrors-website](https://github.com/finnix/finnix-mirrors-website):
+For the example configuration in [finnix-mirrors-website](https://codeberg.org/finnix/finnix-mirrors-website):
 
 ```shell
 utils/iso_randchunk_hashes \
@@ -358,7 +358,7 @@ utils/iso_randchunk_hashes \
 
 Double check GPG/SSH keys have been deleted.
 
-Delete the RC branch on the GitHub remote repository.
+Delete the RC branch on the Codeberg remote repository.
 
 Run a concurrent build on the personal build environment, then update the "focus" symlink:
 
@@ -372,11 +372,11 @@ sudo ln -s $(readlink build/info/previous) build/info/focus
 
 Paste into milestone tracking ticket.
 
-* [ ] [Release fitness](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-fitness)
-* [ ] [SquashFS sort files](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#squashfs-sort-files)
-* [ ] [Release build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-build)
-* [ ] [Release source build](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-source-build)
-* [ ] [Release testing](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-testing)
+* [ ] [Release fitness](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#release-fitness)
+* [ ] [SquashFS sort files](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#squashfs-sort-files)
+* [ ] [Release build](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#release-build)
+* [ ] [Release source build](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#release-source-build)
+* [ ] [Release testing](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#release-testing)
   * [ ] Default UEFI VM boot
   * [ ] Default BIOS VM boot
   * [ ] Real hardware - USB
@@ -385,23 +385,23 @@ Paste into milestone tracking ticket.
   * [ ] Kernel command line: `sshd passwd=foo`
   * [ ] Kernel command line: `toram`
   * [ ] `wifi-connect` usability
-* [ ] [Signatures](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#signatures)
+* [ ] [Signatures](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#signatures)
   * [ ] OpenPGP
   * [ ] SSH
-* [ ] [Torrent](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#torrent)
+* [ ] [Torrent](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#torrent)
   * [ ] File creation
   * [ ] Tracker
-* [ ] [Upload](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#upload)
+* [ ] [Upload](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#upload)
   * [ ] Archive
   * [ ] Internet Archive
-* [ ] [Release data](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#release-data)
+* [ ] [Release data](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#release-data)
   * [ ] Build
   * [ ] Push
-* [ ] [Finalize branch](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
-* [ ] [Documentation / site updates](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
-* [ ] [Issue management](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
-* [ ] [Mirrors](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#mirrors)
-* [ ] [Cleanup](https://github.com/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
+* [ ] [Finalize branch](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#finalize-branch)
+* [ ] [Documentation / site updates](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#documentation--site-updates)
+* [ ] [Issue management](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#issue-management)
+* [ ] [Mirrors](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#mirrors)
+* [ ] [Cleanup](https://codeberg.org/finnix/finnix-docs/blob/main/release-procedure.md#cleanup)
 
 ## License
 
@@ -409,6 +409,6 @@ This document is provided under the following license:
 
     SPDX-PackageName: finnix-docs
     SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-    SPDX-PackageDownloadLocation: https://github.com/rfinnie/finnix-docs
+    SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-docs
     SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0
