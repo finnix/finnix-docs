@@ -50,7 +50,7 @@ rules:
   new-lines:
     type: "unix"
   quoted-strings:
-    quote-type: "any"
+    quote-type: "consistent"
     required: true
   truthy:
     allowed-values:
