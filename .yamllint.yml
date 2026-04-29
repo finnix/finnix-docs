@@ -14,46 +14,38 @@ rules:
     min-spaces-inside-empty: 0
     level: "error"
   brackets:
-    max-spaces-inside: 0
     max-spaces-inside-empty: 0
-    min-spaces-inside: 0
     min-spaces-inside-empty: 0
     level: "error"
   colons:
-    max-spaces-after: 1
     level: "error"
   commas:
     max-spaces-after: -1
     level: "error"
   comments:
-    ignore-shebangs: true
-    level: "error"
     min-spaces-from-content: 1
-    require-starting-space: true
+    level: "error"
   comments-indentation:
     level: "error"
   document-start:
-    present: true
     level: "error"
   empty-lines:
-    max: 2
     level: "error"
   hyphens:
-    max-spaces-after: 1
     level: "error"
   indentation:
     spaces: 2
-  key-duplicates: "enable"
+    level: "error"
+  key-duplicates:
+    level: "error"
   line-length:
     max: 160
-    level: "warning"
+    level: "error"
   new-lines:
-    type: "unix"
+    level: "error"
   quoted-strings:
     quote-type: "consistent"
     required: true
+    level: "error"
   truthy:
-    allowed-values:
-      - "true"
-      - "false"
     level: "error"
