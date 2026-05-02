@@ -70,11 +70,10 @@ git commit -m "Finnix ${FINNIX_VER?}"
 git push origin v${FINNIX_VER?}-rc
 ```
 
-Run the [release workflow](https://codeberg.org/finnix/finnix-live-build/actions/workflows/release.yml), making sure to run the workflow against the RC branch, and download the built artifacts.
+The [Woodpecker CI pipeline](https://woodpecker.colobox.com/repos/3) will run for the RC branch (it runs for all branches), and nothing special needs to be done which isn't configured above, so the result is a true release candidate build.
+Grab the build artifacts from object storage.
 
 ### Docker riscv64 build
-
-*Still not sure if riscv64 will be part of the final release manifest, as it must be built manually.*
 
 On `flexo.snowman.lan` (StarFive VisionFive 2):
 
@@ -82,19 +81,31 @@ On `flexo.snowman.lan` (StarFive VisionFive 2):
 git fetch origin v${FINNIX_VER?}-rc
 git checkout origin/v${FINNIX_VER?}-rc
 git submodule update
-sudo schroot -c noble env DOCKER_BUILD="true" ./finnix-live-build
+sudo schroot -c trixie env DOCKER_BUILD="true" ./finnix-live-build
 docker image pull docker.io/library/debian:testing
 docker image build -t docker.io/finnix/finnix:rc-riscv64 build/docker
 ```
 
 ## Docker RC
 
+On `inez.snowman.lan` (AMD64 build):
+
 ```shell
-docker image pull ghcr.io/finnix/finnix-live-build:release-amd64
-docker image pull ghcr.io/finnix/finnix-live-build:release-arm64
-ssh flexo.snowman.lan docker image save docker.io/finnix/finnix:rc-riscv64 | docker image load
-docker image tag ghcr.io/finnix/finnix-live-build:release-amd64 docker.io/finnix/finnix:rc-amd64
-docker image tag ghcr.io/finnix/finnix-live-build:release-arm64 docker.io/finnix/finnix:rc-arm64
+sudo docker image tag build/finnix/finnix-live-build:ci-docker-amd64 docker.io/finnix/finnix:rc-amd64
+```
+
+On `zapp.snowman.lan` (Raspberry Pi 5):
+
+```shell
+sudo docker image tag build/finnix/finnix-live-build:ci-docker-arm64 docker.io/finnix/finnix:rc-arm64
+```
+
+Locally:
+
+```shell
+ssh inez.snowman.lan sudo docker image save docker.io/finnix/finnix:rc-amd64 | docker image load
+ssh zapp.snowman.lan sudo docker image save docker.io/finnix/finnix:rc-arm64 | docker image load
+ssh flexo.snowman.lan sudo docker image save docker.io/finnix/finnix:rc-riscv64 | docker image load
 docker image push docker.io/finnix/finnix:rc-amd64
 docker image push docker.io/finnix/finnix:rc-arm64
 docker image push docker.io/finnix/finnix:rc-riscv64
