@@ -43,17 +43,12 @@ repos:
     hooks:
       - id: "flake8"
 
-  - repo: "https://github.com/rhysd/actionlint"
-    rev: "v1.7.11"
-    hooks:
-      - id: "actionlint"
-
   - repo: "https://codeberg.org/fsfe/reuse-tool"
     rev: "v6.2.0"
     hooks:
       - id: "reuse-lint-file"
 
   - repo: "https://codeberg.org/rfinnie/woodpecker-shellcheck"
-    rev: "v1.0.1"
+    rev: "v1.1.0"
     hooks:
       - id: "woodpecker-shellcheck"
