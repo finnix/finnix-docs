@@ -14,11 +14,32 @@ steps:
     image: "python:3.14-trixie"
     commands: |
       set -x
-      apt update
-      apt -y install shellcheck
 
+      mkdir -p /etc/apt/apt.conf.d
+      cat <<"EOM" >/etc/apt/apt.conf.d/99proxy
+      Acquire::http::Proxy "http://deb-proxy.snowman.lan:8000";
+      Acquire::https::Proxy "http://deb-proxy.snowman.lan:8000";
+      EOM
+      mkdir -p ~/.pip
+      cat <<"EOM" >~/.pip/pip.conf
+      [global]
+      index-url = http://omniproxi.snowman.lan/pypi/simple/
+      trusted-host = omniproxi.snowman.lan
+      EOM
+
+      apt update
+      apt -y install shellcheck shfmt curl
+
+      mkdir -p ~/.cache/pre-commit
+      cache_url="http://artifacts.snowman.lan/cache_pre-commit_$${CI_REPO_OWNER}_$${CI_REPO_NAME}_$(uname -m).tar.gz"
+      curl --fail-with-body -H "Authorization: Basic $${ASSETS_AUTH}" "$${cache_url}" | tar -C ~/.cache/pre-commit -zxf - || true
       python -m pip install pre-commit
       pre-commit run --show-diff-on-failure --color=always --all-files
+      pre-commit gc
+      tar -C ~/.cache/pre-commit -zcf - . | curl --fail-with-body -T - -H "Authorization: Basic $${ASSETS_AUTH}" "$${cache_url}"
+    environment:
+      ASSETS_AUTH:
+        from_secret: "ASSETS_AUTH"
   - name: "Notify Mastodon if failure"
     when:
       - status: ["failure"]
