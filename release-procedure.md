@@ -70,7 +70,7 @@ git commit -m "Finnix ${FINNIX_VER?}"
 git push origin v${FINNIX_VER?}-rc
 ```
 
-The [Woodpecker CI pipeline](https://woodpecker.colobox.com/repos/3) will run for the RC branch (it runs for all branches), and nothing special needs to be done which isn't configured above, so the result is a true release candidate build.
+The [Woodpecker CI pipeline](https://woodpecker.colobox.com/repos/37) will run for the RC branch (it runs for all branches), and nothing special needs to be done which isn't configured above, so the result is a true release candidate build.
 Grab the build artifacts from object storage.
 
 ### Docker riscv64 build
@@ -369,7 +369,7 @@ utils/iso_randchunk_hashes \
 
 Double check GPG/SSH keys have been deleted.
 
-Delete the RC branch on the Codeberg remote repository.
+Delete the RC branch on the remote repository.
 
 Run a concurrent build on the personal build environment, then update the "focus" symlink:
 
