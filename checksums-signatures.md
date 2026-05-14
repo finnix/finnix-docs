@@ -42,7 +42,7 @@ Good "file" signature for file-signing@finnix.org with ED25519 key SHA256:8e25ds
 
 SHA512, SHA256 and MD5 checksums are provided.  If using these to verify transfer of a release, SHA512 *and* SHA256 should both be checked.  MD5 is provided for historical completeness only and should not be relied upon.
 
-Historical note: The MD5 checksums for Finnix ISOs between versions 100 and 111 all start with "f${version}ff", e.g. finnix-105.iso's MD5 checksum is "f105ff476a228d05d663fc52bd197721".  This was produced by a utility called [vanityhash](https://codeberg.org/rfinnie/vanityhash) which searches a checksum namespace by appending trash data to the file. Finnix 120 and onward no longer do this, because the hybrid BIOS/UEFI booting relies on data at the end of the image.
+Historical note: The MD5 checksums for Finnix ISOs between versions 100 and 111 all start with "f${version}ff", e.g. finnix-105.iso's MD5 checksum is "f105ff476a228d05d663fc52bd197721".  This was produced by a utility called [vanityhash](https://forge.colobox.com/rfinnie/vanityhash) which searches a checksum namespace by appending trash data to the file. Finnix 120 and onward no longer do this, because the hybrid BIOS/UEFI booting relies on data at the end of the image.
 
 ## License
 
@@ -50,6 +50,6 @@ This document is provided under the following license:
 
     SPDX-PackageName: finnix-docs
     SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-    SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-docs
+    SPDX-PackageDownloadLocation: https://forge.colobox.com/finnix/finnix-docs
     SPDX-FileCopyrightText: © 2021 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0
