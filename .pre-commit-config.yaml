@@ -49,6 +49,6 @@ repos:
       - id: "reuse-lint-file"
 
   - repo: "https://forge.colobox.com/rfinnie/woodpecker-shellcheck"
-    rev: "v1.1.0"
+    rev: "v1.3.0"
     hooks:
       - id: "woodpecker-shellcheck"
