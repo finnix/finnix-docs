@@ -1,5 +1,8 @@
 # Finnix documentation
 
+[![Git forge repository](https://img.shields.io/badge/git-forge-orange?logo=forgejo)](https://forge.colobox.com/finnix/finnix-docs)
+[![CI pipeline status](https://woodpecker.colobox.com/api/badges/36/status.svg)](https://woodpecker.colobox.com/repos/36)
+
 This repository contains documentation and data related to the [Finnix](https://www.finnix.org/) project.
 
 ## Topics
