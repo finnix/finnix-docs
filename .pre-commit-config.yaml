@@ -22,7 +22,7 @@ repos:
       - id: "detect-private-key"
       - id: "end-of-file-fixer"
       - id: "fix-byte-order-marker"
-      - id: "requirements-txt-fixer"
+      - id: "check-toml"
       - id: "trailing-whitespace"
 
   - repo: "https://github.com/adrienverge/yamllint"
