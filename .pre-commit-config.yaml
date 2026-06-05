@@ -8,7 +8,7 @@ fail_fast: false
 
 repos:
   - repo: "https://github.com/pre-commit/pre-commit-hooks"
-    rev: "v6.0.0"
+    rev: "3e8a8703264a2f4a69428a0aa4dcb512790b2c8c"  # v6.0.0
     hooks:
       - id: "check-added-large-files"
       - id: "check-case-conflict"
@@ -26,7 +26,7 @@ repos:
       - id: "trailing-whitespace"
 
   - repo: "https://github.com/adrienverge/yamllint"
-    rev: "v1.38.0"
+    rev: "cba56bcde1fdd01c1deb3f945e69764c291a6530"  # v1.38.0
     hooks:
       - id: "yamllint"
         args:
@@ -34,21 +34,21 @@ repos:
           - ".yamllint.yml"
 
   - repo: "https://github.com/psf/black"
-    rev: "26.1.0"
+    rev: "87928e6d6761a4a6d22250e1fee5601b3998086e"  # 26.5.1
     hooks:
       - id: "black"
 
   - repo: "https://github.com/pycqa/flake8"
-    rev: "7.3.0"
+    rev: "c48217e1fc006c2dddd14df54e83b67da15de5cd"  # 7.3.0
     hooks:
       - id: "flake8"
 
   - repo: "https://codeberg.org/fsfe/reuse-tool"
-    rev: "v6.2.0"
+    rev: "a1bb792acda6fd0724936b4ebbdbc8eceb9c0459"  # v6.2.0
     hooks:
       - id: "reuse-lint-file"
 
   - repo: "https://forge.colobox.com/rfinnie/woodpecker-shellcheck"
-    rev: "v1.3.0"
+    rev: "aa1061cff5d2f6888ea0592f1faed65d2c14916a"  # v1.3.0
     hooks:
       - id: "woodpecker-shellcheck"
