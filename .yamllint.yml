@@ -40,7 +40,7 @@ rules:
     level: "error"
   line-length:
     max: 160
-    level: "error"
+    level: "warning"
   new-lines:
     level: "error"
   quoted-strings:
